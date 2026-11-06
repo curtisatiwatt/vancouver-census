@@ -210,5 +210,5 @@ export function createContextLayers({ context, basemap, geography, skytrain, ori
 
   }
   setVisible(visible);
-  return { setVisible, update, labelBoxes, stationCount: transit.stationCount };
+  return { setVisible, update, labelBoxes, openStation: transit.openStation, stationCount: transit.stationCount };
 }

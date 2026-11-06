@@ -1,0 +1,48 @@
+.neighbourhood-profile{color:var(--ink);font-size:.8125rem;line-height:1.55;overflow-wrap:anywhere}
+.neighbourhood-profile dl,.neighbourhood-profile dd{margin:0}
+.neighbourhood-profile h2,.neighbourhood-profile h3{font-size:.875rem;font-weight:650;margin:0 0 12px}
+.neighbourhood-population{padding:20px 0}
+.neighbourhood-metric dt{display:flex;align-items:baseline;flex-wrap:wrap;column-gap:6px;row-gap:2px;color:var(--muted);font-size:.75rem}
+.neighbourhood-metric dd{font-variant-numeric:tabular-nums;font-size:1.375rem;font-weight:550;line-height:1.3;margin-top:4px}
+.neighbourhood-population .neighbourhood-metric:not(.is-missing) dd{font-family:Georgia,"Times New Roman",serif;font-size:2rem;font-weight:500}
+.neighbourhood-year{white-space:nowrap;font-variant-numeric:tabular-nums}
+.neighbourhood-year::before{content:'·';padding-right:6px}
+.neighbourhood-source-ref{font-size:.6875rem;text-decoration:none;white-space:nowrap;padding:2px 0}
+.neighbourhood-source-ref:hover{text-decoration:underline}
+.neighbourhood-section{padding:18px 0;border-top:1px solid var(--line)}
+.neighbourhood-income{display:grid;gap:16px}
+.neighbourhood-income dd{color:var(--accent)}
+.neighbourhood-note,.neighbourhood-missing,.neighbourhood-metric.is-missing dd,.neighbourhood-notes p{font-family:inherit;font-size:.75rem;font-weight:400;line-height:1.65;color:var(--muted)}
+.neighbourhood-note{margin-top:12px}
+.neighbourhood-metric-basis{display:block;margin-top:5px;font-family:system-ui,-apple-system,sans-serif;font-size:.75rem;font-weight:400;line-height:1.65;white-space:normal;color:var(--muted)}
+.neighbourhood-groups .neighbourhood-metric{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}
+.neighbourhood-groups .neighbourhood-metric:first-child{padding-top:0}
+.neighbourhood-groups .neighbourhood-metric:last-child{border-bottom:0;padding-bottom:0}
+.neighbourhood-groups .neighbourhood-metric dt{color:var(--ink)}
+.neighbourhood-groups .neighbourhood-metric dd{font-family:inherit;font-size:.8125rem;font-weight:600;margin:0;align-self:start;white-space:nowrap}
+.neighbourhood-groups .neighbourhood-metric.is-missing{grid-template-columns:1fr;gap:3px}
+.neighbourhood-groups .neighbourhood-metric.is-missing dd{white-space:normal;font-weight:400}
+.neighbourhood-notes p+p{margin-top:8px}
+.neighbourhood-notes{padding:0 0 18px}
+.neighbourhood-empty{padding:18px 0}
+.neighbourhood-subprofile{margin:16px 0 20px;padding:12px 14px 0;border:1px solid var(--line);border-radius:8px}
+.neighbourhood-subprofile>h2{color:var(--accent);font-size:1rem;margin-bottom:0}
+.neighbourhood-subprofile .neighbourhood-population{padding-top:12px}
+.neighbourhood-explore{margin:4px 0 20px;padding:12px 14px;border-left:3px solid var(--accent);border-radius:4px;background:var(--surface-soft,#edf3ed);font-size:.8125rem;line-height:1.65}
+button.neighbourhood-explore{display:block;width:100%;min-height:44px;border:1px solid var(--accent);border-radius:8px;text-align:left;font:inherit;font-size:.875rem;font-weight:600;line-height:1.5;color:var(--accent);cursor:pointer}
+button.neighbourhood-explore:hover{background:var(--desktop-selected,var(--surface-soft,#e1eee8));text-decoration:underline;text-underline-offset:3px}
+button.neighbourhood-explore:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.neighbourhood-sources{padding-top:0;border-top:0}
+.neighbourhood-sources ol{padding-left:20px;margin:0}
+.neighbourhood-sources li+li{margin-top:8px}
+.neighbourhood-sources a{font-size:.75rem;line-height:1.6;text-underline-offset:3px}
+@media(max-width:760px){
+  .neighbourhood-profile{font-size:1rem;color:var(--mobile-ink,var(--ink))}
+  .neighbourhood-profile h2,.neighbourhood-profile h3{font-size:1rem}
+  .neighbourhood-metric dt,.neighbourhood-note,.neighbourhood-missing,.neighbourhood-metric.is-missing dd,.neighbourhood-notes p,.neighbourhood-sources a{font-size:.875rem}
+  .neighbourhood-groups .neighbourhood-metric dd,.neighbourhood-explore{font-size:.9375rem}
+  .neighbourhood-metric dt,.neighbourhood-note,.neighbourhood-missing,.neighbourhood-metric.is-missing dd,.neighbourhood-notes p{color:var(--mobile-muted,var(--muted))}
+  .neighbourhood-source-ref{font-size:.8125rem;min-width:24px;text-align:center}
+  button.neighbourhood-explore{font-size:1rem;min-height:48px}
+  .neighbourhood-metric-basis{font-size:.875rem;color:var(--mobile-muted,var(--muted))}
+}

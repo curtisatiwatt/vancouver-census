@@ -1,0 +1,20 @@
+{
+  "Burnaby": {
+    "count": 20,
+    "invalidGeometries": 0,
+    "overlapAreaRatio": 1.3964770007035554e-08,
+    "source": "https://gis.burnaby.ca/arcgis/rest/services/OpenData/OpenData1/MapServer/10"
+  },
+  "Coquitlam": {
+    "count": 13,
+    "invalidGeometries": 0,
+    "overlapAreaRatio": 8.699422058278117e-07,
+    "source": "https://services2.arcgis.com/Q6Lq3evZUGfPrN7o/arcgis/rest/services/Planning_and_Development/FeatureServer/1"
+  },
+  "Surrey": {
+    "count": 7,
+    "invalidGeometries": 0,
+    "overlapAreaRatio": 1.7730934498416673e-09,
+    "source": "https://services5.arcgis.com/YRpe0VKTJytZSSIB/arcgis/rest/services/Communities/FeatureServer/5"
+  }
+}

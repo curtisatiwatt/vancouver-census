@@ -1,0 +1,18 @@
+{
+  "Burnaby": {
+    "name": "Open Government Licence – City of Burnaby",
+    "url": "https://data.burnaby.ca/pages/open-government-licence",
+    "attribution": "Contains information licensed under the Open Government Licence – British Columbia.",
+    "attributionNote": "The published Burnaby licence itself specifies this British Columbia attribution statement."
+  },
+  "Coquitlam": {
+    "name": "Open Government Licence – Coquitlam",
+    "url": "https://www.coquitlam.ca/894/Open-Government-Licence",
+    "attribution": "Contains information licensed under the Open Government Licence – Coquitlam."
+  },
+  "Surrey": {
+    "name": "Open Government License – Surrey",
+    "url": "https://opendata-surrey.hub.arcgis.com/pages/55089a19491a4fe59a41e059fd8af708",
+    "attribution": "Contains information licensed under the Open Government License – City of Surrey."
+  }
+}

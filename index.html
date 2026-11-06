@@ -16,7 +16,7 @@
     <a class="brand" href="./" aria-label="大温人口地图首页"><span class="brand-mark" aria-hidden="true">V<span>↗</span></span><span><strong>Metro Vancouver <span class="brand-zh">人口地图</span></strong><small>CENSUS ATLAS · 2021</small></span></a>
     <div class="search-wrap">
       <span class="search-icon" aria-hidden="true">⌕</span>
-      <input id="search" type="search" placeholder="搜索城市或普查区编号" autocomplete="off" role="combobox" aria-label="搜索城市或普查区编号" aria-autocomplete="list" aria-expanded="false" aria-controls="search-results">
+      <input id="search" type="search" placeholder="搜索社区、城市或车站" autocomplete="off" role="combobox" aria-label="搜索社区、城市或车站" aria-autocomplete="list" aria-expanded="false" aria-controls="search-results">
       <kbd aria-hidden="true">/</kbd><div id="search-results" class="search-results" role="listbox" hidden></div>
     </div>
     <button id="mobile-more" class="settings-trigger" type="button" aria-label="菜单" aria-haspopup="dialog" aria-controls="mobile-more-dialog" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span data-mobile-text="菜单">菜单</span></button>
@@ -67,6 +67,9 @@
         <div class="community-meta" id="community-meta">正在加载官方地区数据…</div>
         <div class="collapsed-summary" id="collapsed-summary"></div>
         <div id="detail-body">
+          <div id="neighbourhood-detail" hidden></div>
+          <div id="tract-detail">
+          <p id="tract-scope" class="metric-basis" hidden></p>
           <div class="population-summary"><div><span class="metric-label" id="population-detail-label">总人口 · 2021 普查</span><strong id="population">—</strong></div><span class="population-summary-note">官方<br>人口总数</span></div>
           <section class="composition-detail" aria-label="选中地区的人口构成">
             <div class="section-title"><h2>人口构成</h2><span><i class="city-reference-symbol"></i> 全区占比</span></div>
@@ -77,6 +80,7 @@
           <div class="secondary-metrics"><div><span>0–14 岁</span><strong id="children">—</strong></div><div><span>平均每户</span><strong id="household">—</strong></div></div>
           <p class="data-caveat" id="data-caveat" hidden></p>
           <a id="source-link" class="source-link" target="_blank" rel="noopener">查看官方地区档案 ↗</a>
+          </div>
         </div>
       </section>
     </aside>
@@ -142,7 +146,7 @@
     <h2>这张地图怎样读？</h2>
     <div class="method-grid">
       <section><h3>地区构成 / 分布对比</h3><p>“地区构成”用一个等大的圆展示一个地区，彩色扇区对应勾选类别，灰色是其余类别。圆的大小不代表人口多少；全区视角会避开重叠，放大可看到更多地区，未显示圆的地区仍可点击。“分布对比”用底色表示各类别在地区人口中的占比，所有地图共用固定色阶和地图位置。</p><p>地图中的圆心只是地区内的显示位置，不是居民地址。</p></section>
-      <section><h3>道路、SkyTrain 与地理参照</h3><p>可在“地图图层”切换道路、地区标注、SkyTrain 与地理地标。缩小时显示城市与地区名称，放大后显示普查区编号。地理底色仅用于定位，不表示人口或收入。</p></section>
+      <section><h3>市府社区与普查范围</h3><p>优先显示市府社区名称；放大后可点选街区查看细分统计。</p><p>社区名称和边界来自各市政府。市府社区资料按原文公布的范围、年份和指标显示；地图收入底色与族裔分布仍使用 2021 普查小区资料。社区与普查小区不是同一边界，不把小区数值冒充整个社区，不合并或平均收入中位数。</p></section>
       <section><h3>SkyTrain 线路与车站</h3><p id="transit-definition"></p><p>点击车站查看名称与所属线路，放大可显示更多车站名称。线路和站点用于定位，不会改变普查统计范围。</p><p class="transit-license" lang="en">Route and arrival data used in this product or service is provided by permission of TransLink. TransLink assumes no responsibility for the accuracy or currency of the Data used in this product or service.</p></section>
       <section><h3>地理资料范围</h3><p id="geography-definition"></p></section>
       <section><h3>人口类别不等于国籍</h3><p id="population-groups-definition">采用 2021 年普查 Visible minority（Racialized population）分类。Chinese 不等于中国国籍、中国出生或普通话使用者；“非可见少数族裔”包括原住民等，不能改称白人或欧洲裔。初始不选人口群体，可自行选择一个或多个人口群体。</p></section>
@@ -150,7 +154,7 @@
       <section><h3>年份与收入</h3><p id="year-definition"></p><p id="income-definition"></p><p>收入底色蓝色较低、黄色居中、红色较高，使用固定区间；收入不是财富、房价或个人工资。“住户”也包括单人和合住者。</p><p id="latest-census-note"></p></section>
       <section><h3>覆盖范围</h3><p id="coverage-definition"></p><p id="boundary-note"></p><p>普查区是加拿大统计局的统计边界，不等同于房地产社区或市府社区。城市 / 地区筛选包含市镇、原住民保留地与 Electoral Area A。</p></section>
     </div>
-    <div class="method-sources"><h3>原始来源</h3><div id="source-list"></div><p id="prepared-note"></p><p id="license-note"></p></div>
+    <div class="method-sources"><h3>原始来源</h3><div id="source-list"></div><p id="prepared-note"></p><p id="license-note"></p><p id="municipal-licences" lang="en"></p></div>
     </div>
   </dialog>
   <noscript>请启用 JavaScript 以查看互动地图。官方数据可从 https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E 查阅。</noscript>

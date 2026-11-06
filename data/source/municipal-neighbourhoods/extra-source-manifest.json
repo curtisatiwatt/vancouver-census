@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 2,
+  "preparedDate": "2026-11-06",
+  "sourceEvidence": [
+    {
+      "file": "newwest-ocp2017.geojson",
+      "sha256": "fefbcd3d48f06ff9f6d166d4e4b8d8cd9bbc784f9fdc38b1396619a4ce1dcc13",
+      "bytes": 25177
+    },
+    {
+      "file": "newwest-profiles2021.xlsx",
+      "sha256": "fe069cc859415dd345399c74e85bc966489a58d95b860d15d6d91560fac35853",
+      "bytes": 1336544
+    },
+    {
+      "file": "dnv-neighbourhoods.zip",
+      "sha256": "6f0076f07fd1d3d8c8fc24e3f9d9e7a3d9202c95c85b26766ddfe2eb811e2bd5",
+      "bytes": 299055
+    },
+    {
+      "file": "dnv-census2021.zip",
+      "sha256": "d749d85c32a393affb3f8b7eabfd87fa12c1b0ddfe4a5c3fa047074ff3389936",
+      "bytes": 123632
+    },
+    {
+      "file": "langleycity.geojson",
+      "sha256": "0faf5193bc3d4544b7ec9386b2843ee6d66c50d47922c1058257ee6ee719cfdd",
+      "bytes": 25588
+    },
+    {
+      "file": "tol-communities.geojson",
+      "sha256": "00a13de685330e22246e27a240d44562389eb2966a40e1ff500cd0909303c57a",
+      "bytes": 93630
+    },
+    {
+      "file": "tol-neighbourhoods.geojson",
+      "sha256": "e1b0e402f5a78a00a2eb23ad9aa5ac0f5e87011045c2ba8c33549aaff5e46cd0",
+      "bytes": 48227
+    },
+    {
+      "file": "delta-native.json",
+      "sha256": "7820122a9cb8a44962e7f828a71dd57a6a0cf1b164196ed783a16fd28945334a",
+      "bytes": 310610
+    },
+    {
+      "file": "delta-wgs-esri.json",
+      "sha256": "4fc5427d3e1ed4c6486a5a0fdda04c9f0d2748ef57409e01936fa13dae8f5f66",
+      "bytes": 393706
+    },
+    {
+      "file": "delta-boundaries.geojson",
+      "sha256": "7b87830379caf5dce7951218c07087d9dbc808d09937314f51f090e64a77bf43",
+      "bytes": 393603
+    },
+    {
+      "file": "delta-boundaries-validated.geojson",
+      "sha256": "8f48dd9fdc2746995fc11f86aeaf5b1e94f2ee1d814c357ef85bb71d99eb1082",
+      "bytes": 373072
+    }
+  ],
+  "boundaryAudit": {
+    "New Westminster": {
+      "count": 15,
+      "invalidGeometries": 0,
+      "overlapAreaRatio": 6.531952614108327e-05,
+      "fractionOf2021MunicipalAreaCovered": 0.9744043804408635,
+      "coverageNote": "Approximate area comparison with existing simplified 2021 CSD boundary; shoreline/version differences remain. Coverage is not a population share.",
+      "sourceUrl": "https://services3.arcgis.com/A7O8YnTNtzRPIn7T/arcgis/rest/services/Neighbourhood_Boundaries_OCP2017/FeatureServer/0"
+    },
+    "North Vancouver (District)": {
+      "count": 45,
+      "invalidGeometries": 0,
+      "overlapAreaRatio": 1.2142948677684728e-06,
+      "fractionOf2021MunicipalAreaCovered": 0.34395885823993466,
+      "coverageNote": "Approximate area comparison with existing simplified 2021 CSD boundary; shoreline/version differences remain. Coverage is not a population share.",
+      "sourceUrl": "https://geoweb.dnv.org/Products/Data/KML/RegNeighbourhood_kml.zip"
+    },
+    "Langley (City)": {
+      "count": 6,
+      "invalidGeometries": 0,
+      "overlapAreaRatio": 9.534223410767595e-10,
+      "fractionOf2021MunicipalAreaCovered": 0.99473160806641,
+      "coverageNote": "Approximate area comparison with existing simplified 2021 CSD boundary; shoreline/version differences remain. Coverage is not a population share.",
+      "sourceUrl": "https://maps.langleycity.ca/server/rest/services/Maps/Open_Data/FeatureServer/197"
+    },
+    "Langley (Township)": {
+      "count": 11,
+      "invalidGeometries": 0,
+      "overlapAreaRatio": 2.171017476904069e-08,
+      "fractionOf2021MunicipalAreaCovered": 0.23237206529587703,
+      "coverageNote": "Approximate area comparison with existing simplified 2021 CSD boundary; shoreline/version differences remain. Coverage is not a population share.",
+      "sourceUrl": "https://services5.arcgis.com/frpHL0Fv8koQRVWY/arcgis/rest/services/Communities_Open_Data/FeatureServer/0"
+    },
+    "Delta": {
+      "count": 11,
+      "invalidGeometries": 0,
+      "overlapAreaRatio": 6.661338147750939e-16,
+      "fractionOf2021MunicipalAreaCovered": 0.9591470157495365,
+      "coverageNote": "Approximate area comparison with existing simplified 2021 CSD boundary; shoreline/version differences remain. Coverage is not a population share.",
+      "sourceUrl": "https://services9.arcgis.com/w2mu7sRltY6PiQ7J/arcgis/rest/services/Delta_Boundaries/FeatureServer/0"
+    }
+  },
+  "excludedJurisdictions": [
+    {
+      "municipalitySource": "North Vancouver (District)",
+      "sourceName": "SEYMOUR CREEK RESERVE",
+      "reason": "First Nations jurisdiction; not represented as a municipal neighbourhood.",
+      "sourceUrl": "https://geoweb.dnv.org/Products/Data/KML/RegNeighbourhood_kml.zip"
+    },
+    {
+      "municipalitySource": "North Vancouver (District)",
+      "sourceName": "TSLEIL-WAUTUTH",
+      "reason": "First Nations jurisdiction; not represented as a municipal neighbourhood.",
+      "sourceUrl": "https://geoweb.dnv.org/Products/Data/KML/RegNeighbourhood_kml.zip"
+    },
+    {
+      "municipalitySource": "Delta",
+      "sourceName": "TSAWWASSEN,FIRST,NATION",
+      "reason": "First Nations jurisdiction; not represented as a municipal neighbourhood.",
+      "sourceUrl": "https://services9.arcgis.com/w2mu7sRltY6PiQ7J/arcgis/rest/services/Delta_Boundaries/FeatureServer/0"
+    },
+    {
+      "municipalitySource": "Delta",
+      "sourceName": "MUSQUEAM, RESERVE",
+      "reason": "First Nations jurisdiction; not represented as a municipal neighbourhood.",
+      "sourceUrl": "https://services9.arcgis.com/w2mu7sRltY6PiQ7J/arcgis/rest/services/Delta_Boundaries/FeatureServer/0"
+    }
+  ],
+  "notIncluded": [
+    {
+      "municipality": "North Vancouver (City)",
+      "reason": "Official CityMap/PDF map found, but no clear reusable open-data licence and downloadable neighbourhood polygon source verified; no unofficial boundary substituted."
+    }
+  ],
+  "additionalBoundaryData": {
+    "file": "tol-neighbourhoods.geojson",
+    "count": 16,
+    "reason": "Official finer neighbourhood boundaries nest within communities; kept for future hierarchical support, not mixed into this layer.",
+    "sourceUrl": "https://services5.arcgis.com/frpHL0Fv8koQRVWY/arcgis/rest/services/Neighbourhoods/FeatureServer/0"
+  }
+}

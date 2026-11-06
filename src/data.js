@@ -1,5 +1,6 @@
 import { isNumber } from './map-utils.js';
 import { registerVancouverContent } from './city-content.js';
+import { nameCensusTracts } from './neighbourhoods.js';
 
 const cityAliases = {
   Vancouver: ['温哥华', '溫哥華'], Richmond: ['列治文'], Burnaby: ['本拿比'], Surrey: ['素里'],
@@ -17,7 +18,7 @@ async function readJson(path) {
 }
 
 export async function loadData() {
-  const [metadata, communities, populationData, basemap, geographicContext, orientationLandmarks, skytrain] = await Promise.all([
+  const [metadata, communities, populationData, basemap, geographicContext, orientationLandmarks, skytrain, neighbourhoods] = await Promise.all([
     readJson('metadata.json'),
     readJson('communities.geojson'),
     readJson('population-groups.json'),
@@ -27,10 +28,15 @@ export async function loadData() {
     readJson('skytrain.geojson').then(data => data.type === 'FeatureCollection' && Array.isArray(data.features)
       && data.features.some(feature => feature.properties?.kind === 'transit_route')
       && data.features.some(feature => feature.properties?.kind === 'transit_station') ? data : null).catch(() => null),
+    readJson('neighbourhoods.json').then(data => data.type === 'FeatureCollection' && Array.isArray(data.features) ? data : null).catch(() => null),
   ]);
   if (communities.type !== 'FeatureCollection' || !communities.features?.length) throw new Error('地区边界数据格式不完整');
   if (populationData.schemaVersion !== 1 || !populationData.groups?.length || !populationData.communities) throw new Error('地区人口分类数据格式不完整');
-  const features = communities.features.map(feature => {
+  for (const feature of neighbourhoods?.features || []) {
+    const p = feature.properties;
+    p.aliases = [...new Set([...(p.aliases || []), ...(cityAliases[p.municipality.replace(/ \([^)]*\)$/, '')] || [])])];
+  }
+  const features = nameCensusTracts(communities.features, neighbourhoods).map(feature => {
     const p = feature.properties;
     if (!p.name || p.code === undefined || !Array.isArray(p.centroid)) throw new Error('地区身份或显示坐标缺失');
     const names = p.municipalities || [p.municipality];
@@ -48,5 +54,5 @@ export async function loadData() {
     previousIncome = feature.properties.income;
   }
   registerVancouverContent({ metadata, features, groups: populationData.groups });
-  return { metadata, features, populationData, basemap, geographicContext, orientationLandmarks, skytrain };
+  return { metadata, features, populationData, basemap, geographicContext, orientationLandmarks, skytrain, neighbourhoods };
 }

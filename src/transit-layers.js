@@ -70,7 +70,7 @@ export function createTransitLayers({ L, context, skytrain, visible = false, onS
     }).addTo(map);
     let element = null;
     const open = () => {
-      if (!shown || destroyed || marker.getElement()?.style.display === 'none') return;
+      if (!shown || destroyed || marker.getElement()?.style.display === 'none') return false;
       onStationOpen?.();
       context.tooltip?.close();
       closePopup();
@@ -87,6 +87,7 @@ export function createTransitLayers({ L, context, skytrain, visible = false, onS
         autoPanPaddingTopLeft: paddingTopLeft, autoPanPaddingBottomRight: paddingBottomRight,
         closeButton: true, autoClose: true, closeOnClick: true })
         .setLatLng(marker.getLatLng()).setContent(stationContent(p, language())).openOn(map);
+      return true;
     };
     // Leaflet already handles Enter on keyboard markers; Space is the button
     // counterpart and must not scroll the document or click a census polygon.
@@ -200,5 +201,6 @@ export function createTransitLayers({ L, context, skytrain, visible = false, onS
   }
   map.on('unload', destroy);
   setVisible(visible);
-  return { setVisible, update, destroy, stationCount: stations.length };
+  const openStation = id => stationLayers.find(item => item.properties.id === id)?.open() ?? false;
+  return { setVisible, update, destroy, openStation, stationCount: stations.length };
 }

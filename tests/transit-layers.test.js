@@ -137,6 +137,22 @@ test('station popups escape source names and cannot introduce executable URLs', 
   assert.match(html, /Canada Line/);
 });
 
+test('search opens a named station after it is visible and does not invent an unknown station', () => {
+  const s = setup();
+  assert.equal(s.controller.openStation('Close'), false);
+  s.controller.setVisible(true); s.controller.update();
+  assert.equal(s.controller.openStation('Close'), false);
+  s.zoom(15); s.controller.update();
+  assert.equal(s.controller.openStation('Close'), true);
+  const popup = [...s.layers].find(layer => layer.type === 'popup');
+  assert.match(popup.content, /Close/);
+  assert.deepEqual(popup.point, { lat: 49, lng: -123.01 });
+  assert.equal(s.opened(), 1);
+  assert.equal(s.controller.openStation('Not a station'), false);
+  s.controller.destroy();
+  assert.equal(s.controller.openStation('Close'), false);
+});
+
 test('station popups fit the current drawer viewport and read sheet insets after activation', () => {
   let insets = { left: 92, right: 24, top: 76, bottom: 24 };
   let afterOpen = () => {};

@@ -15,7 +15,8 @@
     "check": "npm run test && node scripts/validate-data.mjs",
     "prepare:data": "python3 scripts/build-data.py",
     "prepare:geography": "python3 scripts/build-geography.py",
-    "prepare:transit": "python3 scripts/build-skytrain.py"
+    "prepare:transit": "python3 scripts/build-skytrain.py",
+    "prepare:neighbourhoods": "python3 scripts/build-neighbourhoods.py"
   },
   "dependencies": {
     "leaflet": "1.9.4"

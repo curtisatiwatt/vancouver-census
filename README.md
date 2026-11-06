@@ -1,18 +1,41 @@
 # 大温哥华人口地图 / Metro Vancouver Census Atlas
 
-沿用 [Calgary](https://github.com/curtisatiwatt/calgary-census) 和 [Edmonton](https://github.com/curtisatiwatt/edmonton-census) 项目的地图交互，查看大温哥华各普查分区的人口、族裔分类及住户收入。
+沿用 [Calgary](https://github.com/curtisatiwatt/calgary-census) 和 [Edmonton](https://github.com/curtisatiwatt/edmonton-census) 项目的地图交互，从熟悉的社区名字查找大温哥华人口、族裔及住户收入。
 
 ## 功能
 
 - **人口构成**：选择 13 个普查人口类别，用地图圆环和详情条形图查看人数与占比。
 - **分布对比**：使用统一色阶比较不同群体的地理分布，地图位置和缩放保持同步。
 - **收入底色**：查看 2020 年住户税前总年收入中位数，并与大温官方整体中位数对照。
-- **城市／地区筛选与搜索**：按市镇、地区或普查分区编号定位，点击地图查看详情。
+- **具名社区优先**：默认以市府社区名称定位，搜索 Kitsilano、Steveston、Metrotown、Maillardville 等直接进入社区概况。放大地图可点选街区查看细分统计，不需要手动切换地理层级。编号保留作辅助信息。
+- **统一搜索**：搜索社区、市镇、普查区编号或 SkyTrain 车站。车站结果显示所属线路，选中自动开启 SkyTrain 并定位；不会把车站当成人口统计区域。
 - **中英文、浅色／深色／跟随系统**，适配电脑与手机，支持可拖动的手机详情面板。
 - 内置海岸、水域、主要道路和地理背景，无需地图 API key 或外部瓦片服务。
 - **SkyTrain 线路与车站**：在“地图图层”中独立开关 Expo、Millennium、Canada 三条运营线路与 54 座车站，默认关闭。保留机场、Richmond、Surrey 等支线，换乘站合并显示；点击车站可查看名称和所属线路，放大显示更多站名。
 
 ## 数据范围与口径
+
+### 市府具名社区
+
+截至本次整理，接入 **165 个具名社区／规划区域**，为 **450 个 CT** 提供已核对的地名参照。数据保存在 `public/data/neighbourhoods.json`，原始快照、统计表定位信息、来源与许可在 `data/source/municipal-neighbourhoods/`；构建及连接审计在 `data/audit/neighbourhoods.json`。
+
+| 市镇 | 地区数 | 社区资料 |
+| --- | ---: | --- |
+| Vancouver | 22 | 20 区已核对 2021 人口、族裔百分比和 2020 家庭收入中位数；Strathcona、West End 新版值暂缺 |
+| Richmond | 15 | 具名规划区资料与定位点；East Richmond / Fraser Lands 联合人口、分别收入，不合并中位数 |
+| Burnaby | 20 | 官方 Community Plan Areas；未找到匹配这些现行边界的完整 2021 社区表 |
+| Coquitlam | 13 | 官方 Community Profile Areas；已找到的细分报告使用 2016 数据，未冒充 2021 |
+| Surrey | 7 | 2021 公布人口、2020 **平均**家庭收入；族裔仅原表公布分类。Fleetwood 图文冲突的族裔值留空 |
+| New Westminster | 15 | 官方 2021 社区表；Brunette Creek 的长表值受抑制 |
+| North Vancouver (District) | 45 | 官方 2021 社区表；保留原始舍入差异及抑制值 |
+| Langley (City) / Langley (Township) | 6 / 11 | 官方具名区域，尚无已核对的同范围统计 |
+| Delta | 11 | 官方具名区域，尚无已核对的同范围统计 |
+
+社区资料卡保留每项的实际年份、统计基数、平均／中位数及原分类。缺失不会填零，也不会借用附近 CT 的数据作为整个社区统计。默认地图提供社区边界与名称；启用收入底色、族裔分布或放大查看街区时，仍使用下述统一 CT 统计，并明确所选范围。没有已接入社区参照的地方保留原普查区名称，不表示当地不存在具名社区。
+
+Richmond 公开地图没有已确认的开放再分发许可，因此只保存事实性社区名称、单个定位点、统计摘要及 CT 位置关系，链接官方地图，不公开复制原市府 GIS 多边形或报告图文。其余社区使用各市开放资料。原住民地区保留独立地理身份，不作为邻近市政府管辖社区。DNV 和 Langley Township 的命名多边形主要覆盖居住聚落，未给山林或乡村编造社区边界。
+
+### 统一细分统计
 
 本项目使用 Statistics Canada **2021 年 Vancouver Census Metropolitan Area（CMA 933）的 535 个 Census Tracts（CT，普查分区）**。此版官方边界与 Greater Vancouver Census Division（CD 5915）范围一致，涵盖 Vancouver、Richmond、Burnaby、Surrey、Coquitlam、North/West Vancouver、Delta、Langley、Maple Ridge、White Rock、Bowen Island 等地区。
 
@@ -78,6 +101,14 @@ python3 scripts/build-skytrain.py --refresh --snapshot-date YYYY-MM-DD
 ```
 
 刷新后必须运行 `npm run check`，并复核来源版本、地理范围、数据口径和缺失值。
+
+具名社区从保留的市府快照离线重建：
+
+```sh
+.venv/bin/python scripts/build-neighbourhoods.py
+```
+
+该脚本只建立名称、定位点与几何关系，不重算人口、族裔人数或收入。市府资料新增时应先核对边界、统计年份、基数及许可，再更新 `*-profiles.json`。Richmond 快照只保留定位事实；不能将点生成或描述为官方边界。
 
 ## 来源与许可
 

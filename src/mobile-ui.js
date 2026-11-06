@@ -12,7 +12,7 @@ addTranslations({
   '图例': 'Legend', '关闭图例': 'Close legend', '查看详情': 'Details', '收起': 'Collapse',
   '语言': 'Language', '外观': 'Appearance',
   '跟随系统': 'System default', '白天': 'Light', '夜间': 'Dark', '常用五类': 'Top five groups',
-  '搜索 Vancouver 地区': 'Search places or census tract IDs',
+  '搜索 Vancouver 地区': 'Search areas, tracts or stations',
 });
 
 const $ = id => document.getElementById(id);
@@ -106,7 +106,7 @@ export function initMobileUI({ onLayoutChange = () => {} } = {}) {
       move($('groups-panel'), filters);
       move($('layers-panel'), filters);
     } else if (!mobile && moved) { closeTransient(); restore(); moved = false; }
-    $('search').placeholder = t('搜索城市或普查区编号');
+    $('search').placeholder = t('搜索社区、城市或车站');
     $('mobile-map-switcher').hidden = !mobile || !comparing || !groups;
     pager.hidden = mobile && (!comparing || !groups);
     $('mobile-composition-legend').hidden = comparing;
