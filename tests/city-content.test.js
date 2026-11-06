@@ -20,7 +20,7 @@ test('all source caveats retain a readable English equivalent', () => {
 });
 
 test('statistical definitions and population categories are readable in both languages', () => {
-  for (const field of ['populationDefinition', 'incomeDefinition', 'populationGroupsDefinition', 'latestCensusNote', 'boundaryNote', 'license', 'geographyDefinition']) {
+  for (const field of ['populationDefinition', 'incomeDefinition', 'populationGroupsDefinition', 'latestCensusNote', 'boundaryNote', 'license', 'geographyDefinition', 'transitDefinition']) {
     assert.ok(metadata[field], field);
     const english = translate(metadata[field], 'en');
     assert.ok(english.length > 20, field);

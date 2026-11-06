@@ -17,13 +17,16 @@ async function readJson(path) {
 }
 
 export async function loadData() {
-  const [metadata, communities, populationData, basemap, geographicContext, orientationLandmarks] = await Promise.all([
+  const [metadata, communities, populationData, basemap, geographicContext, orientationLandmarks, skytrain] = await Promise.all([
     readJson('metadata.json'),
     readJson('communities.geojson'),
     readJson('population-groups.json'),
     readJson('basemap.geojson').catch(() => null),
     readJson('geographic-context.geojson').catch(() => null),
     readJson('orientation-landmarks.geojson').catch(() => null),
+    readJson('skytrain.geojson').then(data => data.type === 'FeatureCollection' && Array.isArray(data.features)
+      && data.features.some(feature => feature.properties?.kind === 'transit_route')
+      && data.features.some(feature => feature.properties?.kind === 'transit_station') ? data : null).catch(() => null),
   ]);
   if (communities.type !== 'FeatureCollection' || !communities.features?.length) throw new Error('地区边界数据格式不完整');
   if (populationData.schemaVersion !== 1 || !populationData.groups?.length || !populationData.communities) throw new Error('地区人口分类数据格式不完整');
@@ -45,5 +48,5 @@ export async function loadData() {
     previousIncome = feature.properties.income;
   }
   registerVancouverContent({ metadata, features, groups: populationData.groups });
-  return { metadata, features, populationData, basemap, geographicContext, orientationLandmarks };
+  return { metadata, features, populationData, basemap, geographicContext, orientationLandmarks, skytrain };
 }

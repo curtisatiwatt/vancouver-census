@@ -53,7 +53,7 @@ for (const [code, record] of Object.entries(data.communities)) {
     } else assert.equal(share, null);
   }
 }
-for (const file of ['basemap.geojson', 'geographic-context.geojson', 'orientation-landmarks.geojson']) {
+for (const file of ['basemap.geojson', 'geographic-context.geojson', 'orientation-landmarks.geojson', 'skytrain.geojson']) {
   const collection = read(file);
   assert.equal(collection.type, 'FeatureCollection', file);
   for (const feature of collection.features) coordinates(feature.geometry.coordinates, `${file}: ${feature.properties.name}`);

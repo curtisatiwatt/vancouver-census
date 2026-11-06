@@ -39,7 +39,8 @@
     "roundingNote": "Census category counts are randomly rounded; long-form counts are weighted estimates. Group counts may not sum exactly to the denominator. Total population differs from private-household population. Regional and municipal income medians are official values, not averages of tract medians.",
     "populationGroupsDefinition": "The population-group view uses 13 mutually exclusive visible-minority categories. No groups are initially selected; the Common five shortcut selects the five largest racialized groups in Metro Vancouver. Not a visible minority includes Indigenous people and must not be equated with White or European ancestry.",
     "newCensusNote": "This application uses published 2021 Census data. The population reference year is 2021 and the income reference year is 2020.",
-    "geographyDefinition": "Coasts, rivers, lakes, major roads, parks and railway context come from open geographic data published by Statistics Canada, Natural Resources Canada, British Columbia and the City of Vancouver. Roads are a 2021 snapshot; coastline polygons are generalized at 1:250,000. Only larger parks and waterbodies are shown. Parks do not represent all vegetation, and landmark points are label anchors inside parks, not entrances. Geographic context can extend beyond census coverage without adding population or income estimates."
+    "geographyDefinition": "Coasts, rivers, lakes, major roads, parks and railway context come from open geographic data published by Statistics Canada, Natural Resources Canada, British Columbia and the City of Vancouver. Roads are a 2021 snapshot; coastline polygons are generalized at 1:250,000. Only larger parks and waterbodies are shown. Parks do not represent all vegetation, and landmark points are label anchors inside parks, not entrances. Geographic context can extend beyond census coverage without adding population or income estimates.",
+    "transitDefinition": "The SkyTrain layer shows the operating Expo, Millennium and Canada lines and 54 stations, including Capstan, from the official TransLink GTFS service snapshot for 2026-11-06. Routes use actual trip shapes and interchange platforms are grouped by official parent station. This is not live arrival, disruption or walking-entrance information. The Broadway Subway and Surrey–Langley extensions are not yet open and are not shown as operating lines. SeaBus and West Coast Express are excluded."
   },
   "latestCensusNote": "本应用使用已发布的 2021 年人口普查资料；人口参考年为 2021，收入参考年为 2020。",
   "populationGroupsCoverage": 529,
@@ -489,9 +490,33 @@
     {
       "label": "Geographic data · Open Government Licence – Vancouver",
       "url": "https://opendata.vancouver.ca/pages/licence/"
+    },
+    {
+      "label": "TransLink · GTFS Static Data and licence",
+      "url": "https://www.translink.ca/about-us/doing-business-with-translink/app-developer-resources/gtfs/gtfs-data"
+    },
+    {
+      "label": "TransLink · Official SkyTrain routes and stations",
+      "url": "https://www.translink.ca/schedules-and-maps/skytrain"
+    },
+    {
+      "label": "TransLink · Capstan Station",
+      "url": "https://www.translink.ca/plans-and-projects/projects/rapid-transit-projects/capstan-station"
+    },
+    {
+      "label": "TransLink · Broadway Subway extension (not yet open)",
+      "url": "https://www.translink.ca/plans-and-projects/projects/rapid-transit-projects/broadway-subway-project"
+    },
+    {
+      "label": "TransLink · Surrey Langley extension (not yet open)",
+      "url": "https://www.translink.ca/plans-and-projects/projects/rapid-transit-projects/surrey-langley-skytrain"
     }
   ],
   "geographyPreparedDate": "2026-11-06",
   "geographyDefinition": "海岸、河流、湖泊、主要道路、公园和铁路来自加拿大统计局、自然资源部、卑诗省及温哥华市的开放地理资料。道路为 2021 年快照；海岸线使用 1:250,000 概化资料。只显示较大公园和水域，公园并非全部植被覆盖；地标点只是公园内的文字锚点，不是入口。背景范围可超出普查范围，不会据此推算人口或收入。",
-  "geographyLicense": "Contains information licensed under the Open Government Licence – Canada, Open Government Licence – British Columbia and Open Government Licence – Vancouver."
+  "geographyLicense": "Contains information licensed under the Open Government Licence – Canada, Open Government Licence – British Columbia and Open Government Licence – Vancouver.",
+  "transitPreparedDate": "2026-11-06",
+  "transitDefinition": "SkyTrain 图层显示 Expo、Millennium 和 Canada 三条运营线路与 54 座车站（包括 Capstan），采用 TransLink 官方 GTFS 的 2026-11-06 运营快照。线路直接取自班次形状，换乘站按官方 parent station 合并；不表示实时班次、服务中断或步行入口。Broadway Subway 与 Surrey–Langley 扩建尚未开放，不画作运营线路；不包括 SeaBus 或 West Coast Express。",
+  "transitAttribution": "Route and arrival data used in this product or service is provided by permission of TransLink. TransLink assumes no responsibility for the accuracy or currency of the Data used in this product or service.",
+  "transitLicense": "TransLink GTFS Static Data Terms and Conditions"
 }

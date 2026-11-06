@@ -7,6 +7,7 @@ import './community-sheet.css';
 import './map-legibility.css';
 import './desktop-ui.css';
 import './map-controls.css';
+import './skytrain-controls.css';
 import { initDesktopUI } from './desktop-ui.js';
 import { initMobileUI, getMobileMapInsets } from './mobile-ui.js';
 import { initCommunitySheet } from './community-sheet.js';
@@ -26,8 +27,8 @@ const dialog = $('method-dialog');
 const PALETTE = ['#518a7b', '#c29b4d', '#7e85af', '#5c8eac', '#b67768', '#8d9963', '#947cac', '#bb8c67', '#688b92', '#a18696', '#7f8990', '#b7a268', '#c2c9bd'];
 const state = {
   features: [], byCode: new Map(), metadata: {}, counts: {}, data: null, basemap: null,
-  geographicContext: null, orientationLandmarks: null, municipality: '',
-  roads: true, labels: true, landmarks: false,
+  geographicContext: null, orientationLandmarks: null, skytrain: null, municipality: '',
+  roads: true, labels: true, landmarks: false, transit: false,
   groups: [], groupById: new Map(), selectedGroups: [], colors: {}, selected: null, selectionActive: false,
   mode: 'composition', income: false, contexts: [], comparisonContexts: [], composition: null,
   view: null, wholeCity: true, compareStart: 0, searchMatches: [], activeSearch: -1,
@@ -91,9 +92,13 @@ function resizeMapsKeepingView() {
 function updateLayerVisibility() {
   closeTooltips();
   for (const context of state.contexts) {
-    context.contextLayers?.setVisible({ roads: state.roads, landmarks: state.landmarks, communityLabels: state.labels });
+    context.contextLayers?.setVisible({ roads: state.roads, landmarks: state.landmarks, transit: state.transit, communityLabels: state.labels });
     updateLabels(context);
   }
+  $('transit-legend').hidden = state.mode !== 'composition' || !state.transit || !state.skytrain;
+  const missingTransit = state.transit && !state.skytrain;
+  $('transit-warning').hidden = !missingTransit;
+  $('transit-toggle').setAttribute('aria-describedby', missingTransit ? 'transit-control-note transit-warning' : 'transit-control-note');
   mobileUI?.refresh();
 }
 
@@ -135,6 +140,7 @@ function renderMetadata() {
   $('income-definition').textContent = m.incomeDefinition || '';
   $('latest-census-note').textContent = m.latestCensusNote || '';
   $('geography-definition').textContent = m.geographyDefinition || '';
+  $('transit-definition').textContent = m.transitDefinition || 'SkyTrain 线路与车站用于地理参照。显示运营线路；不提供实时班次、到站时间或服务中断信息。';
   if (m.populationGroupsDefinition) $('population-groups-definition').textContent = m.populationGroupsDefinition.replace('默认勾选全区人数最多的五个可见少数族裔类别', '初始不选人口群体，可自行选择一个或多个人口群体');
   $('coverage-definition').textContent = `覆盖 ${state.counts.total} 个官方区域，${Object.values(state.data.communities).filter(hasPopulationData).length} 个有可用人口分类，${state.counts.income} 个有收入数据；保留缺失区域的边界。`;
   $('boundary-note').textContent = m.boundaryNote || '';
@@ -150,7 +156,7 @@ function renderMetadata() {
   }
   $('income-ramp').innerHTML = INCOME_BINS.map(bin => `<span style="background:${bin.color}" title="${esc(bin.label)}"></span>`).join('');
   $('population-ramp').innerHTML = POPULATION_BINS.map(bin => `<span style="background:${bin.color}" title="${esc(bin.label)}"></span>`).join('');
-  localize(document.querySelector('.app-header'), dialog, $('income-legend'), $('population-legend'), document.querySelector('.map-status'));
+  localize(document.querySelector('.app-header'), dialog, $('income-legend'), $('population-legend'), $('transit-legend'), document.querySelector('.map-status'));
 }
 
 function refreshGroupControl() {
@@ -308,7 +314,12 @@ function createMap(element, groupId = null) {
     },
   }).addTo(map);
   if (!groupId) {
-    context.contextLayers = createContextLayers({ context, basemap: state.basemap, geography: state.geographicContext, orientationLandmarks: state.orientationLandmarks, communityNames: state.features.map(f => f.properties.name), visible: { roads: state.roads, landmarks: state.landmarks, communityLabels: state.labels }, getLabelObstacles: () => mapLabelObstacles(map) });
+    context.contextLayers = createContextLayers({ context, basemap: state.basemap, geography: state.geographicContext, orientationLandmarks: state.orientationLandmarks, skytrain: state.skytrain, communityNames: state.features.map(f => f.properties.name), visible: { roads: state.roads, landmarks: state.landmarks, transit: state.transit, communityLabels: state.labels }, getLabelObstacles: () => mapLabelObstacles(map), getPopupInsets: () => {
+      if (!mobile()) return desktopUI?.getInsets();
+      // Station activation collapses the sheet; use its destination height
+      // instead of the larger height during the closing animation.
+      return { ...getMobileMapInsets(), bottom: (communitySheet?.getTargetInset() || 0) + 14 };
+    }, onStationOpen: () => { closeTooltips(false); toggleGroups(false); toggleLayers(false); if (mobile()) setCollapsed(true); } });
   } else {
     renderComparisonBasemap(context);
   }
@@ -651,6 +662,7 @@ function selectView(mode) {
   }
   $('income-control').hidden = mode !== 'composition';
   $('layers-button').hidden = mode !== 'composition';
+  $('transit-legend').hidden = mode !== 'composition' || !state.transit || !state.skytrain;
   toggleLayers(false);
   $('mode-description').textContent = t(mode === 'composition' ? '一个地区，一张构成图' : '同一色阶，查看聚居分布');
   document.querySelector('.map-workspace').classList.toggle('comparing', mode === 'distribution');
@@ -689,7 +701,7 @@ function chooseSearchResult(code) {
 }
 
 function setReady(ready) {
-  document.querySelectorAll('.view-tabs button,#groups-button,#group-search,#default-groups,#all-groups,#clear-groups,#income-toggle,#layers-button,#roads-toggle,#labels-toggle,#landmarks-toggle,#municipality-filter,#search,#fit-city,#zoom-in,#zoom-out,#focus-community').forEach(control => { control.disabled = !ready; });
+  document.querySelectorAll('.view-tabs button,#groups-button,#group-search,#default-groups,#all-groups,#clear-groups,#income-toggle,#layers-button,#roads-toggle,#labels-toggle,#landmarks-toggle,#transit-toggle,#municipality-filter,#search,#fit-city,#zoom-in,#zoom-out,#focus-community').forEach(control => { control.disabled = !ready; });
 }
 
 function initializeControls() {
@@ -714,7 +726,7 @@ function initializeControls() {
   });
   $('layers-button').addEventListener('click', () => toggleLayers($('layers-panel').hidden));
   $('close-layers').addEventListener('click', () => { toggleLayers(false); (mobile() ? $('mobile-more') : $('layers-button')).focus(); });
-  for (const layer of ['roads', 'labels', 'landmarks']) $(`${layer}-toggle`).addEventListener('change', event => { state[layer] = event.target.checked; updateLayerVisibility(); });
+  for (const layer of ['roads', 'labels', 'landmarks', 'transit']) $(`${layer}-toggle`).addEventListener('change', event => { state[layer] = event.target.checked; updateLayerVisibility(); });
   $('groups-button').addEventListener('click', () => toggleGroups($('groups-panel').hidden));
   $('close-groups').addEventListener('click', () => { toggleGroups(false); (mobile() ? $('mobile-more') : $('groups-button')).focus({ preventScroll: true }); });
   $('empty-choose-groups').addEventListener('click', () => { toggleGroups(true); });
@@ -807,7 +819,7 @@ async function init() {
   try {
     const data = await loadData();
     state.metadata = data.metadata; state.features = data.features; state.data = data.populationData; state.basemap = data.basemap;
-    state.geographicContext = data.geographicContext; state.orientationLandmarks = data.orientationLandmarks;
+    state.geographicContext = data.geographicContext; state.orientationLandmarks = data.orientationLandmarks; state.skytrain = data.skytrain;
     state.byCode = new Map(data.features.map(f => [f.properties.code, f])); state.counts = summarize(data.features);
     state.groups = data.populationData.groups; state.groupById = new Map(state.groups.map(g => [g.id, g]));
     state.colors = Object.fromEntries(state.groups.map((g, i) => [g.id, PALETTE[i % PALETTE.length]]));

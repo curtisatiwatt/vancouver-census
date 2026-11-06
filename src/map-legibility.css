@@ -76,8 +76,30 @@ html[data-theme=dark] .landmark-label.airport-label { color: #d8cce8; }
 html[data-theme=dark] .landmark-label.reserve-label { color: #e0cfac; }
 html[data-theme=dark] .orientation-label { color: #ddd0ec; text-shadow: none; }
 html[data-theme=dark] .orientation-label:before { box-shadow: none; }
+
+/* The visible dot is small; the keyboard and touch target is 24 px. */
+.skytrain-station { display:flex;align-items:center;justify-content:center;background:none;border:0;border-radius:50%;cursor:pointer; }
+.skytrain-station-dot { display:block;width:8px;height:8px;box-sizing:border-box;border:2px solid var(--station-color);border-radius:50%;background:#fff;box-shadow:0 0 0 1px #46596299;pointer-events:none; }
+.skytrain-interchange .skytrain-station-dot { width:11px;height:11px;border:2px solid #243d4a;box-shadow:0 0 0 2px #fff,0 0 0 3px #243d4a; }
+.skytrain-station:focus-visible { outline:2px solid #075d83;outline-offset:1px;background:#ffffff9e; }
+html[data-theme=dark] .skytrain-station:focus-visible { outline-color:#d9f1ff;background:#203b4aaa; }
+html[data-theme=dark] .skytrain-station-dot { background:#e9f4f8;box-shadow:0 0 0 1px #d9e8ef; }
+html[data-theme=dark] .skytrain-interchange .skytrain-station-dot { box-shadow:0 0 0 2px #e9f4f8,0 0 0 3px #203a4a; }
+html .skytrain-station-label>span { padding:1px 3px;border-radius:3px;background:#fffef5ed;box-shadow:0 0 0 1px #ffffffad; }
+html[data-theme=dark] .skytrain-station-label>span { background:#172e36f0;box-shadow:0 0 0 1px #172e36ad; }
+.skytrain-attribution.leaflet-control-attribution { width:560px;max-width:calc(100vw - 110px);padding:5px 8px;border-radius:5px;font-size:10px!important;line-height:1.35!important;text-align:left;white-space:normal;background:#fffffff0!important;color:#33444b; }
+html[data-theme=dark] .skytrain-attribution.leaflet-control-attribution { background:#193139f0!important;color:#d8e7eb; }
+@media(min-width:761px) {
+  .leaflet-left .skytrain-attribution { margin-left:calc(var(--desktop-rail-width,80px) + 12px);margin-bottom:10px;max-width:calc(100vw - var(--desktop-rail-width,80px) - 96px); }
+  .desktop-details-open .leaflet-left .skytrain-attribution { margin-left:calc(var(--desktop-rail-width,80px) + var(--desktop-drawer-width,344px) + 24px);max-width:calc(100vw - var(--desktop-rail-width,80px) - var(--desktop-drawer-width,344px) - 110px); }
+}
+@media(max-width:760px) {
+  .leaflet-left .skytrain-attribution { width:calc(100vw - 24px);max-width:none;margin-left:12px;margin-bottom:calc(128px + env(safe-area-inset-bottom));font-size:11px!important; }
+  .sidebar:not([data-sheet-snap="closed"])~.map-workspace .skytrain-attribution { margin-bottom:64px; }
+}
 html[data-theme=dark] .road-label > span,
 html[data-theme=dark] .water-label > span,
 html[data-theme=dark] .station-label > span,
 html[data-theme=dark] .landmark-label > span,
 html[data-theme=dark] .orientation-label > span { background: transparent; }
+html[data-theme=dark] .skytrain-station-label > span { background:#172e36f0; }

@@ -4,6 +4,7 @@ addTranslations({
   '返回菜单': 'Back to menu', '菜单': 'Menu', '关闭菜单': 'Close menu',
   '返回地图设置': 'Back to menu', '数据说明': 'About the data',
   '道路与地理参照': 'Roads and geographic context',
+  '道路、SkyTrain 与地理参照': 'Roads, SkyTrain and geographic context',
   '统计口径与官方来源': 'Definitions and official sources',
   '显示偏好': 'Display preferences', '地图与资料': 'Map and data',
   '地图视图': 'Map view', '数据与图层': 'Data and layers',
@@ -37,7 +38,7 @@ export function initMobileUI({ onLayoutChange = () => {} } = {}) {
   let moved = false;
 
   // Legends belong to one on-demand dialog on every screen size.
-  for (const id of ['composition-key', 'income-legend']) $('mobile-composition-legend').append($(id));
+  for (const id of ['composition-key', 'income-legend', 'transit-legend']) $('mobile-composition-legend').append($(id));
   $('mobile-distribution-legend').append($('population-legend'));
 
   function move(node, destination) {
@@ -110,7 +111,7 @@ export function initMobileUI({ onLayoutChange = () => {} } = {}) {
     pager.hidden = mobile && (!comparing || !groups);
     $('mobile-composition-legend').hidden = comparing;
     $('mobile-distribution-legend').hidden = !comparing;
-    const hasLegend = comparing ? groups > 0 : groups > 0 || $('income-toggle').checked;
+    const hasLegend = comparing ? groups > 0 : groups > 0 || $('income-toggle').checked || !$('transit-legend').hidden;
     $('mobile-legend-button').hidden = !hasLegend;
     if (!hasLegend) closeDialog(legend);
     for (const node of document.querySelectorAll('[data-mobile-text]')) node.textContent = t(node.dataset.mobileText);
@@ -151,7 +152,7 @@ export function initMobileUI({ onLayoutChange = () => {} } = {}) {
   stateObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
   stateObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
   stateObserver.observe(document.querySelector('.map-workspace'), { attributes: true, attributeFilter: ['class'] });
-  for (const panel of [$('groups-panel'), $('layers-panel'), $('income-legend')]) stateObserver.observe(panel, { attributes: true, attributeFilter: ['hidden'] });
+  for (const panel of [$('groups-panel'), $('layers-panel'), $('income-legend'), $('transit-legend')]) stateObserver.observe(panel, { attributes: true, attributeFilter: ['hidden'] });
   stateObserver.observe($('group-count'), { childList: true, characterData: true, subtree: true });
   media.addEventListener('change', refresh);
   activeUI = { insets: readInsets };

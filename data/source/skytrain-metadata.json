@@ -1,0 +1,31 @@
+{
+  "transitPreparedDate": "2026-11-06",
+  "transitDefinition": "SkyTrain 图层显示 Expo、Millennium 和 Canada 三条运营线路与 54 座车站（包括 Capstan），采用 TransLink 官方 GTFS 的 2026-11-06 运营快照。线路直接取自班次形状，换乘站按官方 parent station 合并；不表示实时班次、服务中断或步行入口。Broadway Subway 与 Surrey–Langley 扩建尚未开放，不画作运营线路；不包括 SeaBus 或 West Coast Express。",
+  "definitionsEn": {
+    "transitDefinition": "The SkyTrain layer shows the operating Expo, Millennium and Canada lines and 54 stations, including Capstan, from the official TransLink GTFS service snapshot for 2026-11-06. Routes use actual trip shapes and interchange platforms are grouped by official parent station. This is not live arrival, disruption or walking-entrance information. The Broadway Subway and Surrey–Langley extensions are not yet open and are not shown as operating lines. SeaBus and West Coast Express are excluded."
+  },
+  "transitAttribution": "Route and arrival data used in this product or service is provided by permission of TransLink. TransLink assumes no responsibility for the accuracy or currency of the Data used in this product or service.",
+  "transitLicense": "TransLink GTFS Static Data Terms and Conditions",
+  "sources": [
+    {
+      "label": "TransLink · GTFS Static Data and licence",
+      "url": "https://www.translink.ca/about-us/doing-business-with-translink/app-developer-resources/gtfs/gtfs-data"
+    },
+    {
+      "label": "TransLink · Official SkyTrain routes and stations",
+      "url": "https://www.translink.ca/schedules-and-maps/skytrain"
+    },
+    {
+      "label": "TransLink · Capstan Station",
+      "url": "https://www.translink.ca/plans-and-projects/projects/rapid-transit-projects/capstan-station"
+    },
+    {
+      "label": "TransLink · Broadway Subway extension (not yet open)",
+      "url": "https://www.translink.ca/plans-and-projects/projects/rapid-transit-projects/broadway-subway-project"
+    },
+    {
+      "label": "TransLink · Surrey Langley extension (not yet open)",
+      "url": "https://www.translink.ca/plans-and-projects/projects/rapid-transit-projects/surrey-langley-skytrain"
+    }
+  ]
+}

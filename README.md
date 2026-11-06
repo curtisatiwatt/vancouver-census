@@ -10,6 +10,7 @@
 - **城市／地区筛选与搜索**：按市镇、地区或普查分区编号定位，点击地图查看详情。
 - **中英文、浅色／深色／跟随系统**，适配电脑与手机，支持可拖动的手机详情面板。
 - 内置海岸、水域、主要道路和地理背景，无需地图 API key 或外部瓦片服务。
+- **SkyTrain 线路与车站**：在“地图图层”中独立开关 Expo、Millennium、Canada 三条运营线路与 54 座车站，默认关闭。保留机场、Richmond、Surrey 等支线，换乘站合并显示；点击车站可查看名称和所属线路，放大显示更多站名。
 
 ## 数据范围与口径
 
@@ -25,6 +26,8 @@
 - **缺失与取整**：抑制、不适用和未发布数据保留为空；公布的 0 保留为 0。缺失不代表低收入或没有居民。人数随机取整可使分类合计与分母略有差异，圆环单独表示差额；所有数值与分布图仍使用原表分母。
 
 人口年份和收入参考年份始终在数据说明中标明。这是官方资料快照，不是实时人口或收入预测。
+
+SkyTrain 使用 TransLink **2026-11-06** 官方 GTFS 运营快照，与人口普查年份独立。轨迹来自真实班次形状，站点采用官方 parent station 坐标，不是车站入口或步行导航；不提供实时到站、班次及服务中断信息。Broadway Subway 和 Surrey–Langley 未开放扩建不画作运营线路，SeaBus 和 West Coast Express 不包含在此图层。
 
 ## 本地开发
 
@@ -65,6 +68,15 @@ python3 -m venv .venv
 
 保留缓存后，省略 `--download` 即可从相同原始文件重建。快照日期可通过 `--snapshot-date YYYY-MM-DD` 指定。
 
+SkyTrain 数据脚本只需 Python 3.9+ 标准库。仓库保留了相关官方 GTFS 行，可离线逐坐标重建：
+
+```sh
+python3 scripts/build-skytrain.py
+# 联网更新时，指定所需运营日期（日期必须在下载的 feed 服务区间内）：
+python3 scripts/build-skytrain.py --refresh --snapshot-date YYYY-MM-DD
+.venv/bin/python scripts/build-data.py  # 合并交通数据说明和来源
+```
+
 刷新后必须运行 `npm run check`，并复核来源版本、地理范围、数据口径和缺失值。
 
 ## 来源与许可
@@ -72,3 +84,7 @@ python3 -m venv .venv
 统计资料改编自 [Statistics Canada 2021 Census Profile](https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E)，通过其官方 SDMX API 获取，依据 [Statistics Canada Open Licence](https://www.statcan.gc.ca/en/reference/licence) 使用。本产品不代表 Statistics Canada 的认可。
 
 地图背景采用 British Columbia 官方开放地理资料；具体服务、查询和许可见地理审计及应用数据说明。Leaflet 的 BSD-2-Clause 许可保存在 `public/licenses/leaflet.txt`。本仓库基于同一作者的 Calgary / Edmonton 项目改编，第三方许可不改变项目自有代码的权利归属。
+
+SkyTrain 使用 [TransLink GTFS Static Data](https://www.translink.ca/about-us/doing-business-with-translink/app-developer-resources/gtfs/gtfs-data)，来源、运营日期、完整性检查和 SHA-256 见 `data/audit/skytrain.json`。
+
+Route and arrival data used in this product or service is provided by permission of TransLink. TransLink assumes no responsibility for the accuracy or currency of the Data used in this product or service.

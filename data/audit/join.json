@@ -47,7 +47,9 @@
     "data/source/cma-boundaries.geojson": "dbe40b3d7af8dd0eb254d698a22342fe3f748c843f2c01c1cdcf4240be70487d",
     "data/source/csd-boundaries.geojson": "4c8256c205d62b4d98afb655912b8fc27f68b775b93119d422b922518887109f",
     "data/source/ct-boundaries.geojson": "0d733b578a2e290293a1f0e1d7fab6b7d799889212e4fc6c0cdbe276caa57890",
-    "data/source/geographic-metadata.json": "d5c0b56ea28b282d068489e6dcc3b836d4d196bd4f062726b20322bcc2775881"
+    "data/source/geographic-metadata.json": "d5c0b56ea28b282d068489e6dcc3b836d4d196bd4f062726b20322bcc2775881",
+    "data/source/skytrain-gtfs.json": "72deb5562cbe8549a02ddbd47a54bcae280ffa405370363badb9a8ee3b7d90d7",
+    "data/source/skytrain-metadata.json": "4c437f6d3cd589f80edcb1f050f0cc038315321a1824842d204d8dceb5459160"
   },
   "outputSha256": {
     "public/data/communities.geojson": "b47c569d03068fa1e350f32dc98d1757dc6ee528ee07edf79f7df00fe2951f1d",

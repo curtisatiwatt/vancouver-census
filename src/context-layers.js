@@ -1,13 +1,15 @@
 import L from 'leaflet';
 
+import { currentLanguage } from './i18n.js';
 import { isDarkTheme } from './theme.js';
+import { createTransitLayers } from './transit-layers.js';
 import { escapeHtml as esc } from './map-utils.js';
 import { displayMapName, groupRoadLabels, roadPriority, visibleLineAnchors, visibleWaterAnchors } from './label-placement.js';
 
 const features = data => data?.type === 'FeatureCollection' && Array.isArray(data.features) ? data.features : [];
 
 /** Context geometry never changes census statistics or the heat-map scale. */
-export function createContextLayers({ context, basemap, geography, orientationLandmarks, communityNames = [], visible, getLabelObstacles }) {
+export function createContextLayers({ context, basemap, geography, skytrain, orientationLandmarks, communityNames = [], visible, onStationOpen, getLabelObstacles, getPopupInsets }) {
   const map = context.map;
   const definitions = [['geography', 405], ['water', 410], ['roads', 420], ['roadLabels', 460], ['waterLabels', 465], ['landmarkLabels', 490]];
   for (const [name, zIndex] of definitions) {
@@ -80,10 +82,13 @@ export function createContextLayers({ context, basemap, geography, orientationLa
     const layer = L.geoJSON(geography || collection([]), { filter: f => f.properties.kind === 'railway', pane: 'roads', interactive: false, style: { color: casing ? '#65716e' : '#f5f6ed', weight: casing ? 2.1 : 1.2, opacity: .85, dashArray: casing ? null : '7 5' } }).addTo(map);
     railways.push({ layer, casing });
   }
+  const transit = createTransitLayers({ L, context, skytrain, visible: visible.transit,
+    onStationOpen, getPopupInsets, isDark: isDarkTheme, language: currentLanguage });
   function setVisible(next) {
     visible = { ...visible, ...next };
     for (const name of ['roads', 'roadLabels']) map.getPane(name).style.display = visible.roads ? '' : 'none';
     for (const name of ['geography', 'landmarkLabels']) map.getPane(name).style.display = visible.landmarks ? '' : 'none';
+    transit.setVisible(visible.transit);
   }
 
   let lastStyleBucket = null;
@@ -129,6 +134,9 @@ export function createContextLayers({ context, basemap, geography, orientationLa
       labelBoxes.push(box);
       return true;
     };
+    // Stations reserve space before geographic and census labels. Their locations
+    // remain official station coordinates and are never shifted to fit text.
+    transit.update({ reserveBox, measureLabel, labelBoxes });
     // Geographic names use the portion currently on screen, not a fixed city-wide midpoint.
     // Reserve their boxes before community labels are placed by the main renderer.
     let watersShown = 0;
@@ -202,5 +210,5 @@ export function createContextLayers({ context, basemap, geography, orientationLa
 
   }
   setVisible(visible);
-  return { setVisible, update, labelBoxes };
+  return { setVisible, update, labelBoxes, stationCount: transit.stationCount };
 }

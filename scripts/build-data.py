@@ -319,13 +319,15 @@ def build():
     }}
     write_json(OUT / 'region-boundary.geojson', {'type': 'FeatureCollection', 'features': [region_feature]})
     metadata = make_metadata(snapshot, features, municipal_features)
-    geographic_metadata = SOURCE / 'geographic-metadata.json'
-    if geographic_metadata.exists():
-        extras = json.loads(geographic_metadata.read_text())
+    for filename in ['geographic-metadata.json', 'skytrain-metadata.json']:
+        extra_metadata = SOURCE / filename
+        if not extra_metadata.exists():
+            continue
+        extras = json.loads(extra_metadata.read_text())
         metadata['sources'].extend(extras.pop('sources', []))
         metadata['definitionsEn'].update(extras.pop('definitionsEn', {}))
         for key, value in extras.items():
-            assert key.startswith(('geography', 'transit')), f'Unexpected geographic metadata key: {key}'
+            assert key.startswith(('geography', 'transit')), f'Unexpected context metadata key: {key}'
             metadata[key] = value
     write_json(OUT / 'metadata.json', metadata, pretty=True)
     checksums = {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
