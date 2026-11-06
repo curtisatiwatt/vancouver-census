@@ -22,6 +22,8 @@ import { SKYTRAIN_LINES } from './transit-layers.js';
 import { createNeighbourhoodLayers } from './neighbourhood-layers.js';
 import { neighbourhoodLabelFeatures } from './neighbourhoods.js';
 import { renderNeighbourhoodProfile } from './neighbourhood-ui.js';
+import { incomeForArea, incomeMetricLabel } from './area-statistics.js';
+import { containsLocation, localCensusFallback } from './selection-statistics.js';
 import { INCOME_BINS, isNumber, colorFor, money, number, percent, searchMapFeatures, summarize, escapeHtml as esc, safeUrl, hashCode } from './map-utils.js';
 import { POPULATION_BINS, populationShare, populationSubtotal, hasPopulationData, populationColor, donutSvg } from './population-utils.js';
 
@@ -34,7 +36,7 @@ const state = {
   features: [], byCode: new Map(), metadata: {}, counts: {}, data: null, basemap: null,
   geographicContext: null, orientationLandmarks: null, skytrain: null, neighbourhoods: null, municipality: '',
   roads: true, labels: true, landmarks: false, transit: false,
-  groups: [], groupById: new Map(), selectedGroups: [], colors: {}, selected: null, selectionActive: false,
+  groups: [], groupById: new Map(), selectedGroups: [], colors: {}, selected: null, selectedLocalCode: null, selectionActive: false,
   mode: 'composition', income: false, contexts: [], comparisonContexts: [], composition: null,
   view: null, wholeCity: true, compareStart: 0, searchMatches: [], activeSearch: -1,
 };
@@ -54,6 +56,16 @@ function selectedGroups() { return state.groups.filter(g => state.selectedGroups
 const inMunicipality = feature => !state.municipality || (feature.properties.municipalities || [feature.properties.municipality]).includes(state.municipality);
 function filteredFeatures() { return state.features.filter(inMunicipality); }
 function populationRecord(code) { return state.data?.communities[code] || null; }
+function communityAtTract(feature, location) {
+  return (state.neighbourhoods?.features || []).find(area => inMunicipality(area) && containsLocation(area, location));
+}
+function selectMapArea(feature, location = null) {
+  const municipal = feature.properties.kind === 'neighbourhood';
+  const area = municipal ? feature : communityAtTract(feature, location) || feature;
+  const local = municipal ? state.features.find(tract => inMunicipality(tract) && containsLocation(tract, location)) : feature;
+  selectCommunity(area.properties.code, false, true, local?.properties.code);
+  toggleGroups(false);
+}
 function activeContexts() { return state.mode === 'composition' ? [state.composition].filter(Boolean) : state.comparisonContexts; }
 function closeTooltips(closePopups = true) { state.contexts.forEach(context => { context.tooltip.close(); context.highlights?.clearHover(); if (closePopups) context.map.closePopup(); }); }
 function setCollapsed(collapsed) {
@@ -139,7 +151,7 @@ function renderMetadata() {
   const m = state.metadata;
   $('data-edition').textContent = `${m.populationYear} 普查 · ${m.incomeYear} 收入`;
   $('income-detail-label').textContent = `家庭税前年收入中位数 · ${m.incomeYear}`;
-  $('city-income').textContent = `全区 ${money(m.cityIncomeMedian)}`;
+  $('city-income').textContent = `${t('全区中位数')} ${money(m.cityIncomeMedian)}`;
   $('coverage-text').textContent = `${filteredFeatures().length} 个区域 · ${m.populationYear} 普查`;
   $('year-definition').textContent = `人口资料来自 ${m.populationYear} 年人口普查，收入参考期为 ${m.incomeYear} 年，不是今天的收入与人口。`;
   $('income-definition').textContent = m.incomeDefinition || '';
@@ -219,17 +231,22 @@ function renderDetail() {
   $('tract-detail').hidden = municipal;
   if (municipal) {
     $('community-name').textContent = p.name;
-    $('community-meta').innerHTML = `<span>${esc(p.municipality)}</span><span>${t('市府社区')}</span>`;
+    $('community-meta').innerHTML = `<span>${esc(p.municipality)}</span><span>${t('市府社区')}</span>${p.boundaryType === 'census-approximation' ? `<span>${t('定位范围为近似边界')}</span>` : ''}`;
     $('collapsed-summary').textContent = t('官方社区资料');
-    $('neighbourhood-detail').innerHTML = `<button class="neighbourhood-explore" type="button" data-explore-neighbourhood="${esc(p.code)}">${t('查看社区内的街区统计')} ↗</button>`
-      + renderNeighbourhoodProfile(feature, { language: currentLanguage() });
+    const tract = state.byCode.get(state.selectedLocalCode || p.anchorTractCode);
+    const fallback = localCensusFallback(feature, tract, populationRecord(tract?.properties.code), state.groups, state.metadata);
+    const municipalHtml = renderNeighbourhoodProfile(feature, { language: currentLanguage() });
+    const fallbackHtml = fallback ? `<section class="local-census-fallback"><h2>${t('当前位置的补充统计')}</h2><p>${t('社区资料未提供的项目，直接显示所选位置的普查数据；这些数值不代表整个社区。')} <span>CT ${esc(tract.properties.code)}</span></p>${renderNeighbourhoodProfile(fallback, { language: currentLanguage(), sourceKind: 'census' })}</section>` : '';
+    const hasMunicipalValues = [p.statistics, ...(p.statistics?.subprofiles || []).map(profile => profile.statistics)].filter(Boolean)
+      .some(stats => isNumber(stats.population?.value) || isNumber(stats.incomeMedian?.value) || isNumber(stats.incomeAverage?.value) || stats.groups?.some(group => isNumber(group.value)));
+    $('neighbourhood-detail').innerHTML = hasMunicipalValues ? municipalHtml + fallbackHtml : fallbackHtml + municipalHtml;
     return;
   }
   const record = populationRecord(p.code);
   $('community-name').textContent = p.name;
   $('community-meta').innerHTML = [p.municipality || p.sectorLabel, p.typeLabel, `CT ${p.code}`].filter(Boolean).map(tag => `<span>${esc(tag)}</span>`).join('');
   $('tract-scope').hidden = !p.scopeNote;
-  $('tract-scope').innerHTML = p.scopeNote ? `${t(p.scopeNote)} ${p.neighbourhoodIds?.length ? `<button class="neighbourhood-parent-link" type="button" data-open-neighbourhood="N:${esc(p.neighbourhoodIds[0])}">${t('查看社区概况')} ↗</button>` : ''}` : '';
+  $('tract-scope').textContent = p.scopeNote ? t(p.scopeNote) : '';
   $('population').textContent = number(p.populationTotal ?? p.population);
   $('population-detail-label').textContent = '总人口 · 2021 普查';
   $('collapsed-summary').textContent = `人口 ${number(p.populationTotal ?? p.population)} · 家庭收入 ${money(p.income)}`;
@@ -246,31 +263,19 @@ function renderDetail() {
   $('source-link').hidden = !sourceUrl;
   if (sourceUrl) $('source-link').href = sourceUrl;
   else $('source-link').removeAttribute('href');
-  const groups = selectedGroups();
+  const groups = state.groups;
   if (!hasPopulationData(record)) {
     $('composition-bars').innerHTML = '<p class="detail-empty">这个区域暂无可用的人口分类资料，不能当作 0 人。</p>';
     $('composition-basis').textContent = '';
     localize(sidebar);
     return;
   }
-  if (!groups.length) {
-    $('composition-bars').innerHTML = '<p class="detail-empty">点击“人群”选择想了解的类别。</p>';
-    $('composition-basis').textContent = t(`构成统计基数：${number(record.population)} 人（25% 长表私人住户人口）。`);
-    localize(sidebar);
-    return;
-  }
-  const rows = groups.map(g => ({ ...g, count: record.counts[g.id], share: populationShare(record, g.id), city: populationShare(state.data.city, g.id), color: state.colors[g.id] }));
-  const remainder = state.groups.filter(g => !state.selectedGroups.includes(g.id));
-  if (remainder.length) {
-    const ids = remainder.map(group => group.id);
-    const subtotal = populationSubtotal(record, ids);
-    rows.push({ id: 'other', label: '其余类别', ...subtotal,
-      city: populationSubtotal(state.data.city, ids).share, color: '#bcc7bd' });
-  }
+  const rows = groups.map(g => ({ ...g, count: record.counts[g.id], share: populationShare(record, g.id), city: populationShare(state.data.city, g.id), color: state.colors[g.id] }))
+    .sort((a, b) => (isNumber(b.count) ? b.count : -1) - (isNumber(a.count) ? a.count : -1));
   $('composition-bars').innerHTML = rows.map(row => `<div class="composition-row" data-detail-group="${row.id}"><div class="bar-heading"><span>${esc(row.label)}</span><span><small>${isNumber(row.count) ? `${number(row.count)} 人` : '暂无数据'}</small><strong>${percent(row.share)}</strong></span></div><div class="bar-track"><span class="bar-fill" style="width:${Math.min(100, Math.max(0, (row.share || 0) * 100))}%;background:${row.color}"></span>${isNumber(row.city) ? `<i class="city-reference" style="left:${Math.min(100, Math.max(0, row.city * 100))}%" title="全区 ${percent(row.city)}"></i>` : ''}</div><span class="sr-only">全区占比 ${percent(row.city)}</span></div>`).join('');
   const sum = populationSubtotal(record, state.groups.map(group => group.id)).count;
   const difference = isNumber(sum) && record.population > 0 ? Math.abs(sum - record.population) : null;
-  $('composition-basis').textContent = t(`构成统计基数：${number(record.population)} 人（25% 长表私人住户人口）。`) + ' ' + t('占比按人数 ÷ 同表私人住户人口计算。灰色为未勾选类别，留白为原表统计差额。') + ' ' + (difference === null ? t('部分人口类别或统计基数缺失，不合计为 0。') : difference > 35 || difference / record.population > 0.01 ? t(` 分类合计 ${number(sum)}，表内人口 ${number(record.population)}；原表存在差异，保留原数值。`) : t('原始人数经过统计取整。'));
+  $('composition-basis').textContent = t(`构成统计基数：${number(record.population)} 人（25% 长表私人住户人口）。`) + ' ' + t('保留原表分类，按人数从多到少排列。') + ' ' + (difference === null ? t('部分人口类别或统计基数缺失，不合计为 0。') : difference > 35 || difference / record.population > 0.01 ? t(` 分类合计 ${number(sum)}，表内人口 ${number(record.population)}；原表存在差异，保留原数值。`) : t('原始人数经过统计取整。'));
   localize(sidebar);
 }
 
@@ -305,6 +310,15 @@ function refreshStyles() {
 
 function tooltipContent(feature, context) {
   const p = feature.properties;
+  if (p.kind === 'neighbourhood') {
+    const income = incomeForArea(feature);
+    const componentIncomes = (p.statistics?.subprofiles || []).map(profile => ({ name: profile.name, metric: incomeForArea({ properties: { kind: 'neighbourhood', statistics: profile.statistics } }) })).filter(item => item.metric);
+    const incomeSummary = income ? `<br>${esc(incomeMetricLabel(income, currentLanguage()))} ${money(income.value)}`
+      : componentIncomes.length ? componentIncomes.map(({ name, metric }) => `<br>${esc(name)} · ${esc(incomeMetricLabel(metric, currentLanguage()))} ${money(metric.value)}`).join('')
+        : state.income ? `<br>${t('区域内部底色使用各普查区收入')}` : '';
+    const population = p.statistics?.population?.value;
+    return localizeHtml(`<strong>${esc(p.name)}</strong><small>${esc(p.municipality)} · ${t('市府社区')}</small>${p.boundaryType === 'census-approximation' ? `<small>${t('定位范围为近似边界')}</small>` : ''}${incomeSummary}${isNumber(population) ? `<br>${t('人口')} ${number(population)}` : ''}<span class="tip-note">点击查看地区详情</span>`);
+  }
   const record = populationRecord(p.code);
   if (context.groupId) {
     const group = state.groupById.get(context.groupId);
@@ -325,7 +339,7 @@ function createMap(element, groupId = null) {
     map.getPane(name).style.zIndex = zIndex;
     if (name !== 'donuts') map.getPane(name).style.pointerEvents = 'none';
   }
-  context.highlights = createCommunityHighlight({ L, map, features: state.features, isDark: isDarkTheme, hoverEnabled: () => !mobile() && window.matchMedia('(any-hover: hover)').matches });
+  context.highlights = createCommunityHighlight({ L, map, features: [...state.features, ...(state.neighbourhoods?.features || []).filter(f => f.geometry.type !== 'Point')], isDark: isDarkTheme, hoverEnabled: () => !mobile() && window.matchMedia('(any-hover: hover)').matches });
   context.highlights.setSelected(state.selectionActive ? state.selected : null);
   context.donuts.addTo(map);
   context.labels.addTo(map);
@@ -335,20 +349,26 @@ function createMap(element, groupId = null) {
       const code = feature.properties.code;
       context.layers.set(code, layer);
       layer.on('add', () => { const path = layer.getElement(); path?.setAttribute('data-community', code); path?.setAttribute('aria-label', feature.properties.name); if (path) path.style.pointerEvents = inMunicipality(feature) ? '' : 'none'; });
-      layer.on('click', () => {
+      layer.on('click', event => {
         if (!inMunicipality(feature)) return;
-        const place = state.byCode.get('N:' + feature.properties.neighbourhoodIds?.[0]);
-        const namedLocation = !groupId && !state.income && !state.selectedGroups.length && map.getZoom() < 14 && place?.properties.locationOnly;
-        selectCommunity(namedLocation ? place.properties.code : code, false); toggleGroups(false);
+        selectMapArea(feature, event.latlng);
       });
       context.highlights.bind(layer, code);
       context.tooltip.bind(layer, { content: () => tooltipContent(feature, context), anchor: event => event?.latlng || layer.getBounds().getCenter() });
     },
   }).addTo(map);
   context.neighbourhoodLayers = createNeighbourhoodLayers({ L, map, features: state.neighbourhoods?.features || [],
-    onSelect: code => { selectCommunity(code, false); toggleGroups(false); }, isDark: isDarkTheme, inMunicipality,
+    incomeAreas: state.neighbourhoods?.incomeAreas || [],
+    onSelect: (code, event, feature) => selectMapArea(feature, event?.latlng), isDark: isDarkTheme, inMunicipality,
     getSelected: () => state.selectionActive ? state.selected : null,
-    allowSelection: () => !groupId && !state.income && !state.selectedGroups.length });
+    getFillStyle: feature => {
+      const metric = !groupId && state.income ? incomeForArea(feature) : null;
+      return metric ? { fillColor: colorFor(metric.value), fillOpacity: 1, incomeMetric: metric } : { fillOpacity: 0 };
+    },
+    onBind: (layer, feature) => {
+      context.highlights.bind(layer, feature.properties.code);
+      context.tooltip.bind(layer, { content: () => tooltipContent(feature, context), anchor: event => event?.latlng || (layer.getBounds ? layer.getBounds().getCenter() : layer.getLatLng()) });
+    } });
   if (!groupId) {
     context.contextLayers = createContextLayers({ context, basemap: state.basemap, geography: state.geographicContext, orientationLandmarks: state.orientationLandmarks, skytrain: state.skytrain, communityNames: state.features.map(f => f.properties.name), visible: { roads: state.roads, landmarks: state.landmarks, transit: state.transit, communityLabels: state.labels }, getLabelObstacles: () => mapLabelObstacles(map), getPopupInsets: () => {
       if (!mobile()) return desktopUI?.getInsets();
@@ -461,11 +481,12 @@ function fitCommunity(code, collapse = true) {
   updateDonuts();
 }
 
-function selectCommunity(code, zoom = true, expand = true) {
+function selectCommunity(code, zoom = true, expand = true, localCode = null) {
   if (!state.byCode.has(code)) return;
-  if (state.byCode.get(code).properties.kind === 'neighbourhood' && state.mode !== 'composition') selectView('composition');
+  if (!activeContexts().length && state.mode !== 'composition') selectView('composition');
   closeTooltips();
   state.selected = code;
+  state.selectedLocalCode = localCode || state.byCode.get(code).properties.anchorTractCode || null;
   if (expand) state.selectionActive = true;
   renderDetail();
   if (expand) {
@@ -516,7 +537,7 @@ function updateDonuts() {
     }).addTo(context.donuts);
     marker.getElement()?.setAttribute('data-population-code', p.code);
     marker.getElement()?.setAttribute('aria-label', t(`${p.name}，点击查看人口构成`));
-    marker.on('click', () => { selectCommunity(p.code, false); toggleGroups(false); });
+    marker.on('click', () => selectMapArea(feature, marker.getLatLng()));
     context.highlights.bind(marker, p.code);
     context.tooltip.bind(marker, { content: () => tooltipContent(feature, context), anchor: () => marker.getLatLng(), offset: [0, -size / 2] });
     shown++;
@@ -574,8 +595,8 @@ function updateLabels(context) {
   const density = (comparison ? 1.7 : 1.2) * textScale * textScale;
   const cap = Math.max(3, Math.min(Math.round(tier.cap / density), Math.floor(viewport.x * viewport.y / (tier.pixels * density))));
   const fontSize = (zoom < 12 ? 12 : 13) * textScale;
-  const labelFeatures = zoom < 10.75 ? municipalityLabels(filteredFeatures()) : zoom < 14
-    ? neighbourhoodLabelFeatures(state.neighbourhoods, filteredFeatures(), state.municipality) : filteredFeatures();
+  const labelFeatures = zoom < 10.75 ? municipalityLabels(filteredFeatures())
+    : neighbourhoodLabelFeatures(state.neighbourhoods, filteredFeatures(), state.municipality);
   const candidates = labelFeatures.filter(feature => {
     const p = feature.properties;
     if (!map.getBounds().contains([p.centroid[1], p.centroid[0]])) return false;
@@ -847,20 +868,6 @@ function initializeControls() {
   $('zoom-in').addEventListener('click', () => activeContexts()[0]?.map.zoomIn(0.5));
   $('zoom-out').addEventListener('click', () => activeContexts()[0]?.map.zoomOut(0.5));
   $('focus-community').addEventListener('click', () => fitCommunity(state.selected));
-  $('detail-body').addEventListener('click', event => {
-    const parent = event.target.closest('[data-open-neighbourhood]');
-    if (parent) return selectCommunity(parent.dataset.openNeighbourhood);
-    const explore = event.target.closest('[data-explore-neighbourhood]');
-    if (!explore) return;
-    const feature = state.byCode.get(explore.dataset.exploreNeighbourhood);
-    const code = feature?.properties.anchorTractCode;
-    if (code && state.byCode.has(code)) selectCommunity(code);
-    else if (feature) {
-      const p = feature.properties;
-      if (mobile()) setCollapsed(true); else desktopUI.closeDetails();
-      activeContexts()[0]?.map.setView([p.centroid[1], p.centroid[0]], 15, { animate: false });
-    }
-  });
   $('method-button').addEventListener('click', () => { toggleGroups(false); toggleLayers(false); closeTooltips(); dialog.showModal(); });
   $('close-method').addEventListener('click', () => { dialog.close(); (mobile() ? $('mobile-more') : $('method-button')).focus({ preventScroll: true }); });
   dialog.addEventListener('click', event => {
@@ -934,7 +941,7 @@ async function init() {
     state.metadata = data.metadata; state.features = data.features; state.data = data.populationData; state.basemap = data.basemap;
     state.geographicContext = data.geographicContext; state.orientationLandmarks = data.orientationLandmarks; state.skytrain = data.skytrain; state.neighbourhoods = data.neighbourhoods;
     state.byCode = new Map([...data.features, ...(data.neighbourhoods?.features || [])].map(f => [f.properties.code, f])); state.counts = summarize(data.features);
-    state.groups = data.populationData.groups; state.groupById = new Map(state.groups.map(g => [g.id, g]));
+    state.groups = [...data.populationData.groups].sort((a, b) => (data.populationData.city.counts[b.id] ?? -1) - (data.populationData.city.counts[a.id] ?? -1)); state.groupById = new Map(state.groups.map(g => [g.id, g]));
     state.colors = Object.fromEntries(state.groups.map((g, i) => [g.id, PALETTE[i % PALETTE.length]]));
     state.selectedGroups = [];
     const linkedCode = hashCode(location.hash, [...state.byCode.values()]);

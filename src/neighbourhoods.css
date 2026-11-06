@@ -15,23 +15,21 @@
 .neighbourhood-note,.neighbourhood-missing,.neighbourhood-metric.is-missing dd,.neighbourhood-notes p{font-family:inherit;font-size:.75rem;font-weight:400;line-height:1.65;color:var(--muted)}
 .neighbourhood-note{margin-top:12px}
 .neighbourhood-metric-basis{display:block;margin-top:5px;font-family:system-ui,-apple-system,sans-serif;font-size:.75rem;font-weight:400;line-height:1.65;white-space:normal;color:var(--muted)}
-.neighbourhood-groups .neighbourhood-metric{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}
+.neighbourhood-groups .neighbourhood-metric{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;padding:12px 0;border-bottom:1px solid var(--line)}
 .neighbourhood-groups .neighbourhood-metric:first-child{padding-top:0}
 .neighbourhood-groups .neighbourhood-metric:last-child{border-bottom:0;padding-bottom:0}
 .neighbourhood-groups .neighbourhood-metric dt{color:var(--ink)}
 .neighbourhood-groups .neighbourhood-metric dd{font-family:inherit;font-size:.8125rem;font-weight:600;margin:0;align-self:start;white-space:nowrap}
 .neighbourhood-groups .neighbourhood-metric.is-missing{grid-template-columns:1fr;gap:3px}
 .neighbourhood-groups .neighbourhood-metric.is-missing dd{white-space:normal;font-weight:400}
+.neighbourhood-groups .neighbourhood-group-track{grid-column:1/-1;height:7px;overflow:hidden;border-radius:3px;background:var(--surface-soft,#edf3ed);line-height:0}
+.neighbourhood-group-track>span{display:block;height:100%;border-radius:inherit;background:var(--accent)}
 .neighbourhood-notes p+p{margin-top:8px}
 .neighbourhood-notes{padding:0 0 18px}
 .neighbourhood-empty{padding:18px 0}
 .neighbourhood-subprofile{margin:16px 0 20px;padding:12px 14px 0;border:1px solid var(--line);border-radius:8px}
 .neighbourhood-subprofile>h2{color:var(--accent);font-size:1rem;margin-bottom:0}
 .neighbourhood-subprofile .neighbourhood-population{padding-top:12px}
-.neighbourhood-explore{margin:4px 0 20px;padding:12px 14px;border-left:3px solid var(--accent);border-radius:4px;background:var(--surface-soft,#edf3ed);font-size:.8125rem;line-height:1.65}
-button.neighbourhood-explore{display:block;width:100%;min-height:44px;border:1px solid var(--accent);border-radius:8px;text-align:left;font:inherit;font-size:.875rem;font-weight:600;line-height:1.5;color:var(--accent);cursor:pointer}
-button.neighbourhood-explore:hover{background:var(--desktop-selected,var(--surface-soft,#e1eee8));text-decoration:underline;text-underline-offset:3px}
-button.neighbourhood-explore:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .neighbourhood-sources{padding-top:0;border-top:0}
 .neighbourhood-sources ol{padding-left:20px;margin:0}
 .neighbourhood-sources li+li{margin-top:8px}
@@ -40,9 +38,15 @@ button.neighbourhood-explore:focus-visible{outline:3px solid var(--accent);outli
   .neighbourhood-profile{font-size:1rem;color:var(--mobile-ink,var(--ink))}
   .neighbourhood-profile h2,.neighbourhood-profile h3{font-size:1rem}
   .neighbourhood-metric dt,.neighbourhood-note,.neighbourhood-missing,.neighbourhood-metric.is-missing dd,.neighbourhood-notes p,.neighbourhood-sources a{font-size:.875rem}
-  .neighbourhood-groups .neighbourhood-metric dd,.neighbourhood-explore{font-size:.9375rem}
+  .neighbourhood-groups .neighbourhood-metric dd{font-size:.9375rem}
   .neighbourhood-metric dt,.neighbourhood-note,.neighbourhood-missing,.neighbourhood-metric.is-missing dd,.neighbourhood-notes p{color:var(--mobile-muted,var(--muted))}
   .neighbourhood-source-ref{font-size:.8125rem;min-width:24px;text-align:center}
-  button.neighbourhood-explore{font-size:1rem;min-height:48px}
   .neighbourhood-metric-basis{font-size:.875rem;color:var(--mobile-muted,var(--muted))}
 }
+.local-census-fallback{margin-top:24px;padding-top:20px;border-top:2px solid var(--control-line)}
+.local-census-fallback:first-child{margin-top:0;padding-top:0;border-top:0}
+.local-census-fallback>h2{font-size:1rem;margin:0 0 10px}
+.local-census-fallback>p{font-size:.8125rem;line-height:1.6;color:var(--muted)}
+.local-census-fallback>p span{display:block;margin-top:5px}
+.average-swatch,.median-swatch{display:inline-block;width:13px;height:11px;border:1px solid #758a7f;vertical-align:middle;margin-right:3px;background:#d8e5cb}
+.average-swatch{margin-left:8px;background:repeating-linear-gradient(135deg,#d8e5cb 0 3px,#627268 3px 4px,#d8e5cb 4px 7px)}

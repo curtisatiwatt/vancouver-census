@@ -16,7 +16,7 @@ test('official population, average and median preserve their own values and year
 test('null and unavailable values never become zero and an empty profile remains brief', () => {
   const html = renderNeighbourhoodProfile(feature({ population: value(null), incomeMedian: value(null), incomeAverage: value(NaN), groups: [{ name: 'Chinese', value: null, unit: 'percent', year: 2021 }] }));
   assert.match(html, /尚无已核对的同范围数值/);
-  assert.match(html, /放大地图并点选街区/);
+  assert.doesNotMatch(html, /放大地图并点选街区|neighbourhood-explore/);
   assert.equal((html.match(/尚无已核对的同范围数值/g) || []).length, 1);
   assert.doesNotMatch(html, /<dd>|0%|\$0|未公布/);
   const missingMedian = renderNeighbourhoodProfile(feature({ incomeMedian: value(null), incomeAverage: value(95000) }));
@@ -38,6 +38,74 @@ test('published municipal categories retain percentages and counts without norma
   for (const published of ['56%', '35%', '10%', '1,250 people', '0 people']) assert.ok(html.includes(published));
   assert.doesNotMatch(html, /12\.5%|55\.4%|White/);
   assert.match(html, /Suppressed[\s\S]*?No verified value/);
+});
+
+test('municipal groups sort by published values with stable ties and missing values last', () => {
+  const f = feature({ groups: [
+    { name: 'Missing first in data', value: null, unit: 'percent' },
+    { name: 'Other & Multiple Groups', value: 6, unit: 'percent' },
+    { name: 'Caucasian', value: 56, unit: 'percent' },
+    { name: 'Chinese', value: 35, unit: 'percent' },
+    { name: 'Tie one', value: 2, unit: 'percent' },
+    { name: 'Tie two', value: 2, unit: 'percent' },
+    { name: 'Published zero', value: 0, unit: 'percent' },
+  ] });
+  const before = JSON.stringify(f);
+  const html = renderNeighbourhoodProfile(f, { language: 'en' });
+  const orderedNames = ['Caucasian', 'Chinese', 'Other &amp; Multiple Groups', 'Tie one', 'Tie two', 'Published zero', 'Missing first in data'];
+  const positions = orderedNames.map(name => html.indexOf(`<dt>${name}`));
+  assert.ok(positions.every((position, i) => position >= 0 && (i === 0 || position > positions[i - 1])));
+  assert.match(html, /width:56%/);
+  assert.match(html, /width:35%/);
+  assert.match(html, /width:0%/);
+  assert.equal((html.match(/class="neighbourhood-group-track"/g) || []).length, 6);
+  assert.equal(JSON.stringify(f), before);
+});
+
+test('an explicit source sequence overrides numeric ranking without changing the source categories', () => {
+  const groups = [
+    { name: 'Small category', value: 10, unit: 'count', sourceOrder: 2 },
+    { name: 'Largest category', value: 500, unit: 'count', sourceOrder: 1 },
+    { name: 'Medium category', value: 100, unit: 'count', sourceOrder: 0 },
+  ];
+  const explicit = renderNeighbourhoodProfile(feature({ groups, groupOrder: ['Small category', 'Medium category', 'Largest category'] }), { language: 'en' });
+  assert.ok(explicit.indexOf('<dt>Small category') < explicit.indexOf('<dt>Medium category'));
+  assert.ok(explicit.indexOf('<dt>Medium category') < explicit.indexOf('<dt>Largest category'));
+  const numeric = renderNeighbourhoodProfile(feature({ groups }), { language: 'en' });
+  assert.ok(numeric.indexOf('<dt>Medium category') < numeric.indexOf('<dt>Largest category'));
+  assert.ok(numeric.indexOf('<dt>Largest category') < numeric.indexOf('<dt>Small category'));
+  const original = renderNeighbourhoodProfile(feature({ groups, groupOrder: 'source' }), { language: 'en' });
+  assert.ok(original.indexOf('<dt>Small category') < original.indexOf('<dt>Largest category'));
+});
+
+test('count bars compare counts without manufacturing population shares', () => {
+  const html = renderNeighbourhoodProfile(feature({ population: value(1000000), populationGroupBase: value(100000), groups: [
+    { name: 'Small count', value: 1000, unit: 'count' },
+    { name: 'Largest count', value: 4000, unit: 'count' },
+    { name: 'Withheld count', value: null, unit: 'count' },
+  ] }), { language: 'en' });
+  assert.match(html, /4,000 people/);
+  assert.match(html, /1,000 people/);
+  assert.match(html, /width:100%/);
+  assert.match(html, /width:25%/);
+  assert.equal((html.match(/class="neighbourhood-group-track"/g) || []).length, 2);
+  assert.match(html, /Bars compare published counts/);
+  assert.doesNotMatch(html, />[^<]*\d+(?:\.\d+)?%/);
+  assert.doesNotMatch(html, /Zoom in and select a local area|neighbourhood-explore/);
+});
+
+test('inline census fallback names its own source and shows only supplied missing metrics', () => {
+  const censusGroups = feature({ groups: [{ name: 'Chinese', value: 1200, unit: 'count', year: 2021 }] });
+  const zh = renderNeighbourhoodProfile(censusGroups, { language: 'zh', sourceKind: 'census' });
+  assert.match(zh, /当前位置普查族裔资料/);
+  assert.match(zh, /普查资料/);
+  assert.match(zh, /普查范围/);
+  assert.doesNotMatch(zh, /市府|家庭收入|尚无已核对|当前位置普查人口/);
+  const en = renderNeighbourhoodProfile(feature({ population: value(4400, 2021) }), { language: 'en', sourceKind: 'census' });
+  assert.match(en, /Census population at this location/);
+  assert.match(en, /Census data/);
+  assert.match(en, /Census geography/);
+  assert.doesNotMatch(en, /Municipal|Household income|No verified value|population groups at this location/);
 });
 
 test('separate official subprofiles do not synthesize one population or median for a merged boundary', () => {

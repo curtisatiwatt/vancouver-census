@@ -35,7 +35,7 @@ export function createCommunityHighlight({ L, map, features, isDark = () => fals
       fill: false, opacity: 1, lineCap: 'round', lineJoin: 'round',
       // Keep every source ring and vertex. Clipping a polygon at the viewport
       // can invent a straight edge; simplification can eat narrow boundary turns.
-      noClip: true, smoothFactor: 0, dashArray: null,
+      noClip: true, smoothFactor: 0, dashArray: feature.properties?.boundaryType === 'census-approximation' ? '5 4' : null,
     };
     const name = selected ? 'selected' : 'hover';
     return [
