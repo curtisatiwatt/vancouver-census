@@ -1,0 +1,7572 @@
+{
+  "scope": "Greater Vancouver regional district (CD 5915), 2021 boundaries",
+  "cma933EqualsCd5915Geometry": true,
+  "ctCount": 535,
+  "csdCount": 38,
+  "profileJoin": "CTUID to ALT_GEO_CODE; preserve null values and suppression flags",
+  "municipalities": "Derived from EPSG:3347 area intersections. Keep primary CSD, overlaps >=1% of CT area, and CSDs >=95% contained in CT. Geographic filters retain the whole tract; no census values are apportioned.",
+  "populationSum": 2642825,
+  "regionalPopulation": 2642825,
+  "sharedTracts": [
+    {
+      "ctuid": "9330250.02",
+      "dguid": "2021S05079330250.02",
+      "municipalities": [
+        "5915020",
+        "5915038",
+        "5915036",
+        "5915065"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915020",
+          "ctAreaShare": 0.95775538,
+          "csdAreaShare": 0.9743151
+        },
+        {
+          "csduid": "5915038",
+          "ctAreaShare": 0.03314917,
+          "csdAreaShare": 0.99997928
+        },
+        {
+          "csduid": "5915036",
+          "ctAreaShare": 0.00622958,
+          "csdAreaShare": 0.99997967
+        },
+        {
+          "csduid": "5915065",
+          "ctAreaShare": 0.00286425,
+          "csdAreaShare": 0.99988377
+        }
+      ]
+    }
+  ],
+  "sourceSha256": {
+    "data/source/cd-boundaries.geojson": "35cee61906c99d392bc81678132850511048f509fc4c33f897d8a5de60caf2c8",
+    "data/source/census-values.json": "36969ebf11a20841be6858d5c631cd264647a41a86cd2294d676a7d3e49ccd62",
+    "data/source/cma-boundaries.geojson": "dbe40b3d7af8dd0eb254d698a22342fe3f748c843f2c01c1cdcf4240be70487d",
+    "data/source/csd-boundaries.geojson": "4c8256c205d62b4d98afb655912b8fc27f68b775b93119d422b922518887109f",
+    "data/source/ct-boundaries.geojson": "0d733b578a2e290293a1f0e1d7fab6b7d799889212e4fc6c0cdbe276caa57890",
+    "data/source/geographic-metadata.json": "d5c0b56ea28b282d068489e6dcc3b836d4d196bd4f062726b20322bcc2775881"
+  },
+  "outputSha256": {
+    "public/data/communities.geojson": "b47c569d03068fa1e350f32dc98d1757dc6ee528ee07edf79f7df00fe2951f1d",
+    "public/data/population-groups.json": "3d661374fee5d6ed31b9b310ef00c844e2c5f045a12704f662881ec86049ca2d",
+    "public/data/municipalities.geojson": "7df8d007715ddb05c3c4ab17453142226d9748a81df093adf605acf744dee601",
+    "public/data/region-boundary.geojson": "c51946e9af60f6a6c48e1c00b0f6fa60dc8859835792af186290f09b6f50d144"
+  },
+  "joins": [
+    {
+      "ctuid": "9330001.01",
+      "dguid": "2021S05079330001.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99982135,
+          "csdAreaShare": 0.00881676
+        }
+      ]
+    },
+    {
+      "ctuid": "9330001.02",
+      "dguid": "2021S05079330001.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.9999909,
+          "csdAreaShare": 0.01614231
+        }
+      ]
+    },
+    {
+      "ctuid": "9330002.01",
+      "dguid": "2021S05079330002.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99988339,
+          "csdAreaShare": 0.01681257
+        }
+      ]
+    },
+    {
+      "ctuid": "9330002.03",
+      "dguid": "2021S05079330002.03",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00679454
+        }
+      ]
+    },
+    {
+      "ctuid": "9330002.04",
+      "dguid": "2021S05079330002.04",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99987315,
+          "csdAreaShare": 0.00673087
+        }
+      ]
+    },
+    {
+      "ctuid": "9330003.01",
+      "dguid": "2021S05079330003.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00472104
+        }
+      ]
+    },
+    {
+      "ctuid": "9330003.02",
+      "dguid": "2021S05079330003.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99994076,
+          "csdAreaShare": 0.00967318
+        }
+      ]
+    },
+    {
+      "ctuid": "9330004.01",
+      "dguid": "2021S05079330004.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99970362,
+          "csdAreaShare": 0.01348196
+        }
+      ]
+    },
+    {
+      "ctuid": "9330004.02",
+      "dguid": "2021S05079330004.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99987385,
+          "csdAreaShare": 0.010238
+        }
+      ]
+    },
+    {
+      "ctuid": "9330005.00",
+      "dguid": "2021S05079330005.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99983542,
+          "csdAreaShare": 0.011945
+        }
+      ]
+    },
+    {
+      "ctuid": "9330006.01",
+      "dguid": "2021S05079330006.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00793315
+        }
+      ]
+    },
+    {
+      "ctuid": "9330006.02",
+      "dguid": "2021S05079330006.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00947137
+        }
+      ]
+    },
+    {
+      "ctuid": "9330007.01",
+      "dguid": "2021S05079330007.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99992788,
+          "csdAreaShare": 0.02318843
+        }
+      ]
+    },
+    {
+      "ctuid": "9330007.02",
+      "dguid": "2021S05079330007.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01227807
+        }
+      ]
+    },
+    {
+      "ctuid": "9330008.01",
+      "dguid": "2021S05079330008.01",
+      "municipalities": [
+        "5915803"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915803",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330008.02",
+      "dguid": "2021S05079330008.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99994744,
+          "csdAreaShare": 0.03072728
+        }
+      ]
+    },
+    {
+      "ctuid": "9330009.00",
+      "dguid": "2021S05079330009.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01442167
+        }
+      ]
+    },
+    {
+      "ctuid": "9330010.01",
+      "dguid": "2021S05079330010.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01227462
+        }
+      ]
+    },
+    {
+      "ctuid": "9330010.02",
+      "dguid": "2021S05079330010.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01206002
+        }
+      ]
+    },
+    {
+      "ctuid": "9330011.00",
+      "dguid": "2021S05079330011.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01360479
+        }
+      ]
+    },
+    {
+      "ctuid": "9330012.01",
+      "dguid": "2021S05079330012.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00768896
+        }
+      ]
+    },
+    {
+      "ctuid": "9330012.02",
+      "dguid": "2021S05079330012.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0056808
+        }
+      ]
+    },
+    {
+      "ctuid": "9330013.01",
+      "dguid": "2021S05079330013.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00988504
+        }
+      ]
+    },
+    {
+      "ctuid": "9330013.03",
+      "dguid": "2021S05079330013.03",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00539571
+        }
+      ]
+    },
+    {
+      "ctuid": "9330013.04",
+      "dguid": "2021S05079330013.04",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00413713
+        }
+      ]
+    },
+    {
+      "ctuid": "9330014.01",
+      "dguid": "2021S05079330014.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00436167
+        }
+      ]
+    },
+    {
+      "ctuid": "9330014.02",
+      "dguid": "2021S05079330014.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00699126
+        }
+      ]
+    },
+    {
+      "ctuid": "9330015.01",
+      "dguid": "2021S05079330015.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.9998558,
+          "csdAreaShare": 0.00808405
+        }
+      ]
+    },
+    {
+      "ctuid": "9330015.02",
+      "dguid": "2021S05079330015.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01162726
+        }
+      ]
+    },
+    {
+      "ctuid": "9330016.01",
+      "dguid": "2021S05079330016.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99990074,
+          "csdAreaShare": 0.00583039
+        }
+      ]
+    },
+    {
+      "ctuid": "9330016.04",
+      "dguid": "2021S05079330016.04",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00812198
+        }
+      ]
+    },
+    {
+      "ctuid": "9330016.05",
+      "dguid": "2021S05079330016.05",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00470242
+        }
+      ]
+    },
+    {
+      "ctuid": "9330016.06",
+      "dguid": "2021S05079330016.06",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0010662
+        }
+      ]
+    },
+    {
+      "ctuid": "9330017.02",
+      "dguid": "2021S05079330017.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00739967
+        }
+      ]
+    },
+    {
+      "ctuid": "9330017.03",
+      "dguid": "2021S05079330017.03",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00640435
+        }
+      ]
+    },
+    {
+      "ctuid": "9330017.04",
+      "dguid": "2021S05079330017.04",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00363429
+        }
+      ]
+    },
+    {
+      "ctuid": "9330018.01",
+      "dguid": "2021S05079330018.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00781217
+        }
+      ]
+    },
+    {
+      "ctuid": "9330018.02",
+      "dguid": "2021S05079330018.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00856145
+        }
+      ]
+    },
+    {
+      "ctuid": "9330019.00",
+      "dguid": "2021S05079330019.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01599166
+        }
+      ]
+    },
+    {
+      "ctuid": "9330020.00",
+      "dguid": "2021S05079330020.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01207486
+        }
+      ]
+    },
+    {
+      "ctuid": "9330021.00",
+      "dguid": "2021S05079330021.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01912276
+        }
+      ]
+    },
+    {
+      "ctuid": "9330022.00",
+      "dguid": "2021S05079330022.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00275165
+        }
+      ]
+    },
+    {
+      "ctuid": "9330023.00",
+      "dguid": "2021S05079330023.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01039925
+        }
+      ]
+    },
+    {
+      "ctuid": "9330024.00",
+      "dguid": "2021S05079330024.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01476411
+        }
+      ]
+    },
+    {
+      "ctuid": "9330025.00",
+      "dguid": "2021S05079330025.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01719102
+        }
+      ]
+    },
+    {
+      "ctuid": "9330026.00",
+      "dguid": "2021S05079330026.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0109
+        }
+      ]
+    },
+    {
+      "ctuid": "9330027.01",
+      "dguid": "2021S05079330027.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01103621
+        }
+      ]
+    },
+    {
+      "ctuid": "9330027.02",
+      "dguid": "2021S05079330027.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00893029
+        }
+      ]
+    },
+    {
+      "ctuid": "9330028.00",
+      "dguid": "2021S05079330028.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01276348
+        }
+      ]
+    },
+    {
+      "ctuid": "9330029.00",
+      "dguid": "2021S05079330029.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01300892
+        }
+      ]
+    },
+    {
+      "ctuid": "9330030.00",
+      "dguid": "2021S05079330030.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01262354
+        }
+      ]
+    },
+    {
+      "ctuid": "9330031.01",
+      "dguid": "2021S05079330031.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00777507
+        }
+      ]
+    },
+    {
+      "ctuid": "9330031.02",
+      "dguid": "2021S05079330031.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00599423
+        }
+      ]
+    },
+    {
+      "ctuid": "9330032.01",
+      "dguid": "2021S05079330032.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00499562
+        }
+      ]
+    },
+    {
+      "ctuid": "9330032.02",
+      "dguid": "2021S05079330032.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00574073
+        }
+      ]
+    },
+    {
+      "ctuid": "9330033.01",
+      "dguid": "2021S05079330033.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00592034
+        }
+      ]
+    },
+    {
+      "ctuid": "9330033.02",
+      "dguid": "2021S05079330033.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00386934
+        }
+      ]
+    },
+    {
+      "ctuid": "9330034.01",
+      "dguid": "2021S05079330034.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00581108
+        }
+      ]
+    },
+    {
+      "ctuid": "9330034.02",
+      "dguid": "2021S05079330034.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01190084
+        }
+      ]
+    },
+    {
+      "ctuid": "9330035.01",
+      "dguid": "2021S05079330035.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0062368
+        }
+      ]
+    },
+    {
+      "ctuid": "9330035.02",
+      "dguid": "2021S05079330035.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01338208
+        }
+      ]
+    },
+    {
+      "ctuid": "9330036.01",
+      "dguid": "2021S05079330036.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0118771
+        }
+      ]
+    },
+    {
+      "ctuid": "9330036.02",
+      "dguid": "2021S05079330036.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99993909,
+          "csdAreaShare": 0.01271846
+        }
+      ]
+    },
+    {
+      "ctuid": "9330037.01",
+      "dguid": "2021S05079330037.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00521273
+        }
+      ]
+    },
+    {
+      "ctuid": "9330037.02",
+      "dguid": "2021S05079330037.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00449494
+        }
+      ]
+    },
+    {
+      "ctuid": "9330038.00",
+      "dguid": "2021S05079330038.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00510719
+        }
+      ]
+    },
+    {
+      "ctuid": "9330039.01",
+      "dguid": "2021S05079330039.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00615964
+        }
+      ]
+    },
+    {
+      "ctuid": "9330039.02",
+      "dguid": "2021S05079330039.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0052172
+        }
+      ]
+    },
+    {
+      "ctuid": "9330040.01",
+      "dguid": "2021S05079330040.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00234758
+        }
+      ]
+    },
+    {
+      "ctuid": "9330040.02",
+      "dguid": "2021S05079330040.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00273403
+        }
+      ]
+    },
+    {
+      "ctuid": "9330041.01",
+      "dguid": "2021S05079330041.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00329706
+        }
+      ]
+    },
+    {
+      "ctuid": "9330041.02",
+      "dguid": "2021S05079330041.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0086844
+        }
+      ]
+    },
+    {
+      "ctuid": "9330042.00",
+      "dguid": "2021S05079330042.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00941043
+        }
+      ]
+    },
+    {
+      "ctuid": "9330043.01",
+      "dguid": "2021S05079330043.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00614696
+        }
+      ]
+    },
+    {
+      "ctuid": "9330043.02",
+      "dguid": "2021S05079330043.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00864427
+        }
+      ]
+    },
+    {
+      "ctuid": "9330044.00",
+      "dguid": "2021S05079330044.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99997171,
+          "csdAreaShare": 0.02503295
+        }
+      ]
+    },
+    {
+      "ctuid": "9330045.01",
+      "dguid": "2021S05079330045.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99930231,
+          "csdAreaShare": 0.00582365
+        }
+      ]
+    },
+    {
+      "ctuid": "9330045.02",
+      "dguid": "2021S05079330045.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0063536
+        }
+      ]
+    },
+    {
+      "ctuid": "9330046.00",
+      "dguid": "2021S05079330046.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0042521
+        }
+      ]
+    },
+    {
+      "ctuid": "9330047.01",
+      "dguid": "2021S05079330047.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99893779,
+          "csdAreaShare": 0.00288404
+        }
+      ]
+    },
+    {
+      "ctuid": "9330047.02",
+      "dguid": "2021S05079330047.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99944534,
+          "csdAreaShare": 0.00338548
+        }
+      ]
+    },
+    {
+      "ctuid": "9330048.01",
+      "dguid": "2021S05079330048.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99989004,
+          "csdAreaShare": 0.00722223
+        }
+      ]
+    },
+    {
+      "ctuid": "9330048.02",
+      "dguid": "2021S05079330048.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0033378
+        }
+      ]
+    },
+    {
+      "ctuid": "9330049.02",
+      "dguid": "2021S05079330049.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99966094,
+          "csdAreaShare": 0.00737242
+        }
+      ]
+    },
+    {
+      "ctuid": "9330049.03",
+      "dguid": "2021S05079330049.03",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00219711
+        }
+      ]
+    },
+    {
+      "ctuid": "9330049.04",
+      "dguid": "2021S05079330049.04",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00216976
+        }
+      ]
+    },
+    {
+      "ctuid": "9330049.05",
+      "dguid": "2021S05079330049.05",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00559957
+        }
+      ]
+    },
+    {
+      "ctuid": "9330049.06",
+      "dguid": "2021S05079330049.06",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99999819,
+          "csdAreaShare": 0.00348306
+        }
+      ]
+    },
+    {
+      "ctuid": "9330050.02",
+      "dguid": "2021S05079330050.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00590006
+        }
+      ]
+    },
+    {
+      "ctuid": "9330050.03",
+      "dguid": "2021S05079330050.03",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01118456
+        }
+      ]
+    },
+    {
+      "ctuid": "9330050.04",
+      "dguid": "2021S05079330050.04",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00266256
+        }
+      ]
+    },
+    {
+      "ctuid": "9330051.01",
+      "dguid": "2021S05079330051.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00471042
+        }
+      ]
+    },
+    {
+      "ctuid": "9330051.02",
+      "dguid": "2021S05079330051.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00653845
+        }
+      ]
+    },
+    {
+      "ctuid": "9330052.01",
+      "dguid": "2021S05079330052.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99989659,
+          "csdAreaShare": 0.01092229
+        }
+      ]
+    },
+    {
+      "ctuid": "9330052.02",
+      "dguid": "2021S05079330052.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99999997,
+          "csdAreaShare": 0.01146466
+        }
+      ]
+    },
+    {
+      "ctuid": "9330053.01",
+      "dguid": "2021S05079330053.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.02272413
+        }
+      ]
+    },
+    {
+      "ctuid": "9330053.02",
+      "dguid": "2021S05079330053.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99999676,
+          "csdAreaShare": 0.00690212
+        }
+      ]
+    },
+    {
+      "ctuid": "9330054.01",
+      "dguid": "2021S05079330054.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00508169
+        }
+      ]
+    },
+    {
+      "ctuid": "9330054.02",
+      "dguid": "2021S05079330054.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00686571
+        }
+      ]
+    },
+    {
+      "ctuid": "9330055.01",
+      "dguid": "2021S05079330055.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00694767
+        }
+      ]
+    },
+    {
+      "ctuid": "9330055.02",
+      "dguid": "2021S05079330055.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99977656,
+          "csdAreaShare": 0.00563399
+        }
+      ]
+    },
+    {
+      "ctuid": "9330056.01",
+      "dguid": "2021S05079330056.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99999987,
+          "csdAreaShare": 0.00975271
+        }
+      ]
+    },
+    {
+      "ctuid": "9330056.02",
+      "dguid": "2021S05079330056.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00577884
+        }
+      ]
+    },
+    {
+      "ctuid": "9330057.01",
+      "dguid": "2021S05079330057.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00200357
+        }
+      ]
+    },
+    {
+      "ctuid": "9330057.02",
+      "dguid": "2021S05079330057.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01408538
+        }
+      ]
+    },
+    {
+      "ctuid": "9330058.00",
+      "dguid": "2021S05079330058.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99999985,
+          "csdAreaShare": 0.00943246
+        }
+      ]
+    },
+    {
+      "ctuid": "9330059.07",
+      "dguid": "2021S05079330059.07",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.9999851,
+          "csdAreaShare": 0.00225179
+        }
+      ]
+    },
+    {
+      "ctuid": "9330059.08",
+      "dguid": "2021S05079330059.08",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99971784,
+          "csdAreaShare": 0.00299667
+        }
+      ]
+    },
+    {
+      "ctuid": "9330059.09",
+      "dguid": "2021S05079330059.09",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00172952
+        }
+      ]
+    },
+    {
+      "ctuid": "9330059.10",
+      "dguid": "2021S05079330059.10",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00172742
+        }
+      ]
+    },
+    {
+      "ctuid": "9330059.11",
+      "dguid": "2021S05079330059.11",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99999983,
+          "csdAreaShare": 0.00744338
+        }
+      ]
+    },
+    {
+      "ctuid": "9330059.13",
+      "dguid": "2021S05079330059.13",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00276567
+        }
+      ]
+    },
+    {
+      "ctuid": "9330059.15",
+      "dguid": "2021S05079330059.15",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00129624
+        }
+      ]
+    },
+    {
+      "ctuid": "9330059.16",
+      "dguid": "2021S05079330059.16",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99991834,
+          "csdAreaShare": 0.00381844
+        }
+      ]
+    },
+    {
+      "ctuid": "9330059.17",
+      "dguid": "2021S05079330059.17",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99999942,
+          "csdAreaShare": 0.00489353
+        }
+      ]
+    },
+    {
+      "ctuid": "9330059.18",
+      "dguid": "2021S05079330059.18",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00185759
+        }
+      ]
+    },
+    {
+      "ctuid": "9330060.01",
+      "dguid": "2021S05079330060.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99973112,
+          "csdAreaShare": 0.00128923
+        }
+      ]
+    },
+    {
+      "ctuid": "9330060.02",
+      "dguid": "2021S05079330060.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99999944,
+          "csdAreaShare": 0.00201063
+        }
+      ]
+    },
+    {
+      "ctuid": "9330061.00",
+      "dguid": "2021S05079330061.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99963978,
+          "csdAreaShare": 0.00183753
+        }
+      ]
+    },
+    {
+      "ctuid": "9330062.00",
+      "dguid": "2021S05079330062.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99988368,
+          "csdAreaShare": 0.00145977
+        }
+      ]
+    },
+    {
+      "ctuid": "9330063.00",
+      "dguid": "2021S05079330063.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00160839
+        }
+      ]
+    },
+    {
+      "ctuid": "9330064.00",
+      "dguid": "2021S05079330064.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00206592
+        }
+      ]
+    },
+    {
+      "ctuid": "9330065.00",
+      "dguid": "2021S05079330065.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00208566
+        }
+      ]
+    },
+    {
+      "ctuid": "9330066.01",
+      "dguid": "2021S05079330066.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00110814
+        }
+      ]
+    },
+    {
+      "ctuid": "9330066.02",
+      "dguid": "2021S05079330066.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99952776,
+          "csdAreaShare": 0.00369654
+        }
+      ]
+    },
+    {
+      "ctuid": "9330067.01",
+      "dguid": "2021S05079330067.01",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00160614
+        }
+      ]
+    },
+    {
+      "ctuid": "9330067.02",
+      "dguid": "2021S05079330067.02",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99905501,
+          "csdAreaShare": 0.00191449
+        }
+      ]
+    },
+    {
+      "ctuid": "9330068.00",
+      "dguid": "2021S05079330068.00",
+      "municipalities": [
+        "5915022"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915022",
+          "ctAreaShare": 0.99980664,
+          "csdAreaShare": 0.03689421
+        }
+      ]
+    },
+    {
+      "ctuid": "9330069.02",
+      "dguid": "2021S05079330069.02",
+      "municipalities": [
+        "5915020"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915020",
+          "ctAreaShare": 0.99996296,
+          "csdAreaShare": 0.0103907
+        }
+      ]
+    },
+    {
+      "ctuid": "9330069.03",
+      "dguid": "2021S05079330069.03",
+      "municipalities": [
+        "5915020"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915020",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00271787
+        }
+      ]
+    },
+    {
+      "ctuid": "9330069.04",
+      "dguid": "2021S05079330069.04",
+      "municipalities": [
+        "5915020"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915020",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00358228
+        }
+      ]
+    },
+    {
+      "ctuid": "9330100.01",
+      "dguid": "2021S05079330100.01",
+      "municipalities": [
+        "5915051"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915051",
+          "ctAreaShare": 0.99999917,
+          "csdAreaShare": 0.08182283
+        }
+      ]
+    },
+    {
+      "ctuid": "9330100.02",
+      "dguid": "2021S05079330100.02",
+      "municipalities": [
+        "5915051"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915051",
+          "ctAreaShare": 0.99995042,
+          "csdAreaShare": 0.24570199
+        }
+      ]
+    },
+    {
+      "ctuid": "9330101.03",
+      "dguid": "2021S05079330101.03",
+      "municipalities": [
+        "5915051"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915051",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.02857126
+        }
+      ]
+    },
+    {
+      "ctuid": "9330101.04",
+      "dguid": "2021S05079330101.04",
+      "municipalities": [
+        "5915051"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915051",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.02545747
+        }
+      ]
+    },
+    {
+      "ctuid": "9330101.05",
+      "dguid": "2021S05079330101.05",
+      "municipalities": [
+        "5915051"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915051",
+          "ctAreaShare": 0.99995278,
+          "csdAreaShare": 0.04962203
+        }
+      ]
+    },
+    {
+      "ctuid": "9330101.06",
+      "dguid": "2021S05079330101.06",
+      "municipalities": [
+        "5915051"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915051",
+          "ctAreaShare": 0.99990397,
+          "csdAreaShare": 0.03552506
+        }
+      ]
+    },
+    {
+      "ctuid": "9330102.01",
+      "dguid": "2021S05079330102.01",
+      "municipalities": [
+        "5915807"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915807",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330102.02",
+      "dguid": "2021S05079330102.02",
+      "municipalities": [
+        "5915051"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915051",
+          "ctAreaShare": 0.99997248,
+          "csdAreaShare": 0.21685921
+        }
+      ]
+    },
+    {
+      "ctuid": "9330103.01",
+      "dguid": "2021S05079330103.01",
+      "municipalities": [
+        "5915051"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915051",
+          "ctAreaShare": 0.99873819,
+          "csdAreaShare": 0.05918954
+        }
+      ]
+    },
+    {
+      "ctuid": "9330103.02",
+      "dguid": "2021S05079330103.02",
+      "municipalities": [
+        "5915051"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915051",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.05376915
+        }
+      ]
+    },
+    {
+      "ctuid": "9330104.01",
+      "dguid": "2021S05079330104.01",
+      "municipalities": [
+        "5915051"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915051",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.04376523
+        }
+      ]
+    },
+    {
+      "ctuid": "9330104.02",
+      "dguid": "2021S05079330104.02",
+      "municipalities": [
+        "5915051"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915051",
+          "ctAreaShare": 0.99998675,
+          "csdAreaShare": 0.15956603
+        }
+      ]
+    },
+    {
+      "ctuid": "9330110.02",
+      "dguid": "2021S05079330110.02",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 0.99997263,
+          "csdAreaShare": 0.01341292
+        }
+      ]
+    },
+    {
+      "ctuid": "9330110.03",
+      "dguid": "2021S05079330110.03",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 0.99998378,
+          "csdAreaShare": 0.23779874
+        }
+      ]
+    },
+    {
+      "ctuid": "9330110.04",
+      "dguid": "2021S05079330110.04",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 0.9998119,
+          "csdAreaShare": 0.00923731
+        }
+      ]
+    },
+    {
+      "ctuid": "9330111.02",
+      "dguid": "2021S05079330111.02",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 0.99999896,
+          "csdAreaShare": 0.19952843
+        }
+      ]
+    },
+    {
+      "ctuid": "9330111.04",
+      "dguid": "2021S05079330111.04",
+      "municipalities": [
+        "5915806"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915806",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330111.05",
+      "dguid": "2021S05079330111.05",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 0.99984765,
+          "csdAreaShare": 0.02062751
+        }
+      ]
+    },
+    {
+      "ctuid": "9330111.06",
+      "dguid": "2021S05079330111.06",
+      "municipalities": [
+        "5915811"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915811",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330111.07",
+      "dguid": "2021S05079330111.07",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 0.99989722,
+          "csdAreaShare": 0.14743646
+        }
+      ]
+    },
+    {
+      "ctuid": "9330112.00",
+      "dguid": "2021S05079330112.00",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00653668
+        }
+      ]
+    },
+    {
+      "ctuid": "9330113.00",
+      "dguid": "2021S05079330113.00",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01821303
+        }
+      ]
+    },
+    {
+      "ctuid": "9330114.01",
+      "dguid": "2021S05079330114.01",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01042925
+        }
+      ]
+    },
+    {
+      "ctuid": "9330114.02",
+      "dguid": "2021S05079330114.02",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01240995
+        }
+      ]
+    },
+    {
+      "ctuid": "9330115.00",
+      "dguid": "2021S05079330115.00",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 0.9999047,
+          "csdAreaShare": 0.02934591
+        }
+      ]
+    },
+    {
+      "ctuid": "9330116.00",
+      "dguid": "2021S05079330116.00",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 0.99989708,
+          "csdAreaShare": 0.09863514
+        }
+      ]
+    },
+    {
+      "ctuid": "9330117.00",
+      "dguid": "2021S05079330117.00",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01458479
+        }
+      ]
+    },
+    {
+      "ctuid": "9330118.00",
+      "dguid": "2021S05079330118.00",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 0.9998241,
+          "csdAreaShare": 0.02174716
+        }
+      ]
+    },
+    {
+      "ctuid": "9330119.00",
+      "dguid": "2021S05079330119.00",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00823108
+        }
+      ]
+    },
+    {
+      "ctuid": "9330120.00",
+      "dguid": "2021S05079330120.00",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 0.99998871,
+          "csdAreaShare": 0.01450263
+        }
+      ]
+    },
+    {
+      "ctuid": "9330121.00",
+      "dguid": "2021S05079330121.00",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01134356
+        }
+      ]
+    },
+    {
+      "ctuid": "9330122.00",
+      "dguid": "2021S05079330122.00",
+      "municipalities": [
+        "5915046"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915046",
+          "ctAreaShare": 0.99999494,
+          "csdAreaShare": 0.12597735
+        }
+      ]
+    },
+    {
+      "ctuid": "9330130.01",
+      "dguid": "2021S05079330130.01",
+      "municipalities": [
+        "5915055"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915055",
+          "ctAreaShare": 0.99903477,
+          "csdAreaShare": 0.00990299
+        }
+      ]
+    },
+    {
+      "ctuid": "9330130.03",
+      "dguid": "2021S05079330130.03",
+      "municipalities": [
+        "5915055"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915055",
+          "ctAreaShare": 0.99994896,
+          "csdAreaShare": 0.01701821
+        }
+      ]
+    },
+    {
+      "ctuid": "9330130.04",
+      "dguid": "2021S05079330130.04",
+      "municipalities": [
+        "5915808"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915808",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330131.00",
+      "dguid": "2021S05079330131.00",
+      "municipalities": [
+        "5915055"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915055",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.03796725
+        }
+      ]
+    },
+    {
+      "ctuid": "9330132.00",
+      "dguid": "2021S05079330132.00",
+      "municipalities": [
+        "5915055"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915055",
+          "ctAreaShare": 0.99976987,
+          "csdAreaShare": 0.03715388
+        }
+      ]
+    },
+    {
+      "ctuid": "9330133.01",
+      "dguid": "2021S05079330133.01",
+      "municipalities": [
+        "5915055"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915055",
+          "ctAreaShare": 0.99976419,
+          "csdAreaShare": 0.04425484
+        }
+      ]
+    },
+    {
+      "ctuid": "9330133.02",
+      "dguid": "2021S05079330133.02",
+      "municipalities": [
+        "5915055"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915055",
+          "ctAreaShare": 0.99998981,
+          "csdAreaShare": 0.41650395
+        }
+      ]
+    },
+    {
+      "ctuid": "9330134.00",
+      "dguid": "2021S05079330134.00",
+      "municipalities": [
+        "5915055"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915055",
+          "ctAreaShare": 0.99998836,
+          "csdAreaShare": 0.17125535
+        }
+      ]
+    },
+    {
+      "ctuid": "9330135.00",
+      "dguid": "2021S05079330135.00",
+      "municipalities": [
+        "5915055"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915055",
+          "ctAreaShare": 0.99999972,
+          "csdAreaShare": 0.2658576
+        }
+      ]
+    },
+    {
+      "ctuid": "9330140.02",
+      "dguid": "2021S05079330140.02",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99996859,
+          "csdAreaShare": 0.12040788
+        }
+      ]
+    },
+    {
+      "ctuid": "9330140.03",
+      "dguid": "2021S05079330140.03",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99996929,
+          "csdAreaShare": 0.33082488
+        }
+      ]
+    },
+    {
+      "ctuid": "9330140.04",
+      "dguid": "2021S05079330140.04",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99968133,
+          "csdAreaShare": 0.02120115
+        }
+      ]
+    },
+    {
+      "ctuid": "9330141.02",
+      "dguid": "2021S05079330141.02",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00063477
+        }
+      ]
+    },
+    {
+      "ctuid": "9330141.03",
+      "dguid": "2021S05079330141.03",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99974769,
+          "csdAreaShare": 0.01083364
+        }
+      ]
+    },
+    {
+      "ctuid": "9330141.04",
+      "dguid": "2021S05079330141.04",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0060261
+        }
+      ]
+    },
+    {
+      "ctuid": "9330142.01",
+      "dguid": "2021S05079330142.01",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99987558,
+          "csdAreaShare": 0.01128929
+        }
+      ]
+    },
+    {
+      "ctuid": "9330142.02",
+      "dguid": "2021S05079330142.02",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99991359,
+          "csdAreaShare": 0.01125345
+        }
+      ]
+    },
+    {
+      "ctuid": "9330142.03",
+      "dguid": "2021S05079330142.03",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99993228,
+          "csdAreaShare": 0.0117327
+        }
+      ]
+    },
+    {
+      "ctuid": "9330143.01",
+      "dguid": "2021S05079330143.01",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01020408
+        }
+      ]
+    },
+    {
+      "ctuid": "9330143.02",
+      "dguid": "2021S05079330143.02",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00999672
+        }
+      ]
+    },
+    {
+      "ctuid": "9330143.03",
+      "dguid": "2021S05079330143.03",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01028024
+        }
+      ]
+    },
+    {
+      "ctuid": "9330143.04",
+      "dguid": "2021S05079330143.04",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01016729
+        }
+      ]
+    },
+    {
+      "ctuid": "9330144.03",
+      "dguid": "2021S05079330144.03",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00520797
+        }
+      ]
+    },
+    {
+      "ctuid": "9330144.04",
+      "dguid": "2021S05079330144.04",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01026409
+        }
+      ]
+    },
+    {
+      "ctuid": "9330144.05",
+      "dguid": "2021S05079330144.05",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00529535
+        }
+      ]
+    },
+    {
+      "ctuid": "9330144.06",
+      "dguid": "2021S05079330144.06",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0101971
+        }
+      ]
+    },
+    {
+      "ctuid": "9330145.01",
+      "dguid": "2021S05079330145.01",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01024264
+        }
+      ]
+    },
+    {
+      "ctuid": "9330145.02",
+      "dguid": "2021S05079330145.02",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01054314
+        }
+      ]
+    },
+    {
+      "ctuid": "9330146.00",
+      "dguid": "2021S05079330146.00",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.03676034
+        }
+      ]
+    },
+    {
+      "ctuid": "9330147.04",
+      "dguid": "2021S05079330147.04",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00254139
+        }
+      ]
+    },
+    {
+      "ctuid": "9330147.05",
+      "dguid": "2021S05079330147.05",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00252536
+        }
+      ]
+    },
+    {
+      "ctuid": "9330147.07",
+      "dguid": "2021S05079330147.07",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00347394
+        }
+      ]
+    },
+    {
+      "ctuid": "9330147.09",
+      "dguid": "2021S05079330147.09",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00183737
+        }
+      ]
+    },
+    {
+      "ctuid": "9330147.10",
+      "dguid": "2021S05079330147.10",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00317928
+        }
+      ]
+    },
+    {
+      "ctuid": "9330147.11",
+      "dguid": "2021S05079330147.11",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00158246
+        }
+      ]
+    },
+    {
+      "ctuid": "9330147.12",
+      "dguid": "2021S05079330147.12",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00306428
+        }
+      ]
+    },
+    {
+      "ctuid": "9330147.13",
+      "dguid": "2021S05079330147.13",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00291434
+        }
+      ]
+    },
+    {
+      "ctuid": "9330147.14",
+      "dguid": "2021S05079330147.14",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01769798
+        }
+      ]
+    },
+    {
+      "ctuid": "9330148.01",
+      "dguid": "2021S05079330148.01",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99955422,
+          "csdAreaShare": 0.00941642
+        }
+      ]
+    },
+    {
+      "ctuid": "9330148.02",
+      "dguid": "2021S05079330148.02",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99980715,
+          "csdAreaShare": 0.00690057
+        }
+      ]
+    },
+    {
+      "ctuid": "9330148.03",
+      "dguid": "2021S05079330148.03",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00519429
+        }
+      ]
+    },
+    {
+      "ctuid": "9330149.02",
+      "dguid": "2021S05079330149.02",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99992046,
+          "csdAreaShare": 0.01178525
+        }
+      ]
+    },
+    {
+      "ctuid": "9330149.05",
+      "dguid": "2021S05079330149.05",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00498292
+        }
+      ]
+    },
+    {
+      "ctuid": "9330149.06",
+      "dguid": "2021S05079330149.06",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99981223,
+          "csdAreaShare": 0.01283313
+        }
+      ]
+    },
+    {
+      "ctuid": "9330149.07",
+      "dguid": "2021S05079330149.07",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99988219,
+          "csdAreaShare": 0.00796816
+        }
+      ]
+    },
+    {
+      "ctuid": "9330149.08",
+      "dguid": "2021S05079330149.08",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99967153,
+          "csdAreaShare": 0.00792052
+        }
+      ]
+    },
+    {
+      "ctuid": "9330149.09",
+      "dguid": "2021S05079330149.09",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00509056
+        }
+      ]
+    },
+    {
+      "ctuid": "9330150.00",
+      "dguid": "2021S05079330150.00",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.13929612
+        }
+      ]
+    },
+    {
+      "ctuid": "9330151.03",
+      "dguid": "2021S05079330151.03",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99992874,
+          "csdAreaShare": 0.02364989
+        }
+      ]
+    },
+    {
+      "ctuid": "9330151.05",
+      "dguid": "2021S05079330151.05",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00995574
+        }
+      ]
+    },
+    {
+      "ctuid": "9330151.06",
+      "dguid": "2021S05079330151.06",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01464073
+        }
+      ]
+    },
+    {
+      "ctuid": "9330151.07",
+      "dguid": "2021S05079330151.07",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 0.99999472,
+          "csdAreaShare": 0.02280506
+        }
+      ]
+    },
+    {
+      "ctuid": "9330151.09",
+      "dguid": "2021S05079330151.09",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.004538
+        }
+      ]
+    },
+    {
+      "ctuid": "9330151.10",
+      "dguid": "2021S05079330151.10",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00533648
+        }
+      ]
+    },
+    {
+      "ctuid": "9330151.11",
+      "dguid": "2021S05079330151.11",
+      "municipalities": [
+        "5915015"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915015",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01543929
+        }
+      ]
+    },
+    {
+      "ctuid": "9330160.01",
+      "dguid": "2021S05079330160.01",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 0.99995299,
+          "csdAreaShare": 0.01171928
+        }
+      ]
+    },
+    {
+      "ctuid": "9330160.02",
+      "dguid": "2021S05079330160.02",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 0.99993596,
+          "csdAreaShare": 0.03561573
+        }
+      ]
+    },
+    {
+      "ctuid": "9330160.03",
+      "dguid": "2021S05079330160.03",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01431148
+        }
+      ]
+    },
+    {
+      "ctuid": "9330160.04",
+      "dguid": "2021S05079330160.04",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 0.99953004,
+          "csdAreaShare": 0.01254943
+        }
+      ]
+    },
+    {
+      "ctuid": "9330161.02",
+      "dguid": "2021S05079330161.02",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 0.99998765,
+          "csdAreaShare": 0.00932829
+        }
+      ]
+    },
+    {
+      "ctuid": "9330161.03",
+      "dguid": "2021S05079330161.03",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01255937
+        }
+      ]
+    },
+    {
+      "ctuid": "9330161.05",
+      "dguid": "2021S05079330161.05",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00868508
+        }
+      ]
+    },
+    {
+      "ctuid": "9330161.06",
+      "dguid": "2021S05079330161.06",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 0.99972369,
+          "csdAreaShare": 0.01997599
+        }
+      ]
+    },
+    {
+      "ctuid": "9330161.07",
+      "dguid": "2021S05079330161.07",
+      "municipalities": [
+        "5915810"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915810",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330161.08",
+      "dguid": "2021S05079330161.08",
+      "municipalities": [
+        "5915802"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915802",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330161.09",
+      "dguid": "2021S05079330161.09",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 0.99999424,
+          "csdAreaShare": 0.76157187
+        }
+      ]
+    },
+    {
+      "ctuid": "9330162.01",
+      "dguid": "2021S05079330162.01",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 0.99999899,
+          "csdAreaShare": 0.01154732
+        }
+      ]
+    },
+    {
+      "ctuid": "9330162.02",
+      "dguid": "2021S05079330162.02",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01119642
+        }
+      ]
+    },
+    {
+      "ctuid": "9330162.04",
+      "dguid": "2021S05079330162.04",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 0.99998646,
+          "csdAreaShare": 0.0265501
+        }
+      ]
+    },
+    {
+      "ctuid": "9330162.05",
+      "dguid": "2021S05079330162.05",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 0.99999734,
+          "csdAreaShare": 0.00515315
+        }
+      ]
+    },
+    {
+      "ctuid": "9330162.06",
+      "dguid": "2021S05079330162.06",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00378588
+        }
+      ]
+    },
+    {
+      "ctuid": "9330163.01",
+      "dguid": "2021S05079330163.01",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00945142
+        }
+      ]
+    },
+    {
+      "ctuid": "9330163.04",
+      "dguid": "2021S05079330163.04",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01793142
+        }
+      ]
+    },
+    {
+      "ctuid": "9330163.05",
+      "dguid": "2021S05079330163.05",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 0.99991329,
+          "csdAreaShare": 0.00885899
+        }
+      ]
+    },
+    {
+      "ctuid": "9330163.06",
+      "dguid": "2021S05079330163.06",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 0.9999851,
+          "csdAreaShare": 0.00531204
+        }
+      ]
+    },
+    {
+      "ctuid": "9330163.07",
+      "dguid": "2021S05079330163.07",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00709688
+        }
+      ]
+    },
+    {
+      "ctuid": "9330163.08",
+      "dguid": "2021S05079330163.08",
+      "municipalities": [
+        "5915011"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915011",
+          "ctAreaShare": 0.99982469,
+          "csdAreaShare": 0.00678609
+        }
+      ]
+    },
+    {
+      "ctuid": "9330170.03",
+      "dguid": "2021S05079330170.03",
+      "municipalities": [
+        "5915007"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915007",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.09542996
+        }
+      ]
+    },
+    {
+      "ctuid": "9330170.04",
+      "dguid": "2021S05079330170.04",
+      "municipalities": [
+        "5915007"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915007",
+          "ctAreaShare": 0.99980368,
+          "csdAreaShare": 0.4194381
+        }
+      ]
+    },
+    {
+      "ctuid": "9330170.05",
+      "dguid": "2021S05079330170.05",
+      "municipalities": [
+        "5915007"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915007",
+          "ctAreaShare": 0.99999332,
+          "csdAreaShare": 0.06264344
+        }
+      ]
+    },
+    {
+      "ctuid": "9330170.07",
+      "dguid": "2021S05079330170.07",
+      "municipalities": [
+        "5915007"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915007",
+          "ctAreaShare": 0.99939386,
+          "csdAreaShare": 0.23763754
+        }
+      ]
+    },
+    {
+      "ctuid": "9330170.08",
+      "dguid": "2021S05079330170.08",
+      "municipalities": [
+        "5915007"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915007",
+          "ctAreaShare": 0.99997757,
+          "csdAreaShare": 0.1842807
+        }
+      ]
+    },
+    {
+      "ctuid": "9330180.05",
+      "dguid": "2021S05079330180.05",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00406996
+        }
+      ]
+    },
+    {
+      "ctuid": "9330180.06",
+      "dguid": "2021S05079330180.06",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0050688
+        }
+      ]
+    },
+    {
+      "ctuid": "9330180.07",
+      "dguid": "2021S05079330180.07",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.02728836
+        }
+      ]
+    },
+    {
+      "ctuid": "9330180.08",
+      "dguid": "2021S05079330180.08",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99999021,
+          "csdAreaShare": 0.11074871
+        }
+      ]
+    },
+    {
+      "ctuid": "9330180.09",
+      "dguid": "2021S05079330180.09",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00534737
+        }
+      ]
+    },
+    {
+      "ctuid": "9330180.10",
+      "dguid": "2021S05079330180.10",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00405057
+        }
+      ]
+    },
+    {
+      "ctuid": "9330181.03",
+      "dguid": "2021S05079330181.03",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99990903,
+          "csdAreaShare": 0.02047177
+        }
+      ]
+    },
+    {
+      "ctuid": "9330181.07",
+      "dguid": "2021S05079330181.07",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99997947,
+          "csdAreaShare": 0.00573391
+        }
+      ]
+    },
+    {
+      "ctuid": "9330181.08",
+      "dguid": "2021S05079330181.08",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.9999557,
+          "csdAreaShare": 0.00376651
+        }
+      ]
+    },
+    {
+      "ctuid": "9330181.09",
+      "dguid": "2021S05079330181.09",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99990191,
+          "csdAreaShare": 0.01205753
+        }
+      ]
+    },
+    {
+      "ctuid": "9330181.10",
+      "dguid": "2021S05079330181.10",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99983742,
+          "csdAreaShare": 0.01008402
+        }
+      ]
+    },
+    {
+      "ctuid": "9330181.11",
+      "dguid": "2021S05079330181.11",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.9999176,
+          "csdAreaShare": 0.00200741
+        }
+      ]
+    },
+    {
+      "ctuid": "9330181.12",
+      "dguid": "2021S05079330181.12",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01077214
+        }
+      ]
+    },
+    {
+      "ctuid": "9330181.13",
+      "dguid": "2021S05079330181.13",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00582379
+        }
+      ]
+    },
+    {
+      "ctuid": "9330181.14",
+      "dguid": "2021S05079330181.14",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00447517
+        }
+      ]
+    },
+    {
+      "ctuid": "9330181.15",
+      "dguid": "2021S05079330181.15",
+      "municipalities": [
+        "5915801"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915801",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330181.16",
+      "dguid": "2021S05079330181.16",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99998547,
+          "csdAreaShare": 0.00703884
+        }
+      ]
+    },
+    {
+      "ctuid": "9330181.17",
+      "dguid": "2021S05079330181.17",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99983915,
+          "csdAreaShare": 0.0056022
+        }
+      ]
+    },
+    {
+      "ctuid": "9330181.18",
+      "dguid": "2021S05079330181.18",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99979436,
+          "csdAreaShare": 0.00199276
+        }
+      ]
+    },
+    {
+      "ctuid": "9330182.02",
+      "dguid": "2021S05079330182.02",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00819142
+        }
+      ]
+    },
+    {
+      "ctuid": "9330182.03",
+      "dguid": "2021S05079330182.03",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.02513571
+        }
+      ]
+    },
+    {
+      "ctuid": "9330182.04",
+      "dguid": "2021S05079330182.04",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00695762
+        }
+      ]
+    },
+    {
+      "ctuid": "9330182.05",
+      "dguid": "2021S05079330182.05",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.05878469
+        }
+      ]
+    },
+    {
+      "ctuid": "9330182.06",
+      "dguid": "2021S05079330182.06",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99999975,
+          "csdAreaShare": 0.03131036
+        }
+      ]
+    },
+    {
+      "ctuid": "9330182.07",
+      "dguid": "2021S05079330182.07",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99999597,
+          "csdAreaShare": 0.12645442
+        }
+      ]
+    },
+    {
+      "ctuid": "9330182.08",
+      "dguid": "2021S05079330182.08",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.03209983
+        }
+      ]
+    },
+    {
+      "ctuid": "9330183.01",
+      "dguid": "2021S05079330183.01",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00821802
+        }
+      ]
+    },
+    {
+      "ctuid": "9330183.03",
+      "dguid": "2021S05079330183.03",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00884915
+        }
+      ]
+    },
+    {
+      "ctuid": "9330183.06",
+      "dguid": "2021S05079330183.06",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99982914,
+          "csdAreaShare": 0.00413781
+        }
+      ]
+    },
+    {
+      "ctuid": "9330183.07",
+      "dguid": "2021S05079330183.07",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00785403
+        }
+      ]
+    },
+    {
+      "ctuid": "9330183.10",
+      "dguid": "2021S05079330183.10",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00204455
+        }
+      ]
+    },
+    {
+      "ctuid": "9330183.11",
+      "dguid": "2021S05079330183.11",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99953657,
+          "csdAreaShare": 0.00198461
+        }
+      ]
+    },
+    {
+      "ctuid": "9330183.12",
+      "dguid": "2021S05079330183.12",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01057692
+        }
+      ]
+    },
+    {
+      "ctuid": "9330183.13",
+      "dguid": "2021S05079330183.13",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0033258
+        }
+      ]
+    },
+    {
+      "ctuid": "9330183.14",
+      "dguid": "2021S05079330183.14",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0042671
+        }
+      ]
+    },
+    {
+      "ctuid": "9330183.15",
+      "dguid": "2021S05079330183.15",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00388216
+        }
+      ]
+    },
+    {
+      "ctuid": "9330183.16",
+      "dguid": "2021S05079330183.16",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00412991
+        }
+      ]
+    },
+    {
+      "ctuid": "9330183.17",
+      "dguid": "2021S05079330183.17",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00265965
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.07",
+      "dguid": "2021S05079330184.07",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00412093
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.08",
+      "dguid": "2021S05079330184.08",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00393673
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.09",
+      "dguid": "2021S05079330184.09",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00405123
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.10",
+      "dguid": "2021S05079330184.10",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00410917
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.13",
+      "dguid": "2021S05079330184.13",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01394498
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.15",
+      "dguid": "2021S05079330184.15",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00303732
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.16",
+      "dguid": "2021S05079330184.16",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00509685
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.17",
+      "dguid": "2021S05079330184.17",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00403328
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.18",
+      "dguid": "2021S05079330184.18",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00204276
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.19",
+      "dguid": "2021S05079330184.19",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00208666
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.20",
+      "dguid": "2021S05079330184.20",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00269222
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.21",
+      "dguid": "2021S05079330184.21",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00607275
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.22",
+      "dguid": "2021S05079330184.22",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00201539
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.23",
+      "dguid": "2021S05079330184.23",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00412407
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.24",
+      "dguid": "2021S05079330184.24",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00401998
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.25",
+      "dguid": "2021S05079330184.25",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00200641
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.26",
+      "dguid": "2021S05079330184.26",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00204232
+        }
+      ]
+    },
+    {
+      "ctuid": "9330184.27",
+      "dguid": "2021S05079330184.27",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00399793
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.05",
+      "dguid": "2021S05079330185.05",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00411369
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.08",
+      "dguid": "2021S05079330185.08",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01129671
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.09",
+      "dguid": "2021S05079330185.09",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0082026
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.10",
+      "dguid": "2021S05079330185.10",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00399967
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.12",
+      "dguid": "2021S05079330185.12",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00409051
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.15",
+      "dguid": "2021S05079330185.15",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00809539
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.16",
+      "dguid": "2021S05079330185.16",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00804454
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.17",
+      "dguid": "2021S05079330185.17",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99983669,
+          "csdAreaShare": 0.00321505
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.18",
+      "dguid": "2021S05079330185.18",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99998806,
+          "csdAreaShare": 0.00519163
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.19",
+      "dguid": "2021S05079330185.19",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99998382,
+          "csdAreaShare": 0.0020772
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.20",
+      "dguid": "2021S05079330185.20",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00208005
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.21",
+      "dguid": "2021S05079330185.21",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99982242,
+          "csdAreaShare": 0.00206045
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.22",
+      "dguid": "2021S05079330185.22",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00206917
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.23",
+      "dguid": "2021S05079330185.23",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00204421
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.24",
+      "dguid": "2021S05079330185.24",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00201088
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.25",
+      "dguid": "2021S05079330185.25",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00404726
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.26",
+      "dguid": "2021S05079330185.26",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99992378,
+          "csdAreaShare": 0.00251247
+        }
+      ]
+    },
+    {
+      "ctuid": "9330185.27",
+      "dguid": "2021S05079330185.27",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99973264,
+          "csdAreaShare": 0.00156337
+        }
+      ]
+    },
+    {
+      "ctuid": "9330186.01",
+      "dguid": "2021S05079330186.01",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99945279,
+          "csdAreaShare": 0.00612352
+        }
+      ]
+    },
+    {
+      "ctuid": "9330186.02",
+      "dguid": "2021S05079330186.02",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00587422
+        }
+      ]
+    },
+    {
+      "ctuid": "9330186.06",
+      "dguid": "2021S05079330186.06",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00394748
+        }
+      ]
+    },
+    {
+      "ctuid": "9330186.07",
+      "dguid": "2021S05079330186.07",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00404313
+        }
+      ]
+    },
+    {
+      "ctuid": "9330186.08",
+      "dguid": "2021S05079330186.08",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00402403
+        }
+      ]
+    },
+    {
+      "ctuid": "9330186.09",
+      "dguid": "2021S05079330186.09",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00185546
+        }
+      ]
+    },
+    {
+      "ctuid": "9330186.10",
+      "dguid": "2021S05079330186.10",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00201187
+        }
+      ]
+    },
+    {
+      "ctuid": "9330187.04",
+      "dguid": "2021S05079330187.04",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00379285
+        }
+      ]
+    },
+    {
+      "ctuid": "9330187.05",
+      "dguid": "2021S05079330187.05",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00403378
+        }
+      ]
+    },
+    {
+      "ctuid": "9330187.06",
+      "dguid": "2021S05079330187.06",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00801297
+        }
+      ]
+    },
+    {
+      "ctuid": "9330187.07",
+      "dguid": "2021S05079330187.07",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00204618
+        }
+      ]
+    },
+    {
+      "ctuid": "9330187.11",
+      "dguid": "2021S05079330187.11",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00427376
+        }
+      ]
+    },
+    {
+      "ctuid": "9330187.12",
+      "dguid": "2021S05079330187.12",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00353493
+        }
+      ]
+    },
+    {
+      "ctuid": "9330187.13",
+      "dguid": "2021S05079330187.13",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00341971
+        }
+      ]
+    },
+    {
+      "ctuid": "9330187.14",
+      "dguid": "2021S05079330187.14",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00198553
+        }
+      ]
+    },
+    {
+      "ctuid": "9330187.15",
+      "dguid": "2021S05079330187.15",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00215343
+        }
+      ]
+    },
+    {
+      "ctuid": "9330187.16",
+      "dguid": "2021S05079330187.16",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00278564
+        }
+      ]
+    },
+    {
+      "ctuid": "9330187.17",
+      "dguid": "2021S05079330187.17",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00382951
+        }
+      ]
+    },
+    {
+      "ctuid": "9330187.18",
+      "dguid": "2021S05079330187.18",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.004133
+        }
+      ]
+    },
+    {
+      "ctuid": "9330188.01",
+      "dguid": "2021S05079330188.01",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99999726,
+          "csdAreaShare": 0.00999203
+        }
+      ]
+    },
+    {
+      "ctuid": "9330188.02",
+      "dguid": "2021S05079330188.02",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00329454
+        }
+      ]
+    },
+    {
+      "ctuid": "9330188.04",
+      "dguid": "2021S05079330188.04",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01193015
+        }
+      ]
+    },
+    {
+      "ctuid": "9330188.05",
+      "dguid": "2021S05079330188.05",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.02221368
+        }
+      ]
+    },
+    {
+      "ctuid": "9330188.06",
+      "dguid": "2021S05079330188.06",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99999972,
+          "csdAreaShare": 0.01265177
+        }
+      ]
+    },
+    {
+      "ctuid": "9330188.07",
+      "dguid": "2021S05079330188.07",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 0.99991827,
+          "csdAreaShare": 0.00838887
+        }
+      ]
+    },
+    {
+      "ctuid": "9330188.08",
+      "dguid": "2021S05079330188.08",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00393585
+        }
+      ]
+    },
+    {
+      "ctuid": "9330189.03",
+      "dguid": "2021S05079330189.03",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00487268
+        }
+      ]
+    },
+    {
+      "ctuid": "9330189.06",
+      "dguid": "2021S05079330189.06",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00744437
+        }
+      ]
+    },
+    {
+      "ctuid": "9330189.07",
+      "dguid": "2021S05079330189.07",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00254703
+        }
+      ]
+    },
+    {
+      "ctuid": "9330189.08",
+      "dguid": "2021S05079330189.08",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00209334
+        }
+      ]
+    },
+    {
+      "ctuid": "9330189.09",
+      "dguid": "2021S05079330189.09",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00409381
+        }
+      ]
+    },
+    {
+      "ctuid": "9330189.10",
+      "dguid": "2021S05079330189.10",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00403307
+        }
+      ]
+    },
+    {
+      "ctuid": "9330189.11",
+      "dguid": "2021S05079330189.11",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00206703
+        }
+      ]
+    },
+    {
+      "ctuid": "9330189.12",
+      "dguid": "2021S05079330189.12",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00206962
+        }
+      ]
+    },
+    {
+      "ctuid": "9330190.03",
+      "dguid": "2021S05079330190.03",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00596942
+        }
+      ]
+    },
+    {
+      "ctuid": "9330190.04",
+      "dguid": "2021S05079330190.04",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00941573
+        }
+      ]
+    },
+    {
+      "ctuid": "9330190.05",
+      "dguid": "2021S05079330190.05",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00187415
+        }
+      ]
+    },
+    {
+      "ctuid": "9330190.06",
+      "dguid": "2021S05079330190.06",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00253182
+        }
+      ]
+    },
+    {
+      "ctuid": "9330190.07",
+      "dguid": "2021S05079330190.07",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00200542
+        }
+      ]
+    },
+    {
+      "ctuid": "9330191.03",
+      "dguid": "2021S05079330191.03",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00407201
+        }
+      ]
+    },
+    {
+      "ctuid": "9330191.04",
+      "dguid": "2021S05079330191.04",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00409104
+        }
+      ]
+    },
+    {
+      "ctuid": "9330191.05",
+      "dguid": "2021S05079330191.05",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00434416
+        }
+      ]
+    },
+    {
+      "ctuid": "9330191.06",
+      "dguid": "2021S05079330191.06",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00154229
+        }
+      ]
+    },
+    {
+      "ctuid": "9330191.07",
+      "dguid": "2021S05079330191.07",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00223904
+        }
+      ]
+    },
+    {
+      "ctuid": "9330192.00",
+      "dguid": "2021S05079330192.00",
+      "municipalities": [
+        "5915004"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915004",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.04096065
+        }
+      ]
+    },
+    {
+      "ctuid": "9330200.01",
+      "dguid": "2021S05079330200.01",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 0.99980867,
+          "csdAreaShare": 0.06093155
+        }
+      ]
+    },
+    {
+      "ctuid": "9330200.02",
+      "dguid": "2021S05079330200.02",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 0.99995612,
+          "csdAreaShare": 0.1550151
+        }
+      ]
+    },
+    {
+      "ctuid": "9330201.00",
+      "dguid": "2021S05079330201.00",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 0.99999984,
+          "csdAreaShare": 0.04131703
+        }
+      ]
+    },
+    {
+      "ctuid": "9330202.01",
+      "dguid": "2021S05079330202.01",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 0.99945122,
+          "csdAreaShare": 0.06652403
+        }
+      ]
+    },
+    {
+      "ctuid": "9330202.02",
+      "dguid": "2021S05079330202.02",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.02883412
+        }
+      ]
+    },
+    {
+      "ctuid": "9330203.00",
+      "dguid": "2021S05079330203.00",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.06404683
+        }
+      ]
+    },
+    {
+      "ctuid": "9330204.01",
+      "dguid": "2021S05079330204.01",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0231973
+        }
+      ]
+    },
+    {
+      "ctuid": "9330204.02",
+      "dguid": "2021S05079330204.02",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 0.99939558,
+          "csdAreaShare": 0.04003487
+        }
+      ]
+    },
+    {
+      "ctuid": "9330205.01",
+      "dguid": "2021S05079330205.01",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.02886751
+        }
+      ]
+    },
+    {
+      "ctuid": "9330205.02",
+      "dguid": "2021S05079330205.02",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 0.99870056,
+          "csdAreaShare": 0.03523408
+        }
+      ]
+    },
+    {
+      "ctuid": "9330206.00",
+      "dguid": "2021S05079330206.00",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 0.99943135,
+          "csdAreaShare": 0.02716515
+        }
+      ]
+    },
+    {
+      "ctuid": "9330207.00",
+      "dguid": "2021S05079330207.00",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 0.99999837,
+          "csdAreaShare": 0.02926755
+        }
+      ]
+    },
+    {
+      "ctuid": "9330208.00",
+      "dguid": "2021S05079330208.00",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 0.99979607,
+          "csdAreaShare": 0.09558857
+        }
+      ]
+    },
+    {
+      "ctuid": "9330209.01",
+      "dguid": "2021S05079330209.01",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.07897595
+        }
+      ]
+    },
+    {
+      "ctuid": "9330209.02",
+      "dguid": "2021S05079330209.02",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.06875015
+        }
+      ]
+    },
+    {
+      "ctuid": "9330210.00",
+      "dguid": "2021S05079330210.00",
+      "municipalities": [
+        "5915029"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915029",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.15622446
+        }
+      ]
+    },
+    {
+      "ctuid": "9330220.00",
+      "dguid": "2021S05079330220.00",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.9999252,
+          "csdAreaShare": 0.09984527
+        }
+      ]
+    },
+    {
+      "ctuid": "9330221.01",
+      "dguid": "2021S05079330221.01",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.99992895,
+          "csdAreaShare": 0.0134785
+        }
+      ]
+    },
+    {
+      "ctuid": "9330221.03",
+      "dguid": "2021S05079330221.03",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01427682
+        }
+      ]
+    },
+    {
+      "ctuid": "9330221.04",
+      "dguid": "2021S05079330221.04",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01448377
+        }
+      ]
+    },
+    {
+      "ctuid": "9330222.01",
+      "dguid": "2021S05079330222.01",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01701327
+        }
+      ]
+    },
+    {
+      "ctuid": "9330222.02",
+      "dguid": "2021S05079330222.02",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01492451
+        }
+      ]
+    },
+    {
+      "ctuid": "9330223.01",
+      "dguid": "2021S05079330223.01",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.99986683,
+          "csdAreaShare": 0.01622738
+        }
+      ]
+    },
+    {
+      "ctuid": "9330223.02",
+      "dguid": "2021S05079330223.02",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.99998749,
+          "csdAreaShare": 0.00827641
+        }
+      ]
+    },
+    {
+      "ctuid": "9330224.01",
+      "dguid": "2021S05079330224.01",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00510226
+        }
+      ]
+    },
+    {
+      "ctuid": "9330224.02",
+      "dguid": "2021S05079330224.02",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00765337
+        }
+      ]
+    },
+    {
+      "ctuid": "9330225.01",
+      "dguid": "2021S05079330225.01",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01611859
+        }
+      ]
+    },
+    {
+      "ctuid": "9330225.02",
+      "dguid": "2021S05079330225.02",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01484722
+        }
+      ]
+    },
+    {
+      "ctuid": "9330226.02",
+      "dguid": "2021S05079330226.02",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0147999
+        }
+      ]
+    },
+    {
+      "ctuid": "9330226.03",
+      "dguid": "2021S05079330226.03",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00800911
+        }
+      ]
+    },
+    {
+      "ctuid": "9330226.04",
+      "dguid": "2021S05079330226.04",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00315325
+        }
+      ]
+    },
+    {
+      "ctuid": "9330227.01",
+      "dguid": "2021S05079330227.01",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00303949
+        }
+      ]
+    },
+    {
+      "ctuid": "9330227.02",
+      "dguid": "2021S05079330227.02",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.99970918,
+          "csdAreaShare": 0.01241468
+        }
+      ]
+    },
+    {
+      "ctuid": "9330228.02",
+      "dguid": "2021S05079330228.02",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.9999981,
+          "csdAreaShare": 0.01073976
+        }
+      ]
+    },
+    {
+      "ctuid": "9330228.03",
+      "dguid": "2021S05079330228.03",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00357933
+        }
+      ]
+    },
+    {
+      "ctuid": "9330228.04",
+      "dguid": "2021S05079330228.04",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.99969069,
+          "csdAreaShare": 0.00789379
+        }
+      ]
+    },
+    {
+      "ctuid": "9330229.00",
+      "dguid": "2021S05079330229.00",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.9999767,
+          "csdAreaShare": 0.03340721
+        }
+      ]
+    },
+    {
+      "ctuid": "9330230.01",
+      "dguid": "2021S05079330230.01",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.04837032
+        }
+      ]
+    },
+    {
+      "ctuid": "9330230.02",
+      "dguid": "2021S05079330230.02",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0437678
+        }
+      ]
+    },
+    {
+      "ctuid": "9330231.00",
+      "dguid": "2021S05079330231.00",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.02343771
+        }
+      ]
+    },
+    {
+      "ctuid": "9330232.00",
+      "dguid": "2021S05079330232.00",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.03367838
+        }
+      ]
+    },
+    {
+      "ctuid": "9330233.00",
+      "dguid": "2021S05079330233.00",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01656014
+        }
+      ]
+    },
+    {
+      "ctuid": "9330234.00",
+      "dguid": "2021S05079330234.00",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.9998318,
+          "csdAreaShare": 0.05030801
+        }
+      ]
+    },
+    {
+      "ctuid": "9330235.02",
+      "dguid": "2021S05079330235.02",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.99958838,
+          "csdAreaShare": 0.01562981
+        }
+      ]
+    },
+    {
+      "ctuid": "9330235.03",
+      "dguid": "2021S05079330235.03",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.99954818,
+          "csdAreaShare": 0.00470857
+        }
+      ]
+    },
+    {
+      "ctuid": "9330235.04",
+      "dguid": "2021S05079330235.04",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01160876
+        }
+      ]
+    },
+    {
+      "ctuid": "9330236.00",
+      "dguid": "2021S05079330236.00",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.04630016
+        }
+      ]
+    },
+    {
+      "ctuid": "9330237.00",
+      "dguid": "2021S05079330237.00",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.02782481
+        }
+      ]
+    },
+    {
+      "ctuid": "9330238.01",
+      "dguid": "2021S05079330238.01",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01349644
+        }
+      ]
+    },
+    {
+      "ctuid": "9330238.02",
+      "dguid": "2021S05079330238.02",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.02546022
+        }
+      ]
+    },
+    {
+      "ctuid": "9330239.01",
+      "dguid": "2021S05079330239.01",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01715013
+        }
+      ]
+    },
+    {
+      "ctuid": "9330239.02",
+      "dguid": "2021S05079330239.02",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00868794
+        }
+      ]
+    },
+    {
+      "ctuid": "9330240.01",
+      "dguid": "2021S05079330240.01",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.99930751,
+          "csdAreaShare": 0.02429709
+        }
+      ]
+    },
+    {
+      "ctuid": "9330240.02",
+      "dguid": "2021S05079330240.02",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.99961887,
+          "csdAreaShare": 0.00970421
+        }
+      ]
+    },
+    {
+      "ctuid": "9330241.00",
+      "dguid": "2021S05079330241.00",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.99994206,
+          "csdAreaShare": 0.0209134
+        }
+      ]
+    },
+    {
+      "ctuid": "9330242.00",
+      "dguid": "2021S05079330242.00",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.99997654,
+          "csdAreaShare": 0.05054837
+        }
+      ]
+    },
+    {
+      "ctuid": "9330243.01",
+      "dguid": "2021S05079330243.01",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01866464
+        }
+      ]
+    },
+    {
+      "ctuid": "9330243.02",
+      "dguid": "2021S05079330243.02",
+      "municipalities": [
+        "5915025"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915025",
+          "ctAreaShare": 0.99988619,
+          "csdAreaShare": 0.14949914
+        }
+      ]
+    },
+    {
+      "ctuid": "9330250.01",
+      "dguid": "2021S05079330250.01",
+      "municipalities": [
+        "5915062"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915062",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330250.02",
+      "dguid": "2021S05079330250.02",
+      "municipalities": [
+        "5915020",
+        "5915038",
+        "5915036",
+        "5915065"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915020",
+          "ctAreaShare": 0.95775538,
+          "csdAreaShare": 0.9743151
+        },
+        {
+          "csduid": "5915038",
+          "ctAreaShare": 0.03314917,
+          "csdAreaShare": 0.99997928
+        },
+        {
+          "csduid": "5915036",
+          "ctAreaShare": 0.00622958,
+          "csdAreaShare": 0.99997967
+        },
+        {
+          "csduid": "5915065",
+          "ctAreaShare": 0.00286425,
+          "csdAreaShare": 0.99988377
+        }
+      ]
+    },
+    {
+      "ctuid": "9330251.01",
+      "dguid": "2021S05079330251.01",
+      "municipalities": [
+        "5915809"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915809",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330251.02",
+      "dguid": "2021S05079330251.02",
+      "municipalities": [
+        "5915020"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915020",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00895719
+        }
+      ]
+    },
+    {
+      "ctuid": "9330260.04",
+      "dguid": "2021S05079330260.04",
+      "municipalities": [
+        "5915043"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915043",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.04498185
+        }
+      ]
+    },
+    {
+      "ctuid": "9330260.05",
+      "dguid": "2021S05079330260.05",
+      "municipalities": [
+        "5915043"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915043",
+          "ctAreaShare": 0.99992441,
+          "csdAreaShare": 0.11724881
+        }
+      ]
+    },
+    {
+      "ctuid": "9330260.06",
+      "dguid": "2021S05079330260.06",
+      "municipalities": [
+        "5915043"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915043",
+          "ctAreaShare": 0.99998115,
+          "csdAreaShare": 0.0980409
+        }
+      ]
+    },
+    {
+      "ctuid": "9330260.07",
+      "dguid": "2021S05079330260.07",
+      "municipalities": [
+        "5915043"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915043",
+          "ctAreaShare": 0.99994707,
+          "csdAreaShare": 0.04008245
+        }
+      ]
+    },
+    {
+      "ctuid": "9330260.08",
+      "dguid": "2021S05079330260.08",
+      "municipalities": [
+        "5915043"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915043",
+          "ctAreaShare": 0.9999879,
+          "csdAreaShare": 0.13052439
+        }
+      ]
+    },
+    {
+      "ctuid": "9330260.10",
+      "dguid": "2021S05079330260.10",
+      "municipalities": [
+        "5915043"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915043",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01127102
+        }
+      ]
+    },
+    {
+      "ctuid": "9330260.11",
+      "dguid": "2021S05079330260.11",
+      "municipalities": [
+        "5915043"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915043",
+          "ctAreaShare": 0.99738117,
+          "csdAreaShare": 0.42875192
+        }
+      ]
+    },
+    {
+      "ctuid": "9330260.12",
+      "dguid": "2021S05079330260.12",
+      "municipalities": [
+        "5915043"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915043",
+          "ctAreaShare": 0.99987175,
+          "csdAreaShare": 0.12900018
+        }
+      ]
+    },
+    {
+      "ctuid": "9330270.00",
+      "dguid": "2021S05079330270.00",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 0.99994898,
+          "csdAreaShare": 0.04648959
+        }
+      ]
+    },
+    {
+      "ctuid": "9330280.01",
+      "dguid": "2021S05079330280.01",
+      "municipalities": [
+        "5915805"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915805",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330280.02",
+      "dguid": "2021S05079330280.02",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 0.99998909,
+          "csdAreaShare": 0.03669892
+        }
+      ]
+    },
+    {
+      "ctuid": "9330281.01",
+      "dguid": "2021S05079330281.01",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01704058
+        }
+      ]
+    },
+    {
+      "ctuid": "9330281.02",
+      "dguid": "2021S05079330281.02",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.02017011
+        }
+      ]
+    },
+    {
+      "ctuid": "9330282.01",
+      "dguid": "2021S05079330282.01",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01096084
+        }
+      ]
+    },
+    {
+      "ctuid": "9330282.02",
+      "dguid": "2021S05079330282.02",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01015468
+        }
+      ]
+    },
+    {
+      "ctuid": "9330283.00",
+      "dguid": "2021S05079330283.00",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 0.99995334,
+          "csdAreaShare": 0.01697114
+        }
+      ]
+    },
+    {
+      "ctuid": "9330284.01",
+      "dguid": "2021S05079330284.01",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 0.99982961,
+          "csdAreaShare": 0.01656338
+        }
+      ]
+    },
+    {
+      "ctuid": "9330284.03",
+      "dguid": "2021S05079330284.03",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01116037
+        }
+      ]
+    },
+    {
+      "ctuid": "9330284.04",
+      "dguid": "2021S05079330284.04",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00498497
+        }
+      ]
+    },
+    {
+      "ctuid": "9330285.01",
+      "dguid": "2021S05079330285.01",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00507714
+        }
+      ]
+    },
+    {
+      "ctuid": "9330285.02",
+      "dguid": "2021S05079330285.02",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01734537
+        }
+      ]
+    },
+    {
+      "ctuid": "9330286.01",
+      "dguid": "2021S05079330286.01",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.03225186
+        }
+      ]
+    },
+    {
+      "ctuid": "9330286.02",
+      "dguid": "2021S05079330286.02",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 0.99999919,
+          "csdAreaShare": 0.02404686
+        }
+      ]
+    },
+    {
+      "ctuid": "9330286.03",
+      "dguid": "2021S05079330286.03",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 0.99987207,
+          "csdAreaShare": 0.02101368
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.06",
+      "dguid": "2021S05079330287.06",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00910186
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.09",
+      "dguid": "2021S05079330287.09",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00463564
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.10",
+      "dguid": "2021S05079330287.10",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 0.99991631,
+          "csdAreaShare": 0.00924536
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.11",
+      "dguid": "2021S05079330287.11",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 0.99995397,
+          "csdAreaShare": 0.01462755
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.12",
+      "dguid": "2021S05079330287.12",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00855683
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.13",
+      "dguid": "2021S05079330287.13",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01737375
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.14",
+      "dguid": "2021S05079330287.14",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.14261359
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.15",
+      "dguid": "2021S05079330287.15",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01113032
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.16",
+      "dguid": "2021S05079330287.16",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 0.99997676,
+          "csdAreaShare": 0.00616035
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.17",
+      "dguid": "2021S05079330287.17",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00478253
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.18",
+      "dguid": "2021S05079330287.18",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01026944
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.19",
+      "dguid": "2021S05079330287.19",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0049419
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.20",
+      "dguid": "2021S05079330287.20",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 0.99999965,
+          "csdAreaShare": 0.00467614
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.21",
+      "dguid": "2021S05079330287.21",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 0.99991242,
+          "csdAreaShare": 0.01448793
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.22",
+      "dguid": "2021S05079330287.22",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 0.99980724,
+          "csdAreaShare": 0.01869686
+        }
+      ]
+    },
+    {
+      "ctuid": "9330287.23",
+      "dguid": "2021S05079330287.23",
+      "municipalities": [
+        "5915034"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915034",
+          "ctAreaShare": 0.99999085,
+          "csdAreaShare": 0.42775654
+        }
+      ]
+    },
+    {
+      "ctuid": "9330290.04",
+      "dguid": "2021S05079330290.04",
+      "municipalities": [
+        "5915039"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915039",
+          "ctAreaShare": 0.99999998,
+          "csdAreaShare": 0.22774205
+        }
+      ]
+    },
+    {
+      "ctuid": "9330290.05",
+      "dguid": "2021S05079330290.05",
+      "municipalities": [
+        "5915039"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915039",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.05385241
+        }
+      ]
+    },
+    {
+      "ctuid": "9330290.06",
+      "dguid": "2021S05079330290.06",
+      "municipalities": [
+        "5915804"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915804",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330290.07",
+      "dguid": "2021S05079330290.07",
+      "municipalities": [
+        "5915039"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915039",
+          "ctAreaShare": 0.99999979,
+          "csdAreaShare": 0.07442619
+        }
+      ]
+    },
+    {
+      "ctuid": "9330290.08",
+      "dguid": "2021S05079330290.08",
+      "municipalities": [
+        "5915039"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915039",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.03810584
+        }
+      ]
+    },
+    {
+      "ctuid": "9330290.09",
+      "dguid": "2021S05079330290.09",
+      "municipalities": [
+        "5915039"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915039",
+          "ctAreaShare": 0.99994986,
+          "csdAreaShare": 0.11247268
+        }
+      ]
+    },
+    {
+      "ctuid": "9330291.01",
+      "dguid": "2021S05079330291.01",
+      "municipalities": [
+        "5915039"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915039",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.06820624
+        }
+      ]
+    },
+    {
+      "ctuid": "9330291.02",
+      "dguid": "2021S05079330291.02",
+      "municipalities": [
+        "5915039"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915039",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.09260188
+        }
+      ]
+    },
+    {
+      "ctuid": "9330292.01",
+      "dguid": "2021S05079330292.01",
+      "municipalities": [
+        "5915039"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915039",
+          "ctAreaShare": 0.99968998,
+          "csdAreaShare": 0.06246077
+        }
+      ]
+    },
+    {
+      "ctuid": "9330292.03",
+      "dguid": "2021S05079330292.03",
+      "municipalities": [
+        "5915039"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915039",
+          "ctAreaShare": 0.99992433,
+          "csdAreaShare": 0.09516596
+        }
+      ]
+    },
+    {
+      "ctuid": "9330292.04",
+      "dguid": "2021S05079330292.04",
+      "municipalities": [
+        "5915039"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915039",
+          "ctAreaShare": 0.9999294,
+          "csdAreaShare": 0.17508442
+        }
+      ]
+    },
+    {
+      "ctuid": "9330400.04",
+      "dguid": "2021S05079330400.04",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 0.99999595,
+          "csdAreaShare": 0.04471043
+        }
+      ]
+    },
+    {
+      "ctuid": "9330400.05",
+      "dguid": "2021S05079330400.05",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 0.99999975,
+          "csdAreaShare": 0.02167133
+        }
+      ]
+    },
+    {
+      "ctuid": "9330400.06",
+      "dguid": "2021S05079330400.06",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00511732
+        }
+      ]
+    },
+    {
+      "ctuid": "9330400.08",
+      "dguid": "2021S05079330400.08",
+      "municipalities": [
+        "5915840"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915840",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330400.09",
+      "dguid": "2021S05079330400.09",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 0.99999998,
+          "csdAreaShare": 0.14250581
+        }
+      ]
+    },
+    {
+      "ctuid": "9330401.01",
+      "dguid": "2021S05079330401.01",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 0.9999967,
+          "csdAreaShare": 0.00508758
+        }
+      ]
+    },
+    {
+      "ctuid": "9330401.03",
+      "dguid": "2021S05079330401.03",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0042754
+        }
+      ]
+    },
+    {
+      "ctuid": "9330401.04",
+      "dguid": "2021S05079330401.04",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 0.99999913,
+          "csdAreaShare": 0.00818914
+        }
+      ]
+    },
+    {
+      "ctuid": "9330402.02",
+      "dguid": "2021S05079330402.02",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01057091
+        }
+      ]
+    },
+    {
+      "ctuid": "9330402.03",
+      "dguid": "2021S05079330402.03",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00461565
+        }
+      ]
+    },
+    {
+      "ctuid": "9330402.04",
+      "dguid": "2021S05079330402.04",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00629521
+        }
+      ]
+    },
+    {
+      "ctuid": "9330403.01",
+      "dguid": "2021S05079330403.01",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 0.99999433,
+          "csdAreaShare": 0.00997226
+        }
+      ]
+    },
+    {
+      "ctuid": "9330403.04",
+      "dguid": "2021S05079330403.04",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01770124
+        }
+      ]
+    },
+    {
+      "ctuid": "9330403.05",
+      "dguid": "2021S05079330403.05",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0065632
+        }
+      ]
+    },
+    {
+      "ctuid": "9330403.06",
+      "dguid": "2021S05079330403.06",
+      "municipalities": [
+        "5915830"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915830",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330403.07",
+      "dguid": "2021S05079330403.07",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 0.99999648,
+          "csdAreaShare": 0.01369209
+        }
+      ]
+    },
+    {
+      "ctuid": "9330404.01",
+      "dguid": "2021S05079330404.01",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.12466966
+        }
+      ]
+    },
+    {
+      "ctuid": "9330404.02",
+      "dguid": "2021S05079330404.02",
+      "municipalities": [
+        "5915075"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915075",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.57434568
+        }
+      ]
+    },
+    {
+      "ctuid": "9330410.02",
+      "dguid": "2021S05079330410.02",
+      "municipalities": [
+        "5915070"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915070",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.28018794
+        }
+      ]
+    },
+    {
+      "ctuid": "9330410.04",
+      "dguid": "2021S05079330410.04",
+      "municipalities": [
+        "5915070"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915070",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.67401692
+        }
+      ]
+    },
+    {
+      "ctuid": "9330410.05",
+      "dguid": "2021S05079330410.05",
+      "municipalities": [
+        "5915070"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915070",
+          "ctAreaShare": 0.9999979,
+          "csdAreaShare": 0.01741103
+        }
+      ]
+    },
+    {
+      "ctuid": "9330410.06",
+      "dguid": "2021S05079330410.06",
+      "municipalities": [
+        "5915070"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915070",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.02836902
+        }
+      ]
+    },
+    {
+      "ctuid": "9330500.01",
+      "dguid": "2021S05079330500.01",
+      "municipalities": [
+        "5915825"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915825",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330500.02",
+      "dguid": "2021S05079330500.02",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 0.99997261,
+          "csdAreaShare": 0.23007321
+        }
+      ]
+    },
+    {
+      "ctuid": "9330501.01",
+      "dguid": "2021S05079330501.01",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.06271786
+        }
+      ]
+    },
+    {
+      "ctuid": "9330501.02",
+      "dguid": "2021S05079330501.02",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.0604502
+        }
+      ]
+    },
+    {
+      "ctuid": "9330501.03",
+      "dguid": "2021S05079330501.03",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 0.99997177,
+          "csdAreaShare": 0.07396747
+        }
+      ]
+    },
+    {
+      "ctuid": "9330502.01",
+      "dguid": "2021S05079330502.01",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00473329
+        }
+      ]
+    },
+    {
+      "ctuid": "9330502.02",
+      "dguid": "2021S05079330502.02",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.03107344
+        }
+      ]
+    },
+    {
+      "ctuid": "9330502.03",
+      "dguid": "2021S05079330502.03",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00829726
+        }
+      ]
+    },
+    {
+      "ctuid": "9330502.05",
+      "dguid": "2021S05079330502.05",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 0.99996272,
+          "csdAreaShare": 0.10649301
+        }
+      ]
+    },
+    {
+      "ctuid": "9330502.06",
+      "dguid": "2021S05079330502.06",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 0.99998889,
+          "csdAreaShare": 0.01075588
+        }
+      ]
+    },
+    {
+      "ctuid": "9330502.07",
+      "dguid": "2021S05079330502.07",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01002543
+        }
+      ]
+    },
+    {
+      "ctuid": "9330503.01",
+      "dguid": "2021S05079330503.01",
+      "municipalities": [
+        "5915002"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915002",
+          "ctAreaShare": 0.99999971,
+          "csdAreaShare": 0.1070907
+        }
+      ]
+    },
+    {
+      "ctuid": "9330503.03",
+      "dguid": "2021S05079330503.03",
+      "municipalities": [
+        "5915002"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915002",
+          "ctAreaShare": 0.99999258,
+          "csdAreaShare": 0.35298631
+        }
+      ]
+    },
+    {
+      "ctuid": "9330503.06",
+      "dguid": "2021S05079330503.06",
+      "municipalities": [
+        "5915002"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915002",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.05745345
+        }
+      ]
+    },
+    {
+      "ctuid": "9330503.07",
+      "dguid": "2021S05079330503.07",
+      "municipalities": [
+        "5915002"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915002",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.08255746
+        }
+      ]
+    },
+    {
+      "ctuid": "9330503.08",
+      "dguid": "2021S05079330503.08",
+      "municipalities": [
+        "5915002"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915002",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.24509722
+        }
+      ]
+    },
+    {
+      "ctuid": "9330503.09",
+      "dguid": "2021S05079330503.09",
+      "municipalities": [
+        "5915002"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915002",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.15474378
+        }
+      ]
+    },
+    {
+      "ctuid": "9330504.03",
+      "dguid": "2021S05079330504.03",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 0.99996436,
+          "csdAreaShare": 0.04817512
+        }
+      ]
+    },
+    {
+      "ctuid": "9330504.07",
+      "dguid": "2021S05079330504.07",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00267573
+        }
+      ]
+    },
+    {
+      "ctuid": "9330504.08",
+      "dguid": "2021S05079330504.08",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00390685
+        }
+      ]
+    },
+    {
+      "ctuid": "9330504.09",
+      "dguid": "2021S05079330504.09",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 0.99999735,
+          "csdAreaShare": 0.01111802
+        }
+      ]
+    },
+    {
+      "ctuid": "9330504.10",
+      "dguid": "2021S05079330504.10",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 0.99975486,
+          "csdAreaShare": 0.00360597
+        }
+      ]
+    },
+    {
+      "ctuid": "9330504.12",
+      "dguid": "2021S05079330504.12",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01263566
+        }
+      ]
+    },
+    {
+      "ctuid": "9330504.13",
+      "dguid": "2021S05079330504.13",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 0.99963753,
+          "csdAreaShare": 0.00530095
+        }
+      ]
+    },
+    {
+      "ctuid": "9330504.14",
+      "dguid": "2021S05079330504.14",
+      "municipalities": [
+        "5915813"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915813",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330504.15",
+      "dguid": "2021S05079330504.15",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 0.99998167,
+          "csdAreaShare": 0.01577858
+        }
+      ]
+    },
+    {
+      "ctuid": "9330504.16",
+      "dguid": "2021S05079330504.16",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 0.99998112,
+          "csdAreaShare": 0.00725217
+        }
+      ]
+    },
+    {
+      "ctuid": "9330504.17",
+      "dguid": "2021S05079330504.17",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00499719
+        }
+      ]
+    },
+    {
+      "ctuid": "9330504.18",
+      "dguid": "2021S05079330504.18",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.00751655
+        }
+      ]
+    },
+    {
+      "ctuid": "9330504.19",
+      "dguid": "2021S05079330504.19",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01136817
+        }
+      ]
+    },
+    {
+      "ctuid": "9330504.20",
+      "dguid": "2021S05079330504.20",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01797137
+        }
+      ]
+    },
+    {
+      "ctuid": "9330505.01",
+      "dguid": "2021S05079330505.01",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 0.01667537
+        }
+      ]
+    },
+    {
+      "ctuid": "9330505.03",
+      "dguid": "2021S05079330505.03",
+      "municipalities": [
+        "5915816"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915816",
+          "ctAreaShare": 1.0,
+          "csdAreaShare": 1.0
+        }
+      ]
+    },
+    {
+      "ctuid": "9330505.04",
+      "dguid": "2021S05079330505.04",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 0.99999258,
+          "csdAreaShare": 0.20277692
+        }
+      ]
+    },
+    {
+      "ctuid": "9330506.01",
+      "dguid": "2021S05079330506.01",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 0.99997069,
+          "csdAreaShare": 0.009753
+        }
+      ]
+    },
+    {
+      "ctuid": "9330506.02",
+      "dguid": "2021S05079330506.02",
+      "municipalities": [
+        "5915001"
+      ],
+      "overlaps": [
+        {
+          "csduid": "5915001",
+          "ctAreaShare": 0.99996093,
+          "csdAreaShare": 0.01982098
+        }
+      ]
+    }
+  ],
+  "anchorWaterInput": {
+    "path": "public/data/basemap.geojson",
+    "sha256": "f241f6fccd4c68db672fbe3c819f8f0864ec4a334adb66834a12ddcbfeaca6e5"
+  }
+}

@@ -1,0 +1,497 @@
+{
+  "city": "Metro Vancouver",
+  "cityName": "Metro Vancouver",
+  "regionCode": "5915",
+  "censusYear": 2021,
+  "incomeYear": 2020,
+  "populationYear": 2021,
+  "verifiedAt": "2026-11-06",
+  "preparedDate": "2026-11-06",
+  "cityIncomeMedian": 90000,
+  "cityChineseCount": 512260,
+  "cityChinesePct": 0.1964933007545042,
+  "cityChinesePopulationBase": 2607010,
+  "cityPopulationPrivate": 2607015,
+  "cityPopulationTotal": 2642825,
+  "cityChildrenPct": 0.141,
+  "cityHouseholdSize": 2.5,
+  "populationLabel": "总人口",
+  "populationDefinition": "人口为 2021 年普查总人口（100% 数据，特征 1），包括集体住所居民；不是私人住户人口。私人住户短表人口和族裔长表分母另存，三者不得混用。",
+  "incomeDefinition": "2020 年私人住户税前总年收入中位数（加元），来自 2021 Census Profile 的 100% 数据（特征 229）；不是个人收入、税后收入或当前收入。",
+  "chineseDefinition": "Chinese 为 2021 普查 visible minority 分类之一（25% 长表加权估计），不是国籍、语言或祖源。占比以同一长表私人住户人口（特征 1669）为分母。",
+  "childrenDefinition": "0–14 岁占比使用 Census Profile 直接发布百分比（特征 35），分母为年龄统计总人口（100% 数据），包括集体住所居民。",
+  "householdSizeDefinition": "平均私人住户人数，2021 Census Profile 100% 数据（特征 56）。",
+  "boundaryNote": "覆盖 Greater Vancouver 区域局（CD 5915，即大温哥华）的全部 535 个 2021 普查区。官方 Vancouver CMA 933 边界与此区域边界一致。38 个 Census subdivisions 包括市镇、原住民保留区和选举区，不代表 38 个城市。普查区不是市府命名社区；名称由市镇／地区与官方普查区编号组成。",
+  "municipalityNote": "市镇／地区标签由官方 CSD 与普查区边界相交确定。CT 9330250.02 同时覆盖 Metro Vancouver A、Anmore、Belcarra 和 Lions Bay；筛选其中任何地区都会显示完整普查区，其统计值不可拆分。",
+  "missingDataNote": "保密抑制、不适用或未发布值保留为空，不以 0 替代。Barnston Island 3 在 2021 年未能完成住户普查，未发布人口。灰色区域不表示无人居住、低收入或族裔人数为零。",
+  "roundingNote": "普查分类人数按保密规则随机取整，25% 长表为加权估计。类别之和与分母可能略有差异。总人口与私人住户人口口径不同；市镇和区域收入中位数直接采用官方值，不平均普查区中位数。",
+  "populationGroupsDefinition": "族裔视图使用 13 个互斥 visible minority 分类，起始未选择类别；“常用五类”可选中大温哥华人数最多的五个可见少数族裔类别。非可见少数族裔包括原住民等人口，不可等同于白人或欧洲裔。",
+  "newCensusNote": "本应用使用已发布的 2021 年人口普查资料；人口参考年为 2021，收入参考年为 2020。",
+  "definitionsEn": {
+    "populationDefinition": "Population is the 2021 Census total population (100% data, characteristic 1), including collective-dwelling residents. Private-household population and the long-form population-group denominator are stored separately.",
+    "incomeDefinition": "Median total annual income of private households in 2020, before tax, in Canadian dollars (2021 Census Profile, 100% data, characteristic 229). This is not personal, after-tax or current income.",
+    "chineseDefinition": "Chinese is a 2021 Census visible-minority category from weighted 25% sample data, not a nationality, language or ancestry. Shares use the same long-form private-household denominator (characteristic 1669).",
+    "childrenDefinition": "The age 0–14 share is the published Census Profile percentage (characteristic 35). Its denominator is total age-group population, including collective dwellings (100% data).",
+    "householdSizeDefinition": "Average number of persons per private household, 2021 Census Profile 100% data (characteristic 56).",
+    "boundaryNote": "All 535 census tracts in the Greater Vancouver regional district (CD 5915), on 2021 boundaries. Official Vancouver CMA 933 geometry matches this regional boundary. The 38 census subdivisions include municipalities, Indigenous reserves and an electoral area; they are not 38 cities. Census tracts are not named municipal neighbourhoods.",
+    "municipalityNote": "Municipality/area labels are derived from intersections with official CSD boundaries. CT 9330250.02 covers Metro Vancouver A, Anmore, Belcarra and Lions Bay. Filtering any of these areas retains the entire tract; its statistics cannot be divided between them.",
+    "missingDataNote": "Suppressed, inapplicable and unpublished values remain null, never zero. Barnston Island 3 was incompletely enumerated in 2021, so its population was not published. Grey areas do not imply zero population, low income or absence of a population group.",
+    "roundingNote": "Census category counts are randomly rounded; long-form counts are weighted estimates. Group counts may not sum exactly to the denominator. Total population differs from private-household population. Regional and municipal income medians are official values, not averages of tract medians.",
+    "populationGroupsDefinition": "The population-group view uses 13 mutually exclusive visible-minority categories. No groups are initially selected; the Common five shortcut selects the five largest racialized groups in Metro Vancouver. Not a visible minority includes Indigenous people and must not be equated with White or European ancestry.",
+    "newCensusNote": "This application uses published 2021 Census data. The population reference year is 2021 and the income reference year is 2020.",
+    "geographyDefinition": "Coasts, rivers, lakes, major roads, parks and railway context come from open geographic data published by Statistics Canada, Natural Resources Canada, British Columbia and the City of Vancouver. Roads are a 2021 snapshot; coastline polygons are generalized at 1:250,000. Only larger parks and waterbodies are shown. Parks do not represent all vegetation, and landmark points are label anchors inside parks, not entrances. Geographic context can extend beyond census coverage without adding population or income estimates."
+  },
+  "latestCensusNote": "本应用使用已发布的 2021 年人口普查资料；人口参考年为 2021，收入参考年为 2020。",
+  "populationGroupsCoverage": 529,
+  "populationGroupsBase": 2607010,
+  "coverage": {
+    "boundaryCount": 535,
+    "publishedNeighbourhoodRows": 535,
+    "censusTractCount": 535,
+    "censusSubdivisionCount": 38,
+    "incomePublished": 522,
+    "chinesePublished": 529,
+    "populationTotalPublished": 534,
+    "populationPrivatePublished": 529,
+    "householdSizePublished": 529,
+    "zeroChineseCount": 9,
+    "boundariesWithoutStatistics": 1,
+    "boundariesMissingIncome": 13,
+    "boundariesMissingChinese": 6
+  },
+  "municipalities": [
+    {
+      "code": "5915001",
+      "name": "Langley (Township)",
+      "type": "DM",
+      "centroid": [
+        -122.5707532,
+        49.0963834
+      ]
+    },
+    {
+      "code": "5915002",
+      "name": "Langley (City)",
+      "type": "CY",
+      "centroid": [
+        -122.6606691,
+        49.0988319
+      ]
+    },
+    {
+      "code": "5915004",
+      "name": "Surrey",
+      "type": "CY",
+      "centroid": [
+        -122.7674198,
+        49.1155267
+      ]
+    },
+    {
+      "code": "5915007",
+      "name": "White Rock",
+      "type": "CY",
+      "centroid": [
+        -122.8036573,
+        49.027274
+      ]
+    },
+    {
+      "code": "5915011",
+      "name": "Delta",
+      "type": "CY",
+      "centroid": [
+        -122.9950331,
+        49.0911276
+      ]
+    },
+    {
+      "code": "5915015",
+      "name": "Richmond",
+      "type": "CY",
+      "centroid": [
+        -123.1030552,
+        49.1614732
+      ]
+    },
+    {
+      "code": "5915020",
+      "name": "Metro Vancouver A",
+      "type": "RDA",
+      "centroid": [
+        -122.7327116,
+        49.491843
+      ]
+    },
+    {
+      "code": "5915022",
+      "name": "Vancouver",
+      "type": "CY",
+      "centroid": [
+        -123.1071226,
+        49.2500677
+      ]
+    },
+    {
+      "code": "5915025",
+      "name": "Burnaby",
+      "type": "CY",
+      "centroid": [
+        -122.9585731,
+        49.2501404
+      ]
+    },
+    {
+      "code": "5915029",
+      "name": "New Westminster",
+      "type": "CY",
+      "centroid": [
+        -122.9150952,
+        49.209885
+      ]
+    },
+    {
+      "code": "5915034",
+      "name": "Coquitlam",
+      "type": "CY",
+      "centroid": [
+        -122.7215403,
+        49.3171199
+      ]
+    },
+    {
+      "code": "5915036",
+      "name": "Belcarra",
+      "type": "VL",
+      "centroid": [
+        -122.9019528,
+        49.3228671
+      ]
+    },
+    {
+      "code": "5915038",
+      "name": "Anmore",
+      "type": "VL",
+      "centroid": [
+        -122.849957,
+        49.3409056
+      ]
+    },
+    {
+      "code": "5915039",
+      "name": "Port Coquitlam",
+      "type": "CY",
+      "centroid": [
+        -122.7579208,
+        49.2532121
+      ]
+    },
+    {
+      "code": "5915043",
+      "name": "Port Moody",
+      "type": "CY",
+      "centroid": [
+        -122.8582392,
+        49.3022312
+      ]
+    },
+    {
+      "code": "5915046",
+      "name": "North Vancouver (District)",
+      "type": "DM",
+      "centroid": [
+        -122.9877885,
+        49.3715439
+      ]
+    },
+    {
+      "code": "5915051",
+      "name": "North Vancouver (City)",
+      "type": "CY",
+      "centroid": [
+        -123.0694358,
+        49.3154118
+      ]
+    },
+    {
+      "code": "5915055",
+      "name": "West Vancouver",
+      "type": "DM",
+      "centroid": [
+        -123.1962593,
+        49.3619768
+      ]
+    },
+    {
+      "code": "5915062",
+      "name": "Bowen Island",
+      "type": "IM",
+      "centroid": [
+        -123.3759831,
+        49.3689986
+      ]
+    },
+    {
+      "code": "5915065",
+      "name": "Lions Bay",
+      "type": "VL",
+      "centroid": [
+        -123.2347916,
+        49.4630192
+      ]
+    },
+    {
+      "code": "5915070",
+      "name": "Pitt Meadows",
+      "type": "CY",
+      "centroid": [
+        -122.6820478,
+        49.2613403
+      ]
+    },
+    {
+      "code": "5915075",
+      "name": "Maple Ridge",
+      "type": "CY",
+      "centroid": [
+        -122.5391687,
+        49.2471464
+      ]
+    },
+    {
+      "code": "5915801",
+      "name": "Semiahmoo",
+      "type": "IRI",
+      "centroid": [
+        -122.7668106,
+        49.0132128
+      ]
+    },
+    {
+      "code": "5915802",
+      "name": "Tsawwassen",
+      "type": "TWL",
+      "centroid": [
+        -123.0928627,
+        49.042347
+      ]
+    },
+    {
+      "code": "5915803",
+      "name": "Musqueam 2",
+      "type": "IRI",
+      "centroid": [
+        -123.2024373,
+        49.2313165
+      ]
+    },
+    {
+      "code": "5915804",
+      "name": "Coquitlam 2",
+      "type": "IRI",
+      "centroid": [
+        -122.7944564,
+        49.2472383
+      ]
+    },
+    {
+      "code": "5915805",
+      "name": "Coquitlam 1",
+      "type": "IRI",
+      "centroid": [
+        -122.8051712,
+        49.2302617
+      ]
+    },
+    {
+      "code": "5915806",
+      "name": "Burrard Inlet 3",
+      "type": "IRI",
+      "centroid": [
+        -122.9755074,
+        49.3098532
+      ]
+    },
+    {
+      "code": "5915807",
+      "name": "Mission 1",
+      "type": "IRI",
+      "centroid": [
+        -123.0887858,
+        49.3163179
+      ]
+    },
+    {
+      "code": "5915808",
+      "name": "Capilano 5",
+      "type": "IRI",
+      "centroid": [
+        -123.1291612,
+        49.3224689
+      ]
+    },
+    {
+      "code": "5915809",
+      "name": "Barnston Island 3",
+      "type": "IRI",
+      "centroid": [
+        -122.6951137,
+        49.1882766
+      ]
+    },
+    {
+      "code": "5915810",
+      "name": "Musqueam 4",
+      "type": "IRI",
+      "centroid": [
+        -123.1250019,
+        49.0667727
+      ]
+    },
+    {
+      "code": "5915811",
+      "name": "Seymour Creek 2",
+      "type": "IRI",
+      "centroid": [
+        -123.021702,
+        49.3102502
+      ]
+    },
+    {
+      "code": "5915813",
+      "name": "Katzie 2",
+      "type": "IRI",
+      "centroid": [
+        -122.6528605,
+        49.1939269
+      ]
+    },
+    {
+      "code": "5915816",
+      "name": "McMillan Island 6",
+      "type": "IRI",
+      "centroid": [
+        -122.5669571,
+        49.1747203
+      ]
+    },
+    {
+      "code": "5915825",
+      "name": "Matsqui 4",
+      "type": "IRI",
+      "centroid": [
+        -122.4763386,
+        49.0052922
+      ]
+    },
+    {
+      "code": "5915830",
+      "name": "Katzie 1",
+      "type": "IRI",
+      "centroid": [
+        -122.6737193,
+        49.2031167
+      ]
+    },
+    {
+      "code": "5915840",
+      "name": "Whonnock 1",
+      "type": "IRI",
+      "centroid": [
+        -122.4607396,
+        49.1753271
+      ]
+    }
+  ],
+  "attribution": "Adapted from Statistics Canada, 2021 Census of Population and 2021 Cartographic Boundary Files. This does not constitute an endorsement by Statistics Canada of this product.",
+  "license": "Statistical data: Statistics Canada Open Licence. Cartographic boundaries: Open Government Licence – Canada. This product is not endorsed by Statistics Canada. Basemap and context sources are listed separately.",
+  "sources": [
+    {
+      "label": "Statistics Canada · Metro Vancouver 2021 Census Profile",
+      "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&DGUIDlist=2021S0503933&GENDERlist=1&STATISTIClist=1&HEADERlist=0"
+    },
+    {
+      "label": "Statistics Canada · 2021 Census Profile SDMX API",
+      "url": "https://api.statcan.gc.ca/census-recensement/profile/sdmx/rest/dataflow/STC_CP/DF_CT/1.3?references=all"
+    },
+    {
+      "label": "Statistics Canada · 2021 Census tract boundaries",
+      "url": "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Cartographic_boundary_files/MapServer/11"
+    },
+    {
+      "label": "Statistics Canada · 2021 Census subdivision boundaries",
+      "url": "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Cartographic_boundary_files/MapServer/9"
+    },
+    {
+      "label": "Statistics Canada · 2021 Regional district boundaries",
+      "url": "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Cartographic_boundary_files/MapServer/4"
+    },
+    {
+      "label": "Statistics Canada · 2021 Census metropolitan area boundaries",
+      "url": "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Cartographic_boundary_files/MapServer/6"
+    },
+    {
+      "label": "Statistics Canada · Boundary files reference guide",
+      "url": "https://www150.statcan.gc.ca/n1/pub/92-160-g/92-160-g2021002-eng.htm"
+    },
+    {
+      "label": "Statistics Canada · Incompletely enumerated reserves and settlements",
+      "url": "https://www12.statcan.gc.ca/census-recensement/2021/ref/98-304/98-304-x2021001-eng.pdf"
+    },
+    {
+      "label": "Statistics Canada Open Licence",
+      "url": "https://www.statcan.gc.ca/en/reference/licence"
+    },
+    {
+      "label": "Open Government Licence – Canada",
+      "url": "https://open.canada.ca/en/open-government-licence-canada"
+    },
+    {
+      "label": "Statistics Canada · 2021 Road Network File",
+      "url": "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Road_Network_File/MapServer"
+    },
+    {
+      "label": "Natural Resources Canada / BC · NTS Coastline Polygons (1:250,000)",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/af9ceee9-6545-423e-b5f7-75872968704c"
+    },
+    {
+      "label": "Province of BC · Freshwater Atlas Bays and Channels",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/60fb779b-e0b0-4026-9ecc-40579d63a724"
+    },
+    {
+      "label": "Province of BC · Freshwater Atlas Lakes",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/cb1e3aba-d3fe-4de1-a2d4-b8b6650fb1f6"
+    },
+    {
+      "label": "Province of BC · Freshwater Atlas Rivers",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/f7dac054-efbf-402f-ab62-6fc4b32a619e"
+    },
+    {
+      "label": "Province of BC · Local and Regional Greenspaces",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/6a2fea1b-0cc4-4fc2-8017-eaf755d516da"
+    },
+    {
+      "label": "Natural Resources Canada / BC · Railway Track Lines",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/4ff93cda-9f58-4055-a372-98c22d04a9f8"
+    },
+    {
+      "label": "City of Vancouver · Parks polygons",
+      "url": "https://opendata.vancouver.ca/explore/dataset/parks-polygon-representation/"
+    },
+    {
+      "label": "Geographic data · Open Government Licence – Canada",
+      "url": "https://open.canada.ca/en/open-government-licence-canada"
+    },
+    {
+      "label": "Geographic data · Open Government Licence – British Columbia",
+      "url": "https://www2.gov.bc.ca/gov/content/data/policy-standards/data-policies/open-data/open-government-licence-bc"
+    },
+    {
+      "label": "Geographic data · Open Government Licence – Vancouver",
+      "url": "https://opendata.vancouver.ca/pages/licence/"
+    }
+  ],
+  "geographyPreparedDate": "2026-11-06",
+  "geographyDefinition": "海岸、河流、湖泊、主要道路、公园和铁路来自加拿大统计局、自然资源部、卑诗省及温哥华市的开放地理资料。道路为 2021 年快照；海岸线使用 1:250,000 概化资料。只显示较大公园和水域，公园并非全部植被覆盖；地标点只是公园内的文字锚点，不是入口。背景范围可超出普查范围，不会据此推算人口或收入。",
+  "geographyLicense": "Contains information licensed under the Open Government Licence – Canada, Open Government Licence – British Columbia and Open Government Licence – Vancouver."
+}

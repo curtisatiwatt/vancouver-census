@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.DS_Store
+.env
+.env.*
+!.env.example
+.openai/
+*.log
+__pycache__/
+.venv/
+.data-cache/

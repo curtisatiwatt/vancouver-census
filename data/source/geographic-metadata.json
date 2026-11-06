@@ -1,0 +1,54 @@
+{
+  "geographyPreparedDate": "2026-11-06",
+  "geographyDefinition": "海岸、河流、湖泊、主要道路、公园和铁路来自加拿大统计局、自然资源部、卑诗省及温哥华市的开放地理资料。道路为 2021 年快照；海岸线使用 1:250,000 概化资料。只显示较大公园和水域，公园并非全部植被覆盖；地标点只是公园内的文字锚点，不是入口。背景范围可超出普查范围，不会据此推算人口或收入。",
+  "definitionsEn": {
+    "geographyDefinition": "Coasts, rivers, lakes, major roads, parks and railway context come from open geographic data published by Statistics Canada, Natural Resources Canada, British Columbia and the City of Vancouver. Roads are a 2021 snapshot; coastline polygons are generalized at 1:250,000. Only larger parks and waterbodies are shown. Parks do not represent all vegetation, and landmark points are label anchors inside parks, not entrances. Geographic context can extend beyond census coverage without adding population or income estimates."
+  },
+  "geographyLicense": "Contains information licensed under the Open Government Licence – Canada, Open Government Licence – British Columbia and Open Government Licence – Vancouver.",
+  "sources": [
+    {
+      "label": "Statistics Canada · 2021 Road Network File",
+      "url": "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Road_Network_File/MapServer"
+    },
+    {
+      "label": "Natural Resources Canada / BC · NTS Coastline Polygons (1:250,000)",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/af9ceee9-6545-423e-b5f7-75872968704c"
+    },
+    {
+      "label": "Province of BC · Freshwater Atlas Bays and Channels",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/60fb779b-e0b0-4026-9ecc-40579d63a724"
+    },
+    {
+      "label": "Province of BC · Freshwater Atlas Lakes",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/cb1e3aba-d3fe-4de1-a2d4-b8b6650fb1f6"
+    },
+    {
+      "label": "Province of BC · Freshwater Atlas Rivers",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/f7dac054-efbf-402f-ab62-6fc4b32a619e"
+    },
+    {
+      "label": "Province of BC · Local and Regional Greenspaces",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/6a2fea1b-0cc4-4fc2-8017-eaf755d516da"
+    },
+    {
+      "label": "Natural Resources Canada / BC · Railway Track Lines",
+      "url": "https://catalogue.data.gov.bc.ca/dataset/4ff93cda-9f58-4055-a372-98c22d04a9f8"
+    },
+    {
+      "label": "City of Vancouver · Parks polygons",
+      "url": "https://opendata.vancouver.ca/explore/dataset/parks-polygon-representation/"
+    },
+    {
+      "label": "Geographic data · Open Government Licence – Canada",
+      "url": "https://open.canada.ca/en/open-government-licence-canada"
+    },
+    {
+      "label": "Geographic data · Open Government Licence – British Columbia",
+      "url": "https://www2.gov.bc.ca/gov/content/data/policy-standards/data-policies/open-data/open-government-licence-bc"
+    },
+    {
+      "label": "Geographic data · Open Government Licence – Vancouver",
+      "url": "https://opendata.vancouver.ca/pages/licence/"
+    }
+  ]
+}

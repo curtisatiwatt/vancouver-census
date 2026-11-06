@@ -1,0 +1,145 @@
+{
+  "preparedDate": "2026-11-06",
+  "bounds": [
+    -123.65,
+    48.9,
+    -122.35,
+    49.8
+  ],
+  "method": "All geometries are real, licensed official source data clipped to the map envelope and simplified by at most 0.000045 degrees after the server query. Ocean is generalized NTS 1:250,000. Road ranks 1–4 (2021) are grouped without inventing connecting segments. Lakes smaller than 2 ha, river polygons smaller than 1 ha, parks smaller than 5 ha, and railway yards/spurs are omitted for map legibility.",
+  "limitations": "This geographic context can extend beyond census coverage. It is not a navigation service, complete vegetation map, park entrance map or current road inventory. Geographic source vintages differ from the census; no census counts are inferred from these layers.",
+  "attribution": "Contains information licensed under the Open Government Licence – Canada, Open Government Licence – British Columbia and Open Government Licence – Vancouver.",
+  "sourceRoadSegmentCount": 15927,
+  "input": {
+    "layer69.json": {
+      "sha256": "52aef6da85ac8b040d1b55659c4acd55b8140772b9245981984cb0e19c62ece0",
+      "featureCount": 86
+    },
+    "layer66.json": {
+      "sha256": "1889a6c5f47e1d5a0f696fbe02addba8ee4875c04602d45f6abeb85761fa2f45",
+      "featureCount": 133
+    },
+    "layer20.json": {
+      "sha256": "c7e556fe37f6254e6a30bcfe5f2cbf2fb81c3b5dca6c64a46bdd1bb5bc9c7603",
+      "featureCount": 386
+    },
+    "layer17.json": {
+      "sha256": "d21d95614c68d68939406b2a50dc895af2b5293cf118a3839a61f797760c01e3",
+      "featureCount": 224
+    },
+    "layer40.json": {
+      "sha256": "6331d12e12ae5eb18fbb5a5bcf3b300cda4ea0ad829619612fb84fe0c7c07afc",
+      "featureCount": 510
+    },
+    "layer44.json": {
+      "sha256": "74973bb656e0ef81be9e8539c047615393094e71d80d536c1f58e2592efa9b33",
+      "featureCount": 4211
+    },
+    "roads0.json": {
+      "sha256": "2ed4fbb65f854c8e2567fbfaba6e7258a3d7a574e604157123b20a9d44485aaa",
+      "featureCount": 663
+    },
+    "roads1.json": {
+      "sha256": "9e4ca99d172ab6674afe95b692c94ccac53bf2187d72fa0311522a9eb9de35f3",
+      "featureCount": 1891
+    },
+    "roads2.json": {
+      "sha256": "7d09e532fc380630caac6b4b1b5174a7a9f7a308f6544bcb79eefb97b1e12306",
+      "featureCount": 0
+    },
+    "roads3.json": {
+      "sha256": "432c0fa88c0c93ba97a6cad58b4d1bab74cdb6b1e63af582812383fd3ce26594",
+      "featureCount": 13373
+    },
+    "vancouver-parks.json": {
+      "sha256": "cf2e3941dd5f525f6a1de1930eca2e366ca803e9b36a7902175549a37e7ef31f",
+      "featureCount": 254
+    }
+  },
+  "output": {
+    "basemap.geojson": {
+      "featureCount": 1236,
+      "kinds": {
+        "water": 677,
+        "road": 559
+      },
+      "sha256": "f241f6fccd4c68db672fbe3c819f8f0864ec4a334adb66834a12ddcbfeaca6e5"
+    },
+    "geographic-context.geojson": {
+      "featureCount": 991,
+      "kinds": {
+        "park": 499,
+        "railway": 492
+      },
+      "sha256": "b640b9fda5c58624457bfd6bcf845e52b618fb12d4b2009022b02b2ce50dec4c"
+    },
+    "orientation-landmarks.geojson": {
+      "featureCount": 11,
+      "kinds": {
+        "orientation_landmark": 11
+      },
+      "sha256": "377343789322fd3e01f3e2baac59907f0ce053ec13dc74f91c8b6215b70a3dc9"
+    }
+  },
+  "sources": [
+    {
+      "label": "Statistics Canada · 2021 Road Network File",
+      "url": "https://geo.statcan.gc.ca/geo_wa/rest/services/2021/Road_Network_File/MapServer",
+      "licence": "https://open.canada.ca/en/open-government-licence-canada"
+    },
+    {
+      "label": "Natural Resources Canada / BC · NTS Coastline Polygons (1:250,000)",
+      "url": "https://delivery.maps.gov.bc.ca/arcgis/rest/services/whse/bcgw_pub_whse_basemapping/MapServer/69",
+      "catalogue": "https://catalogue.data.gov.bc.ca/dataset/af9ceee9-6545-423e-b5f7-75872968704c",
+      "licence": "https://open.canada.ca/en/open-government-licence-canada"
+    },
+    {
+      "label": "Province of BC · Freshwater Atlas Bays and Channels",
+      "url": "https://delivery.maps.gov.bc.ca/arcgis/rest/services/whse/bcgw_pub_whse_basemapping/MapServer/66",
+      "catalogue": "https://catalogue.data.gov.bc.ca/dataset/60fb779b-e0b0-4026-9ecc-40579d63a724",
+      "licence": "https://www2.gov.bc.ca/gov/content/data/policy-standards/data-policies/open-data/open-government-licence-bc"
+    },
+    {
+      "label": "Province of BC · Freshwater Atlas Lakes",
+      "url": "https://delivery.maps.gov.bc.ca/arcgis/rest/services/whse/bcgw_pub_whse_basemapping/MapServer/20",
+      "catalogue": "https://catalogue.data.gov.bc.ca/dataset/cb1e3aba-d3fe-4de1-a2d4-b8b6650fb1f6",
+      "licence": "https://www2.gov.bc.ca/gov/content/data/policy-standards/data-policies/open-data/open-government-licence-bc"
+    },
+    {
+      "label": "Province of BC · Freshwater Atlas Rivers",
+      "url": "https://delivery.maps.gov.bc.ca/arcgis/rest/services/whse/bcgw_pub_whse_basemapping/MapServer/17",
+      "catalogue": "https://catalogue.data.gov.bc.ca/dataset/f7dac054-efbf-402f-ab62-6fc4b32a619e",
+      "licence": "https://www2.gov.bc.ca/gov/content/data/policy-standards/data-policies/open-data/open-government-licence-bc"
+    },
+    {
+      "label": "Province of BC · Local and Regional Greenspaces",
+      "url": "https://delivery.maps.gov.bc.ca/arcgis/rest/services/whse/bcgw_pub_whse_basemapping/MapServer/40",
+      "catalogue": "https://catalogue.data.gov.bc.ca/dataset/6a2fea1b-0cc4-4fc2-8017-eaf755d516da",
+      "licence": "https://www2.gov.bc.ca/gov/content/data/policy-standards/data-policies/open-data/open-government-licence-bc"
+    },
+    {
+      "label": "Natural Resources Canada / BC · Railway Track Lines",
+      "url": "https://delivery.maps.gov.bc.ca/arcgis/rest/services/whse/bcgw_pub_whse_basemapping/MapServer/44",
+      "catalogue": "https://catalogue.data.gov.bc.ca/dataset/4ff93cda-9f58-4055-a372-98c22d04a9f8",
+      "licence": "https://open.canada.ca/en/open-government-licence-canada"
+    },
+    {
+      "label": "City of Vancouver · Parks polygons",
+      "url": "https://opendata.vancouver.ca/explore/dataset/parks-polygon-representation/",
+      "licence": "https://opendata.vancouver.ca/pages/licence/"
+    }
+  ],
+  "landmarkNames": [
+    "Burnaby Mountain Conservation Area",
+    "Lynn Canyon Park",
+    "Central Park",
+    "Minoru Park",
+    "Queen Elizabeth Park",
+    "Deer Lake Park",
+    "Mundy Park",
+    "Tynehead Regional Park",
+    "Stanley Park",
+    "Campbell Valley Regional Park",
+    "Pacific Spirit Regional Park"
+  ]
+}
